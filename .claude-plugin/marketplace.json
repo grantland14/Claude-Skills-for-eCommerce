@@ -1,14 +1,14 @@
 {
-  "name": "ecommerce-email-skill",
+  "name": "ecommerce-skills",
   "owner": {
     "name": "Ashley Read"
   },
   "plugins": [
     {
-      "name": "ecommerce-email",
+      "name": "ecommerce-skills",
       "source": ".",
-      "description": "The complete eCommerce email playbook for DTC brands. Automated flows, campaigns, segmentation, and revenue optimization. Klaviyo-first.",
-      "version": "1.0.0"
+      "description": "Claude skills for eCommerce founders. Email marketing, copywriting, and more — built for DTC brands.",
+      "version": "1.1.0"
     }
   ]
 }

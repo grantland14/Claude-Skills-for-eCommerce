@@ -1,9 +1,9 @@
 {
-  "name": "ecommerce-email",
-  "description": "The complete eCommerce email playbook for DTC brands. Automated flows, campaigns, segmentation, and revenue optimization. Klaviyo-first.",
-  "version": "1.0.0",
+  "name": "ecommerce-skills",
+  "description": "Claude skills for eCommerce founders. Email marketing, copywriting, and more — built for DTC brands.",
+  "version": "1.1.0",
   "author": {
     "name": "Ashley Read"
   },
-  "keywords": ["ecommerce", "email", "klaviyo", "DTC", "abandoned-cart", "flows", "campaigns", "segmentation"]
+  "keywords": ["ecommerce", "DTC", "email", "copywriting", "klaviyo", "conversion", "product-pages"]
 }
