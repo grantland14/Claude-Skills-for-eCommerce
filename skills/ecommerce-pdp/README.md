@@ -17,10 +17,14 @@ This skill turns Claude into a PDP conversion specialist who understands how eCo
 
 ## Installation
 
-1. Download or clone this repo
-2. Open [Claude.ai](https://claude.ai) and go to **Settings → Skills**
-3. Upload the `SKILL.md` file from `skills/ecommerce-pdp/`
-4. Start a new conversation — Claude will audit and optimize your product pages
+Copy the skill folder into your Claude Code skills directory:
+
+```bash
+git clone https://github.com/grantland14/Claude-Skills-for-eCommerce.git
+cp -r Claude-Skills-for-eCommerce/skills/ecommerce-pdp ~/.claude/skills/
+```
+
+Start a new Claude Code conversation — Claude will automatically use this skill when relevant.
 
 ## Example prompts
 

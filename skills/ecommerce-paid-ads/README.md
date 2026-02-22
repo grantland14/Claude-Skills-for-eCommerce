@@ -16,10 +16,14 @@ This skill turns Claude into a performance marketing expert who understands DTC 
 
 ## Installation
 
-1. Download or clone this repo
-2. Open [Claude.ai](https://claude.ai) and go to **Settings → Skills**
-3. Upload the `SKILL.md` file from `skills/ecommerce-paid-ads/`
-4. Start a new conversation — Claude will now advise on your ad campaigns like a media buyer
+Copy the skill folder into your Claude Code skills directory:
+
+```bash
+git clone https://github.com/grantland14/Claude-Skills-for-eCommerce.git
+cp -r Claude-Skills-for-eCommerce/skills/ecommerce-paid-ads ~/.claude/skills/
+```
+
+Start a new Claude Code conversation — Claude will automatically use this skill when relevant.
 
 ## Example prompts
 

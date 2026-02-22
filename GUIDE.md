@@ -90,17 +90,13 @@ cp -r Claude-Skills-for-eCommerce/skills/ecommerce-brand-guide ~/.claude/skills/
 
 Replace the skill folder names with whichever ones you want.
 
-### Option 3: Install via Claude Code directly
-
-```bash
-claude install grantland14/Claude-Skills-for-eCommerce
-```
-
 ### After installation
 
 Start a new Claude Code conversation. Claude will now recognize when you're asking about eCommerce tasks and apply the relevant skill automatically. You don't need to tell Claude which skill to use — it figures that out from your prompt.
 
 If you want to invoke a specific skill directly, you can use the slash command (e.g., `/ecommerce-email` or `/ecommerce-pricing`).
+
+> **Note:** The `claude install` command is for updating Claude Code itself, not for installing skills. Skills are installed by copying the SKILL.md files into your `~/.claude/skills/` directory.
 
 ---
 

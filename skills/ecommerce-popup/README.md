@@ -18,10 +18,14 @@ This skill turns Claude into a popup conversion specialist who knows what works 
 
 ## Installation
 
-1. Download or clone this repo
-2. Open [Claude.ai](https://claude.ai) and go to **Settings → Skills**
-3. Upload the `SKILL.md` file from `skills/ecommerce-popup/`
-4. Start a new conversation — Claude will design popups that convert
+Copy the skill folder into your Claude Code skills directory:
+
+```bash
+git clone https://github.com/grantland14/Claude-Skills-for-eCommerce.git
+cp -r Claude-Skills-for-eCommerce/skills/ecommerce-popup ~/.claude/skills/
+```
+
+Start a new Claude Code conversation — Claude will automatically use this skill when relevant.
 
 ## Example prompts
 

@@ -16,10 +16,14 @@ This skill turns Claude into a social media expert who understands how DTC brand
 
 ## Installation
 
-1. Download or clone this repo
-2. Open [Claude.ai](https://claude.ai) and go to **Settings → Skills**
-3. Upload the `SKILL.md` file from `skills/ecommerce-social-content/`
-4. Start a new conversation — Claude will plan and write your social content
+Copy the skill folder into your Claude Code skills directory:
+
+```bash
+git clone https://github.com/grantland14/Claude-Skills-for-eCommerce.git
+cp -r Claude-Skills-for-eCommerce/skills/ecommerce-social-content ~/.claude/skills/
+```
+
+Start a new Claude Code conversation — Claude will automatically use this skill when relevant.
 
 ## Example prompts
 

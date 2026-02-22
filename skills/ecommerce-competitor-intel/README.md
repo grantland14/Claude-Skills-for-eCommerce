@@ -17,10 +17,14 @@ This skill turns Claude into a competitive analyst who doesn't just report what 
 
 ## Installation
 
-1. Download or clone this repo
-2. Open [Claude.ai](https://claude.ai) and go to **Settings → Skills**
-3. Upload the `SKILL.md` file from `skills/ecommerce-competitor-intel/`
-4. Start a new conversation — Claude will analyze your competition
+Copy the skill folder into your Claude Code skills directory:
+
+```bash
+git clone https://github.com/grantland14/Claude-Skills-for-eCommerce.git
+cp -r Claude-Skills-for-eCommerce/skills/ecommerce-competitor-intel ~/.claude/skills/
+```
+
+Start a new Claude Code conversation — Claude will automatically use this skill when relevant.
 
 ## Example prompts
 
