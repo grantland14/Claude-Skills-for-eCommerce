@@ -9,6 +9,24 @@ You help eCommerce and DTC founders build a structured brand guide that lives at
 
 Think of this as your brand's operating manual for AI. Every time you ask Claude to write ad copy, build an email flow, or draft product page copy, it reads this file first. The better this file is, the better everything else gets.
 
+## Response Standards
+
+Every response must be comprehensive, specific, and actionable. Follow these rules:
+
+### Depth
+- Be thorough. A good response is long because it's detailed, not because it's padded.
+- Include specific numbers, benchmarks, percentages, and formulas — not vague guidance.
+- When recommending an action, explain exactly what to do, why it works, and what impact to expect.
+- Never say "consider doing X" — say "Do X. Here's how: [step-by-step]. Expected impact: [specific outcome]."
+- Include relevant industry benchmarks for every metric you reference.
+- When writing copy, always provide multiple variations with rationale for each. Never give just one option.
+
+### Specificity
+- Never use placeholder text like "[insert X here]" in a final deliverable. Fill in real copy and recommendations based on the context provided.
+- If you don't have enough data for a specific recommendation, state your assumption explicitly.
+- Every recommendation must answer: What exactly should I change? Why? What will happen if I do it?
+- When auditing a page or copy, provide specific rewrites — not just "this could be better."
+
 ## How This Works
 
 The brand guide is stored at `.claude/brand-guide.md` in your project.
@@ -249,7 +267,11 @@ The evidence that builds trust. Other skills use these in ad copy, emails, produ
 
 ## Step 3: Build the Document
 
-After gathering information, create `.claude/brand-guide.md` with this structure:
+After gathering information, create `.claude/brand-guide.md`. This is the single source of truth that every other eCommerce skill reads. Every section must be filled in with real, specific detail — not placeholders or brackets. If information is not yet available, leave a clear note (e.g., "TO BE ADDED — founder to provide") so it's obvious what still needs gathering.
+
+The brand guide must be comprehensive enough that any other skill reading it can write on-brand, on-target copy without asking follow-up questions. That means: specific language, real examples, actual numbers, and detailed personas — not generic summaries.
+
+Write the file with this structure:
 
 ```markdown
 # Brand Guide
@@ -257,169 +279,227 @@ After gathering information, create `.claude/brand-guide.md` with this structure
 
 ## The Brand
 
-**Name:** [Brand name]
-**URL:** [website]
-**One-liner:** [What you sell in one sentence]
-**Category:** [Product category] | [Market position: budget/mid/premium/luxury]
+**Name:** The brand name exactly as it appears on the site (including capitalization)
+**URL:** Full website URL
+**One-liner:** A single sentence that tells a stranger exactly what you sell and who it's for. This should be specific enough to differentiate — not "we sell skincare" but "clinical-grade retinol treatments for women over 40 who want dermatologist results without the office visit."
+**Category:** Product category | Market position (budget / mid-range / premium / luxury)
 
 **Origin Story:**
-[Why the brand exists — the frustration, gap, or mission that started it]
+Write 3-5 sentences capturing the founder's story in their own voice where possible. This should cover: what frustration or gap they experienced, what they tried before starting the brand, and the specific moment they decided to build it. Other skills use this for About Us pages, email sequences, and ad copy — so it needs to be detailed and emotionally resonant, not a corporate summary.
 
 **Mission:**
-[What the brand stands for beyond selling products]
+Write 1-2 sentences on what the brand stands for beyond selling products. This should be a genuine belief or stance — not generic feel-good language. Good: "We believe every ingredient should earn its place in the formula — no fillers, no marketing ingredients, no fragrance to cover up cheap formulations." Bad: "We're committed to providing high-quality products."
 
 **Key Differentiators:**
-- [Differentiator 1]
-- [Differentiator 2]
-- [Differentiator 3]
+List 3-5 specific differentiators. Each one must be concrete and defensible — something a competitor cannot easily claim. For each differentiator, include a one-sentence proof point or explanation.
+- Differentiator: Why it matters and what proves it
+- Differentiator: Why it matters and what proves it
+- Differentiator: Why it matters and what proves it
 
 ---
 
 ## Customer Personas
 
-### [Persona Name 1] *(Primary)*
-- **Who:** [Demographics — age, gender, location, income]
-- **Lifestyle & values:** [What matters to them]
-- **Purchase trigger:** [The moment or feeling that makes them buy]
-- **Main objection:** [What almost stops them]
-- **Their words:** "[Verbatim language from reviews/comments]"
-- **Where they are:** [Platforms — Instagram, TikTok, Google, etc.]
+List personas in order of revenue contribution (biggest first). Most brands have 2-4. Each persona should be detailed enough that you could write a Facebook ad targeting them without any additional information.
 
-### [Persona Name 2]
-[Same structure]
+### Persona Name *(Primary — ~X% of revenue)*
+- **Who:** Age range, gender skew (e.g., 85% female), location patterns (urban/suburban, specific regions if relevant), household income range, education level if relevant
+- **Lifestyle & values:** What matters to them beyond your product. What they spend their time doing. What they post about on social media. What other brands they buy from.
+- **Purchase trigger:** The specific moment, event, or feeling that makes them search for a product like yours. Be concrete: "She just saw a friend's skin transformation on Instagram and realized her current routine isn't working" is useful. "She wants better skin" is not.
+- **Main objection:** The specific thought that almost stops them from buying at the moment of decision. Include the internal monologue: "It's $68 for a serum — what if it doesn't work on my skin type and I've wasted the money?"
+- **Their words:** 3-5 verbatim quotes from real customer reviews, DMs, Reddit threads, or TikTok comments that capture how this persona talks about the problem your product solves. These exact phrases should appear in ad copy and product descriptions.
+- **Where they are:** Ranked list of platforms where this persona spends time and discovers products, with notes on behavior (e.g., "Instagram — follows skincare influencers, saves Reels to try later" / "Google — searches specific ingredient names and reads clinical studies")
+- **Average order:** What they typically buy and spend on their first order vs. repeat orders
+
+### Next Persona Name
+(Same depth and specificity as above)
 
 ---
 
 ## Product Catalog
 
 **Overview:**
-- SKU count: [X]
-- AOV: $[X]
-- Price range: $[low] – $[high]
-- Core collections: [Collection 1], [Collection 2], [Collection 3]
+- SKU count: Total number of products
+- AOV: Average order value with context (e.g., "$72 — driven by bundles, single product average is $38")
+- Price range: Lowest-priced product to highest-priced product
+- Core collections: Name each collection with a brief description (e.g., "The Essentials — daily routine basics" / "Advanced Treatments — targeted solutions for specific concerns")
+- Signature ingredients/materials/technology: The key inputs or innovations that span multiple products and make the brand distinctive
 
 ### Hero Products
 
-**[Product Name 1]** — $[price]
-- What it does: [1-2 sentences]
-- Key ingredients/materials: [specifics]
-- Differentiator: [What makes it different]
-- Top proof point: [Best review, stat, or press mention]
-- URL: [link]
+For each hero product (top 3-5 by revenue), provide enough detail that any skill can write product copy, ad copy, or email content about this product without follow-up questions.
 
-**[Product Name 2]** — $[price]
-[Same structure]
+**Product Name** — $Price
+- What it does: 2-3 sentences explaining the product, the problem it solves, and the outcome the customer experiences. Write this in customer-facing language, not internal jargon.
+- Key ingredients/materials/specs: List each key ingredient or material with a brief note on what it does and why it matters (e.g., "2% Retinaldehyde — 11x more potent than retinol, converts to retinoic acid in one step instead of two")
+- Differentiator: The single most important thing that makes this product different from competitor versions. Be specific.
+- Top proof point: The single most persuasive piece of evidence for this product — a specific customer review quote, a clinical stat, a press pull quote, or a sales number
+- Best-selling variants: If the product has variants (size, scent, shade), which ones sell best
+- Common objections specific to this product and how to address them
+- URL: Product page link
+
+(Repeat for each hero product)
 
 ---
 
 ## Brand Voice
 
-**Voice:** [3-5 adjectives]
-**Tone spectrum:** [Where you sit from formal to casual]
-**Reference brand:** [Brand whose voice you admire]
+**Voice personality:** 3-5 adjectives that describe how the brand sounds, with a brief note explaining what each means in practice (e.g., "Confident — we state benefits as facts, not hopes. 'This works.' not 'This may help.'")
+
+**Tone spectrum:** Where the brand sits on the formal-to-casual scale, with examples. (e.g., "We sit at 7/10 casual — more like a knowledgeable friend than a doctor, but we never use slang or try too hard to be funny. Think: smart, warm, direct.")
+
+**Reference brand(s):** 1-2 brands whose voice you admire, with a note on what specifically you want to borrow (e.g., "Glossier's warmth and relatability, but with more authority and less cuteness")
 
 **Words & phrases we love:**
-- [phrase 1]
-- [phrase 2]
+List 5-10 specific words, phrases, or sentence structures the brand gravitates toward. Include examples of each used in context.
+- "ritual" (not "routine") — "Your evening ritual starts here"
+- "designed to" — "Designed to work while you sleep"
+- (Continue for each phrase)
 
 **Words & phrases we never use:**
-- [word 1]
-- [word 2]
+List 5-10 words, phrases, or tones the brand avoids, with brief reasoning.
+- "anti-aging" — we frame aging positively; use "age-confident" instead
+- "cheap" or "affordable" — we compete on quality, not price; use "accessible" if needed
+- (Continue for each avoided term)
 
 **Example of our voice done right:**
-> "[A piece of copy that nails the brand voice]"
+Pull 2-3 real examples of copy that perfectly nail the brand voice. These serve as reference for every other skill. Include the source (homepage, email, product page, social post).
+
+> "Example copy that sounds exactly like the brand" — Source: Homepage hero
+
+> "Another example" — Source: Welcome email
+
+**Voice don'ts — examples of what we do NOT sound like:**
+Include 1-2 examples of copy that would be wrong for this brand, with a note on why.
+
+> "This would be wrong because..." — Why: too corporate / too casual / too salesy / etc.
 
 ---
 
 ## Messaging & Positioning
 
-**Value proposition:**
-[The single most important promise — 1-2 sentences]
+**Primary value proposition:**
+The single most important promise the brand makes, in 1-2 sentences. This is the message that should appear in every hero section, every ad, and every email subject line in some form. It must be specific, benefit-driven, and differentiated.
 
-**Supporting messages:**
-1. [Message 1]
-2. [Message 2]
-3. [Message 3]
+**Supporting messages (3-5):**
+These reinforce the value prop from different angles. Each one should be a complete thought that could stand alone as a subheadline or email subject line.
+1. Message — What it reinforces — When to lead with it (e.g., "best for retargeting warm traffic")
+2. Message — What it reinforces — When to lead with it
+3. Message — What it reinforces — When to lead with it
 
 **Elevator pitch:**
-[30-second version]
+A 30-second version (roughly 60-80 words) of why this brand exists and why it matters. Written in the brand voice, as if the founder is explaining it to a friend at a dinner party.
 
-**Tagline:** [If applicable]
+**Tagline:** The brand tagline or slogan, if one exists. Note where it's used (homepage, packaging, social bios, etc.)
 
 **Objection handling:**
+For each common objection, provide the objection in the customer's own words and the response strategy — not just a one-line rebuttal, but the proof points and framing that overcome it.
 
-| Objection | Our response |
-|-----------|-------------|
-| [Objection 1] | [Response] |
-| [Objection 2] | [Response] |
-| [Objection 3] | [Response] |
+| Objection (in customer's words) | Response strategy | Key proof point to cite |
+|---|---|---|
+| "It's too expensive — I can get something similar for less" | How the brand justifies its price: cost-per-use math, ingredient quality comparison, longevity, results timeline | Specific stat, review quote, or comparison that closes this objection |
+| "Does it actually work? I've been burned before" | How the brand proves efficacy: clinical results, before/afters, review volume, money-back guarantee | Specific proof point |
+| "I've never heard of this brand" | How the brand builds trust quickly: press mentions, expert endorsements, review count, founder story | Specific credibility markers |
+| (Add all major objections the brand faces) | ... | ... |
 
 ---
 
 ## Competitive Landscape
 
 **Direct competitors:**
-- **[Competitor 1]:** [What they do well] / [Where they fall short] / [How we're different]
-- **[Competitor 2]:** [Same structure]
+For each direct competitor (2-5), provide a detailed comparison, not just a label.
+
+**Competitor Name** — URL
+- What they do well: Specific strengths (e.g., "Strong TikTok presence with 500K+ followers, great UGC program, fast shipping")
+- Where they fall short: Specific weaknesses from customer reviews or market positioning (e.g., "Customers complain about fragrance and sensitivity reactions. Packaging feels cheap for the price point.")
+- How we're different: The specific claim we can make that they cannot. This should be concrete and provable.
+- Their price range: How their pricing compares to ours
+- Their messaging: What they lead with (so we can differentiate)
+
+(Repeat for each competitor)
 
 **Indirect competitors:**
-- [Alternative approach and why ours is better]
+Products or approaches in different categories that solve the same underlying problem. For each one, explain why your solution is better for your target customer.
 
 **"Do nothing" alternative:**
-[What happens if they don't buy — the cost of inaction]
+What happens if the customer does not buy anything — yours or a competitor's. Describe the cost of inaction in specific, emotional terms. This is often the biggest competitor and fuels urgency messaging in ads and emails.
 
 **Our unfair advantage:**
-[The one thing hardest to replicate]
+The single thing that is hardest for any competitor to replicate. This could be a proprietary ingredient, a manufacturing process, a founder's expertise, a community, or a data advantage. Explain why it's defensible.
 
 ---
 
 ## Key Dates & Calendar
 
-| Month | Key Moment | Typical Activity |
-|-------|-----------|-----------------|
-| Jan | [Event] | [What you do] |
-| Feb | [Event] | [What you do] |
-| Mar | [Event] | [What you do] |
-| Apr | [Event] | [What you do] |
-| May | [Event] | [What you do] |
-| Jun | [Event] | [What you do] |
-| Jul | [Event] | [What you do] |
-| Aug | [Event] | [What you do] |
-| Sep | [Event] | [What you do] |
-| Oct | [Event] | [What you do] |
-| Nov | [Event — likely BFCM] | [Offer details] |
-| Dec | [Event] | [What you do] |
+Fill in every month with the brand's actual plans or likely activity. If a month has no planned activity, note it as "No major activity — evergreen content only" rather than leaving it blank.
+
+| Month | Key Moment | Typical Offer/Activity | Planning Notes |
+|---|---|---|---|
+| Jan | New Year / Fresh Start | New year messaging, wellness angle, resolution bundles | Tease by Dec 28, launch Jan 2 |
+| Feb | Valentine's Day | Gift guides, couples bundles, self-love angle, Galentine's content | Ship-by cutoff: Feb 8 |
+| Mar | Spring / Seasonal Transition | New season product push, spring refresh messaging | Launch spring collection by Mar 1 |
+| Apr | Earth Day (if relevant) | Sustainability messaging, limited-edition, community events | |
+| May | Mother's Day | Gift guides, bundles, "treat her/treat yourself" messaging | Ship-by cutoff: May 3 |
+| Jun | Summer Launch | Summer collection, travel sizes, seasonal concerns | |
+| Jul | Mid-Year Sale (if applicable) | Mid-year clearance, Christmas in July, subscriber-only offers | |
+| Aug | Back-to-School (if relevant) | Routine-building messaging, fall prep | |
+| Sep | Fall Transition | New season product push, fall routines | |
+| Oct | Halloween / Pre-Holiday | Spooky themed content (if on-brand), BFCM tease begins late Oct | |
+| Nov | BFCM | Biggest sale of the year — specific offer structure (e.g., "25% sitewide + free gift on orders over $100") | VIP early access: Nov 25, public launch: Nov 28 |
+| Dec | Holiday / Christmas | Gift guides, last-ship dates, gift card push, end-of-year reflection | Last ship: Dec 18, gift card push: Dec 19-24 |
 
 **Brand milestones:**
-- [Anniversary, launch dates, annual events]
+- Brand anniversary: Date and how you typically celebrate it
+- Product launch dates: Planned or historical launch timing
+- Annual brand moments: Founder's birthday, community events, annual sales, charity partnerships
 
-**Last-ship-date cutoffs:**
-- [Holiday: date] (e.g., Christmas: Dec 18)
+**Last-ship-date cutoffs by carrier:**
+- Standard shipping: Date
+- Expedited shipping: Date
+- Express/overnight: Date
 
 ---
 
 ## Proof Points
 
-**Reviews:** [Total count] reviews, [X.X] average stars
-**Units/customers:** [Number sold or served]
+Every proof point should be written in a format that can be dropped directly into copy — other skills will pull from this section when writing ads, emails, and product pages.
 
-**Standout reviews:**
-> "[Detailed, persuasive customer quote]" — [Name]
-> "[Another great review]" — [Name]
-> "[Another]" — [Name]
+**Reviews:**
+- Total review count and average star rating across platforms (site, Amazon, etc.)
+- Review velocity: How many new reviews per month (signals momentum)
+- Platform breakdown if relevant (e.g., "2,800 on site at 4.8 stars, 1,200 on Amazon at 4.6 stars")
+
+**Standout reviews (5-8 curated quotes):**
+Select reviews that are specific, emotional, and mention concrete results. Generic "love it!" reviews are not useful. For each review, note which persona it resonates with and which product it references.
+
+> "Exact review quote that is specific, detailed, and persuasive" — Reviewer name, verified buyer — Product: Product Name — Best for: Which persona this speaks to
+
+> (Continue for 5-8 reviews)
+
+**Units/customers:**
+- Total units sold or customers served (if publicly shared)
+- Milestone framing: How to express this in copy (e.g., "Trusted by 25,000+ customers" or "Over 100,000 units sold")
 
 **Press & media:**
-- [Publication 1]
-- [Publication 2]
+- List each publication with the specific quote or mention if available
+- "As Seen In" logos available: List publications whose logos you have permission to use
+- Notable quotes from press that can be used in copy
 
 **Awards & certifications:**
-- [Award/cert 1]
+- List each award or certification with the year and granting body
+- Which ones carry the most weight with your target customer
 
 **Expert endorsements:**
-- [Endorsement]
+- Name, title/credentials, and what they said about the product
+- Whether you have permission to use their name and likeness in marketing
 
-**Notable stats:**
-- [Repeat purchase rate, subscription metrics, UGC stats, etc.]
+**UGC & community stats:**
+- Branded hashtag usage (e.g., "#YourBrand — 12,000+ posts on Instagram")
+- Community size (email list, SMS list, social followers — if impressive)
+- Repeat purchase rate or subscription metrics (if strong)
+
+**Notable customer stories/transformations:**
+- 2-3 detailed customer stories that go beyond a single review — these are the transformation narratives used in long-form ads, email sequences, and landing pages
 ```
 
 ---
