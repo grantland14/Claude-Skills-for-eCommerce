@@ -617,7 +617,7 @@ This skill doesn't just report competitor activity — it analyzes the strategy 
 
 3. **Pricing and offer analysis** — Product-by-product pricing comparison, subscription discounts, bundle structures, welcome offers, free shipping thresholds, and return policies. Claude builds a competitive pricing table.
 
-4. **Email flow teardown** — Claude guides you through subscribing to competitor email lists and documents their welcome series, browse abandonment, cart abandonment, campaign frequency, and content quality.
+4. **Email flow teardown** — Share competitor emails you've collected and Claude will analyze their welcome series, browse abandonment, cart abandonment, campaign frequency, and content quality. Claude tells you what to look for and how to evaluate what you find.
 
 5. **Social media presence** — Platform activity, posting frequency, engagement rates, content types, UGC usage, and influencer partnerships. Which content gets the most engagement? What creators are they working with?
 

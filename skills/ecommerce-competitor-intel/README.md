@@ -32,7 +32,7 @@ Start a new Claude Code conversation — Claude will automatically use this skil
 - *"Analyze my top 3 competitors' Meta ads — here are their brand names"*
 - *"Do a full competitive audit of [Competitor Name] — website, pricing, and positioning"*
 - *"Compare my pricing against these 5 competitors in the premium skincare space"*
-- *"Sign up for [Competitor]'s email list and tell me what their welcome series looks like"*
+- *"Here are 8 emails I received from [Competitor] after subscribing — analyze their welcome series strategy"*
 - *"Map the competitive positioning of the top brands in organic baby food"*
 - *"My competitor just launched a product similar to mine — what should I do?"*
 

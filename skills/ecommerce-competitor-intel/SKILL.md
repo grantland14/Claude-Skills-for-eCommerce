@@ -236,9 +236,11 @@ Return Policy   | [Yours]   | [A]    | [B]    | [C]    |
 
 **How to analyze a competitor's email program:**
 
-Sign up for their email list. Use a secondary email address. Over 2-4 weeks, document everything you receive.
+The best way to study a competitor's email program is to subscribe to their list yourself using a secondary email address. Over 2-4 weeks, screenshot and save everything you receive. Then share those emails with Claude for analysis.
 
-**What to track:**
+If you've already been collecting competitor emails, share them here and Claude will analyze the strategy, timing, copy quality, and what you can learn from them.
+
+**What to look for (and share with Claude):**
 
 Welcome series:
 - How many emails in the welcome sequence?
@@ -248,7 +250,7 @@ Welcome series:
 - What story do they tell across the sequence?
 
 Browse abandonment:
-- Visit a product page after subscribing. Do you get browse abandonment emails?
+- After subscribing, visit a product page. Do you get browse abandonment emails?
 - How soon after? (1 hour? 4 hours? 24 hours?)
 - What's the message? (Reminder? Social proof? Incentive?)
 
@@ -504,7 +506,7 @@ Don't panic-discount. Their sale creates urgency for THEIR customers, not yours.
 
 - [ ] Full ad library analysis for top 3 competitors
 - [ ] Product catalog and pricing comparison update
-- [ ] Email program audit (subscribe, review sequence)
+- [ ] Email program review (analyze any competitor emails you've collected)
 - [ ] Social media performance comparison
 - [ ] Positioning map update
 - [ ] Strategic recommendations based on changes
