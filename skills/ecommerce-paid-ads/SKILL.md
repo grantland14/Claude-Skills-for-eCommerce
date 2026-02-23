@@ -20,10 +20,10 @@ Every response must be comprehensive, specific, and actionable. Follow these rul
 - Show your reasoning. If you calculate a ROAS target, show the margin math behind it.
 
 ### File Delivery
-- For any analysis, audit, strategy, plan, or multi-section deliverable: save the complete output as a markdown file using the Write tool.
-- File path: `reports/paid-ads-{YYYY-MM-DD}.md` (create the `reports/` directory if it doesn't exist).
-- The .md file IS the deliverable. Put everything in the file, then confirm to the user what was saved and where.
-- Still provide a brief summary in the chat message (3-5 key findings) so the user gets immediate value, but the full report lives in the file.
+- Only save a .md report when the user asks for a full report, audit, analysis, review, strategy, plan, or deep dive.
+- For quick questions or single-topic answers, respond thoroughly in chat — no file needed.
+- When saving: use `reports/paid-ads-{YYYY-MM-DD}.md` (create `reports/` if needed). Always .md format — never .docx, .pdf, or other formats.
+- Provide a brief summary in chat (3-5 key findings) plus confirmation of where the file was saved.
 
 ### Report Structure
 Every saved report must include:
@@ -751,397 +751,47 @@ These are ranges, not guarantees. Your benchmarks depend on product category, pr
 
 ### For Campaign Strategy
 
-Campaign Strategy deliverables are comprehensive media plans saved as `.md` files. The full structure is shown below. Every campaign, ad set, and ad must be fully specified.
+Save to `reports/campaign-strategy-{platform}-{YYYY-MM-DD}.md`. Include:
 
-```markdown
-# Paid Ads Campaign Strategy: [Brand Name]
-**Platform:** [Meta / Google / TikTok / Pinterest]
-**Date:** [Date]
-**Monthly Budget:** $XX,XXX
-**Objective:** [Awareness / Conversions / Scaling]
-**Prepared by:** Claude (eCommerce Paid Ads Skill)
-
----
-
-## Executive Summary
-
-Provide a thorough overview covering: the strategic approach for this platform, how the budget is allocated across funnel stages, the primary ROAS/CPA targets, and what success looks like at 30/60/90 days. Reference the brand's gross margin to justify ROAS targets. This should be a full paragraph.
-
----
-
-## Budget Allocation by Funnel Stage
-
-| Funnel Stage | Monthly Budget | % of Total | ROAS Target | CPA Target | Rationale |
-|---|---|---|---|---|---|
-| Prospecting (Cold) | $X,XXX | XX% | X.Xx | $XX.XX | e.g., "Primary growth driver — 60% of budget to scale new customer acquisition" |
-| Retargeting (Warm) | $X,XXX | XX% | X.Xx | $XX.XX | e.g., "High-efficiency conversion of existing traffic" |
-| Retention / Existing Customers | $X,XXX | XX% | X.Xx | $XX.XX | e.g., "Cross-sell and repurchase campaigns to existing buyers" |
-| Testing / Experimental | $X,XXX | XX% | — | — | e.g., "Reserved for new creative and audience testing" |
-| **TOTAL** | **$XX,XXX** | **100%** | **X.Xx (blended)** | **$XX.XX (blended)** | — |
-
-**Target Justification:**
-- Break-even ROAS = 1 / Gross Margin % = X.Xx (this is the minimum ROAS to not lose money on first order)
-- Target ROAS accounts for: LTV payback, operating costs, and profit target
-- Blended target of X.Xx assumes XX% of revenue from prospecting at X.Xx and XX% from retargeting at X.Xx
-
----
-
-## Campaign Structure
-
-### Campaign 1: [Campaign Name — e.g., "Prospecting — Broad Interests"]
-
-| Parameter | Detail |
-|---|---|
-| Campaign Objective | Conversions / Sales |
-| Campaign Budget | $X,XXX/month ($XXX/day) |
-| Bid Strategy | Lowest Cost / Cost Cap at $XX / Bid Cap at $XX |
-| Optimization Event | Purchase |
-
-**Ad Sets:**
-
-| Ad Set Name | Targeting | Audience Size | Daily Budget | Placement |
-|---|---|---|---|---|
-| [Name] | e.g., Broad interests — [list interests] | X.XM — X.XM | $XXX | Automatic / Feed + Stories + Reels |
-| [Name] | e.g., Lookalike — 1% Purchasers (180d) | X.XM — X.XM | $XXX | Automatic |
-| [Name] | e.g., Broad (no targeting) | X.XM+ | $XXX | Automatic |
-
-**Ads per Ad Set:**
-
-| Ad Name | Format | Creative Direction | Primary Text (first 125 chars) | Headline | CTA |
-|---|---|---|---|---|---|
-| [Name] | UGC Video 15s | Customer testimonial highlighting [benefit] | First 125 characters of ad copy... | Exact headline | Shop Now |
-| [Name] | Static Image | Product-on-lifestyle flat lay | First 125 characters of ad copy... | Exact headline | Shop Now |
-| [Name] | Carousel | Before/After or multi-product | First 125 characters of ad copy... | Exact headline | Learn More |
-
-(Repeat the full Campaign specification for EVERY campaign in the account structure — typically 3-6 campaigns covering Prospecting, Retargeting, Retention, and Testing.)
-
----
-
-### Campaign 2: [Campaign Name — e.g., "Retargeting — Site Visitors"]
-
-(Full specification as above)
-
----
-
-### Campaign 3: [Campaign Name — e.g., "Retargeting — Cart Abandoners"]
-
-(Full specification as above)
-
----
-
-## ROAS & Performance Targets
-
-| Metric | Prospecting | Retargeting | Blended | Notes |
-|---|---|---|---|---|
-| ROAS | X.Xx | X.Xx | X.Xx | Based on XX% gross margin |
-| CPA (New Customer) | $XX.XX | $XX.XX | $XX.XX | Acceptable if LTV:CAC > 3:1 |
-| CTR | >X.X% | >X.X% | >X.X% | Platform benchmark |
-| CPM | $XX — $XX | $XX — $XX | — | Expected range for this vertical |
-| Conversion Rate (click-to-purchase) | X.X% | X.X% | X.X% | Dependent on landing page performance |
-| Frequency Cap | <2.0/week | <4.0/week | — | Fatigue prevention |
-
----
-
-## Creative Needs
-
-| # | Creative Type | Format | Platform Specs | Funnel Stage | Quantity Needed | Priority |
-|---|---|---|---|---|---|---|
-| 1 | UGC Testimonial Video | 9:16 vertical, 15-30s | 1080x1920, <4GB | Prospecting | 3 variations | High |
-| 2 | Product Demo / How-To | 9:16 vertical, 30-60s | 1080x1920, <4GB | Prospecting | 2 variations | High |
-| 3 | Static — Lifestyle | 1:1 square | 1080x1080, <30MB | Prospecting + Retargeting | 3 variations | Medium |
-| 4 | Carousel — Multi-Product | 1:1 square per card | 1080x1080 per card, 3-5 cards | Retargeting | 2 variations | Medium |
-| 5 | Dynamic Product Ad | Auto-generated from catalog | Catalog feed required | Retargeting | 1 template | High |
-
----
-
-## Measurement Plan
-
-| KPI | How Measured | Reporting Cadence | Action Threshold |
-|---|---|---|---|
-| Blended ROAS | Platform reporting + GA4 cross-reference | Daily check, weekly report | If <X.Xx for 3 consecutive days, pause and diagnose |
-| CPA by campaign | Platform reporting | Daily | If >$XX.XX for 48 hours, reduce budget or pause ad set |
-| Creative fatigue (frequency + CTR) | Frequency >X.X AND CTR declining >20% | Weekly | Rotate in new creative |
-| Attribution discrepancy | Compare platform vs. GA4 revenue | Weekly | If >25% discrepancy, investigate tracking |
-
----
-
-## Testing Roadmap
-
-| Week | Test | Variable | Hypothesis | Budget | Success Metric |
-|---|---|---|---|---|---|
-| 1-2 | Audience test | Broad vs. Interest vs. Lookalike | Broad will outperform at scale | $X,XXX | CPA comparison after 50+ conversions each |
-| 3-4 | Creative format test | UGC video vs. Static image | UGC will drive higher CTR and lower CPA | $X,XXX | CTR and CPA after statistical significance |
-| 5-6 | Copy angle test | Benefit-led vs. Social proof vs. Urgency | Social proof will win for cold audiences | $X,XXX | CTR and conversion rate |
-| 7-8 | Landing page test | PDP vs. Collection page vs. Dedicated LP | Dedicated LP will convert higher for prospecting | $X,XXX | On-site conversion rate (GA4) |
-
----
-
-## Next Steps
-
-Sequenced implementation plan: what to set up in the ad platform this week, what creative to brief immediately, when to launch, and when to conduct the first performance review. Include specific checkpoints at Day 3, Day 7, Day 14, and Day 30.
-```
+1. Executive Summary — full paragraph on strategic approach for this platform, budget allocation across funnel stages, primary ROAS/CPA targets justified by gross margin, and what success looks like at 30/60/90 days
+2. Budget Allocation by Funnel Stage — table: prospecting, retargeting, retention, testing, each with monthly budget, % of total, ROAS target, CPA target, and rationale. Include target justification showing break-even ROAS calculation from gross margin
+3. Campaign Structure — for EVERY campaign (typically 3-6 covering prospecting, retargeting, retention, testing): campaign-level parameters (objective, budget, bid strategy, optimization event), ad sets table (name, targeting, audience size, daily budget, placement), and ads table per ad set (name, format, creative direction, primary text first 125 chars, headline, CTA)
+4. ROAS & Performance Targets — table by funnel stage: ROAS, CPA, CTR, CPM range, conversion rate, and frequency cap, with notes explaining each target
+5. Creative Needs — table: creative type, format, platform specs, funnel stage, quantity needed, and priority for all assets required
+6. Measurement Plan — table: KPI, how measured, reporting cadence, and specific action thresholds (e.g., pause if CPA exceeds $XX for 48 hours)
+7. Testing Roadmap — 8-week plan: week range, test name, variable, hypothesis, budget, and success metric
+8. Next Steps — sequenced implementation plan with specific checkpoints at Day 3, Day 7, Day 14, and Day 30
 
 ---
 
 ### For Ad Creative Briefs
 
-Ad Creative Briefs are detailed production documents saved as `.md` files. The full structure is shown below.
+Save to `reports/creative-brief-{concept-name}-{YYYY-MM-DD}.md`. Include:
 
-```markdown
-# Ad Creative Brief: [Ad Name / Concept Name]
-**Brand:** [Brand Name]
-**Platform:** [Meta / Google / TikTok / Pinterest]
-**Format:** [UGC Video / Static Image / Carousel / Shopping / Collection]
-**Funnel Stage:** [Prospecting / Retargeting / Retention]
-**Prepared by:** Claude (eCommerce Paid Ads Skill)
-
----
-
-## Creative Concept
-
-| Parameter | Detail |
-|---|---|
-| Concept Name | Descriptive name for internal reference |
-| Objective | What this ad is designed to achieve (e.g., "Stop the scroll with a relatable pain point, drive cold traffic to PDP") |
-| Target Audience | Specific description of who sees this ad |
-| Key Message | The single most important takeaway for the viewer |
-| Tone | e.g., "Conversational, authentic, not salesy — like a friend recommending a product" |
-| Angle | e.g., "Problem-solution" / "Social proof" / "Before-after" / "Unboxing" / "Founder story" |
-
----
-
-## Hook Options (First 3 Seconds / Above the Fold)
-
-| # | Hook | Type | Why It Works |
-|---|---|---|---|
-| 1 | Exact hook text or video opening description | Pattern interrupt / Question / Bold claim / Visual shock | Specific rationale tied to audience psychology |
-| 2 | Exact hook text or opening | Type | Rationale |
-| 3 | Exact hook text or opening | Type | Rationale |
-
----
-
-## Ad Copy
-
-**Primary Text (for feed placements):**
-Full ad copy — typically 3-5 short paragraphs or lines. Include the hook, value proposition, social proof element, and CTA within the copy. Mark the "see more" cutoff point (first 125 characters).
-
-**Headline:** Exact headline text (40 characters max for Meta)
-**Description:** Exact description text (if applicable)
-**CTA Button:** Shop Now / Learn More / Get Offer / Sign Up
-
----
-
-## Visual / Video Direction
-
-**For Video:**
-| Timestamp | Visual | Audio/Text Overlay | Notes |
-|---|---|---|---|
-| 0-3s | Hook scene — describe exactly what appears on screen | Text overlay: exact text | This is the scroll-stopper |
-| 3-8s | Problem/pain point scene | Voiceover: exact script or text overlay | Build relatability |
-| 8-15s | Product introduction / solution | Voiceover or text | Show product in use |
-| 15-25s | Social proof / results | Customer quote or stat overlay | Build trust |
-| 25-30s | CTA + offer (if applicable) | Text overlay: exact CTA text | Clear next step |
-
-**For Static Image:**
-Describe the exact composition — product placement, background, text overlay content and placement, color palette, any lifestyle elements. Reference brand guidelines if relevant.
-
-**For Carousel:**
-Specify each card — image content, headline per card, and the narrative arc across all cards.
-
----
-
-## Platform Specifications
-
-| Spec | Requirement |
-|---|---|
-| Aspect Ratio | 9:16 (Stories/Reels) / 1:1 (Feed) / 4:5 (Feed optimal) |
-| Resolution | 1080x1920 / 1080x1080 / 1080x1350 |
-| Duration (video) | XX seconds (min 6s, recommended 15-30s) |
-| File Size | <4GB video / <30MB image |
-| Safe Zones | Keep text within center 80% for Stories/Reels |
-
----
-
-## Variations to Produce
-
-List all variations needed for testing — e.g., "3 hook variations x 2 body variations = 6 total ads. Same body copy across all, only creative changes."
-
----
-
-## Performance Expectations
-
-| Metric | Target | Benchmark for This Format |
-|---|---|---|
-| CTR | >X.X% | X.X% average for [format] on [platform] |
-| Hook Rate (video) | >XX% | XX% average for 15s UGC |
-| Hold Rate (video — watched 50%+) | >XX% | XX% average |
-| CPA | <$XX.XX | Based on account historical data |
-```
+1. Creative Concept — table: concept name, objective, target audience, key message, tone, and angle (problem-solution, social proof, before-after, unboxing, founder story, etc.)
+2. Hook Options — table with 3 hooks: exact hook text or video opening, type (pattern interrupt, question, bold claim, etc.), and rationale tied to audience psychology
+3. Ad Copy — full primary text for feed placements (3-5 paragraphs with "see more" cutoff marked at 125 characters), headline (40 chars max for Meta), description, and CTA button choice
+4. Visual/Video Direction — for video: timestamped scene-by-scene table (visual, audio/text overlay, notes). For static: exact composition description. For carousel: per-card specification with narrative arc
+5. Platform Specifications — table: aspect ratio, resolution, duration, file size, safe zones
+6. Variations to Produce — list all variations needed for testing with total count and what varies between them
+7. Performance Expectations — table: CTR, hook rate, hold rate, CPA, each with target and benchmark for this format/platform
 
 ---
 
 ### For Campaign Audit
 
-The Campaign Audit is a comprehensive diagnostic report saved as a `.md` file. The full structure is shown below. Every platform and campaign must be individually assessed.
+Save to `reports/paid-ads-audit-{YYYY-MM-DD}.md`. Include:
 
-```markdown
-# Paid Ads Campaign Audit: [Brand Name]
-**Date:** [Date]
-**Period Analyzed:** [Date range]
-**Platforms Audited:** [Meta, Google, TikTok, etc.]
-**Total Monthly Spend:** $XX,XXX
-**Prepared by:** Claude (eCommerce Paid Ads Skill)
-
----
-
-## Executive Summary
-
-Provide a thorough overview covering: overall paid media efficiency (blended ROAS, MER contribution), the single biggest source of wasted spend, the single highest-impact optimization opportunity, and the estimated dollar impact of acting on the top three recommendations. State whether the current paid strategy supports or undermines the brand's growth targets. This should be a full paragraph.
-
----
-
-## Campaign Performance Dashboard
-
-| Campaign | Platform | Funnel Stage | Spend | Revenue | ROAS | CPA | CTR | Conv Rate | Freq. | Trend (30d) | Status |
-|---|---|---|---|---|---|---|---|---|---|---|---|
-| [Campaign name] | Meta | Prospecting | $X,XXX | $X,XXX | X.Xx | $XX.XX | X.X% | X.X% | X.X | ↑/↓/→ | 🟢/🟡/🔴 |
-| [Campaign name] | Meta | Retargeting | $X,XXX | $X,XXX | X.Xx | $XX.XX | X.X% | X.X% | X.X | ↑/↓/→ | 🟢/🟡/🔴 |
-| [Campaign name] | Google | Brand Search | $X,XXX | $X,XXX | X.Xx | $XX.XX | X.X% | X.X% | — | ↑/↓/→ | 🟢/🟡/🔴 |
-| [Campaign name] | Google | Non-Brand Search | $X,XXX | $X,XXX | X.Xx | $XX.XX | X.X% | X.X% | — | ↑/↓/→ | 🟢/🟡/🔴 |
-| [Campaign name] | Google | Shopping/PMax | $X,XXX | $X,XXX | X.Xx | $XX.XX | X.X% | X.X% | — | ↑/↓/→ | 🟢/🟡/🔴 |
-| [Campaign name] | TikTok | Prospecting | $X,XXX | $X,XXX | X.Xx | $XX.XX | X.X% | X.X% | X.X | ↑/↓/→ | 🟢/🟡/🔴 |
-| **TOTAL** | — | — | **$XX,XXX** | **$XX,XXX** | **X.Xx** | **$XX.XX** | **X.X%** | **X.X%** | — | — | — |
-
----
-
-## Platform-by-Platform Deep Dive
-
-### Meta Ads Assessment
-
-**Account Structure:**
-Describe the current account structure — number of campaigns, ad sets per campaign, ads per ad set. Assess whether the structure follows best practices (consolidated vs. fragmented, CBO vs. ABO, proper funnel separation).
-
-**What is Working:**
-Specific campaigns, ad sets, or creatives that are performing well. Include specific metrics. Explain why they are working.
-
-**What is NOT Working:**
-Specific campaigns, ad sets, or creatives that are underperforming. Include specific metrics. Diagnose the root cause (audience saturation, creative fatigue, wrong optimization event, budget too low for learning phase, etc.).
-
-**Specific Fixes:**
-
-| Issue | Root Cause | Fix | Expected Impact | Timeline |
-|---|---|---|---|---|
-| e.g., Prospecting CPA rose 40% in 30 days | Creative fatigue — top ad frequency >4.0 | Rotate in 3 new UGC creatives, pause fatigued ads | CPA reduction of 15-25% | 1-2 weeks |
-| Specific issue | Root cause | Specific action | Quantified impact | Timeline |
-
-(Repeat the full Platform Deep Dive for EVERY active platform — Google Ads, TikTok, Pinterest, etc.)
-
----
-
-### Google Ads Assessment
-
-(Full specification as above, with Google-specific analysis: Search term reports, Quality Score issues, Shopping feed optimization, PMax asset group analysis, negative keyword gaps, etc.)
-
----
-
-## Creative Performance Analysis
-
-### Top Performing Creatives
-
-| Rank | Creative Name | Platform | Format | Spend | ROAS | CPA | CTR | Age (days) | Fatigue Risk |
-|---|---|---|---|---|---|---|---|---|---|
-| 1 | [Name/description] | Meta | UGC Video | $X,XXX | X.Xx | $XX.XX | X.X% | XX | Low/Med/High |
-| 2 | [Name/description] | Meta | Static | $X,XXX | X.Xx | $XX.XX | X.X% | XX | Low/Med/High |
-| 3 | [Name/description] | Google | Shopping | $X,XXX | X.Xx | $XX.XX | X.X% | XX | Low/Med/High |
-
-### Creative Mix Assessment
-
-| Creative Type | # Active | % of Spend | Avg ROAS | Gap/Opportunity |
-|---|---|---|---|---|
-| UGC Video | X | XX% | X.Xx | e.g., "Need more volume — only 2 active, both >30 days old" |
-| Static Image | X | XX% | X.Xx | Assessment |
-| Carousel | X | XX% | X.Xx | Assessment |
-| Dynamic Product Ads | X | XX% | X.Xx | Assessment |
-
-**Creative Fatigue Assessment:** Identify which creatives are showing fatigue signals (rising frequency + declining CTR + rising CPA over time). Recommend specific replacements.
-
----
-
-## Audience Segment Performance
-
-| Audience | Platform | Type | Size | Spend | ROAS | CPA | Notes |
-|---|---|---|---|---|---|---|---|
-| Broad (no targeting) | Meta | Prospecting | XM+ | $X,XXX | X.Xx | $XX.XX | Assessment |
-| Interest: [specific] | Meta | Prospecting | X.XM | $X,XXX | X.Xx | $XX.XX | Assessment |
-| Lookalike 1% — Purchasers | Meta | Prospecting | X.XM | $X,XXX | X.Xx | $XX.XX | Assessment |
-| Site Visitors (30d) | Meta | Retargeting | XX,XXX | $X,XXX | X.Xx | $XX.XX | Assessment |
-| Cart Abandoners (7d) | Meta | Retargeting | X,XXX | $X,XXX | X.Xx | $XX.XX | Assessment |
-| Non-Brand Keywords | Google | Prospecting | — | $X,XXX | X.Xx | $XX.XX | Assessment |
-| Brand Keywords | Google | Brand Defense | — | $X,XXX | X.Xx | $XX.XX | Assessment |
-
----
-
-## Budget Reallocation Recommendations
-
-| Channel / Campaign | Current Spend | Recommended Spend | Change ($) | Change (%) | Rationale |
-|---|---|---|---|---|---|
-| Meta — Prospecting | $X,XXX | $X,XXX | +$X,XXX | +XX% | e.g., "Best-performing prospecting channel, has room to scale before diminishing returns" |
-| Meta — Retargeting | $X,XXX | $X,XXX | -$XXX | -XX% | e.g., "Over-invested relative to retargeting pool size — frequency too high" |
-| Google — Brand Search | $X,XXX | $X,XXX | -$XXX | -XX% | Specific reason |
-| Google — Shopping | $X,XXX | $X,XXX | +$X,XXX | +XX% | Specific reason |
-| TikTok — Testing | $X,XXX | $X,XXX | +$XXX | +XX% | Specific reason |
-| **TOTAL** | **$XX,XXX** | **$XX,XXX** | **$0** | — | Budget-neutral reallocation |
-
-**Expected Impact of Reallocation:**
-
-| Metric | Current | Projected | Improvement |
-|---|---|---|---|
-| Blended ROAS | X.Xx | X.Xx | +X.Xx |
-| Blended CPA | $XX.XX | $XX.XX | -$X.XX |
-| Monthly Revenue (paid) | $XX,XXX | $XX,XXX | +$X,XXX |
-| New Customers / Month | X,XXX | X,XXX | +XXX |
-
----
-
-## Tracking & Attribution Assessment
-
-| Tracking Element | Status | Issues | Impact | Fix |
-|---|---|---|---|---|
-| Meta Pixel / CAPI | ✅ / ⚠️ / ❌ | Specific issue | Quantified data impact | Specific fix |
-| Google Conversion Tag | ✅ / ⚠️ / ❌ | Specific issue | Quantified data impact | Specific fix |
-| GA4 Integration | ✅ / ⚠️ / ❌ | Specific issue | Quantified data impact | Specific fix |
-| UTM Parameters | ✅ / ⚠️ / ❌ | Specific issue | Quantified data impact | Specific fix |
-| Post-Purchase Survey | ✅ / ⚠️ / ❌ | Specific issue | Quantified data impact | Specific fix |
-
----
-
-## Testing Roadmap (Next 90 Days)
-
-| Priority | Test | Platform | Variable | Hypothesis | Budget | Timeline | Success Metric |
-|---|---|---|---|---|---|---|---|
-| 1 | Description | Platform | What is being tested | Expected outcome and why | $X,XXX | Weeks X-X | Specific metric and threshold |
-| 2 | Description | Platform | Variable | Hypothesis | $X,XXX | Weeks X-X | Success metric |
-| 3 | Description | Platform | Variable | Hypothesis | $X,XXX | Weeks X-X | Success metric |
-| 4 | Description | Platform | Variable | Hypothesis | $X,XXX | Weeks X-X | Success metric |
-
----
-
-## Recommendations
-
-| Priority | Recommendation | Expected Impact | Effort | Timeline |
-|---|---|---|---|---|
-| 1 | Specific action | +$X,XXX/mo revenue or -$X,XXX/mo wasted spend | Low/Med/High | This week / 2 weeks / 30 days |
-| 2 | Specific action | Quantified impact | Effort | Timeline |
-| 3 | Specific action | Quantified impact | Effort | Timeline |
-| 4 | Specific action | Quantified impact | Effort | Timeline |
-| 5 | Specific action | Quantified impact | Effort | Timeline |
-
----
-
-## Next Steps
-
-Sequenced action plan: what to change this week, what to test in weeks 2-4, and what to build/optimize over the next 30-90 days. For each step, name who owns it and what the measurable success criteria is.
-```
+1. Executive Summary — full paragraph on overall paid media efficiency (blended ROAS, MER contribution), the single biggest source of wasted spend, the single highest-impact optimization, estimated dollar impact of top three recommendations, and whether current strategy supports growth targets
+2. Campaign Performance Dashboard — table for every campaign across all platforms: campaign name, platform, funnel stage, spend, revenue, ROAS, CPA, CTR, conversion rate, frequency, 30-day trend, and status indicator
+3. Platform-by-Platform Deep Dive — for EVERY active platform (Meta, Google, TikTok, etc.): account structure assessment, what is working (with specific metrics and why), what is NOT working (with root cause diagnosis), and specific fixes table (issue, root cause, fix, expected impact, timeline). Google section should include search term report findings, Quality Score issues, Shopping feed optimization, PMax asset groups, and negative keyword gaps
+4. Creative Performance Analysis — top performing creatives table (rank, name, platform, format, spend, ROAS, CPA, CTR, age, fatigue risk), creative mix assessment table (type, active count, % of spend, avg ROAS, gap/opportunity), and creative fatigue assessment identifying specific creatives needing replacement
+5. Audience Segment Performance — table for every audience: name, platform, type, size, spend, ROAS, CPA, and assessment notes
+6. Budget Reallocation Recommendations — table: channel, current spend, recommended spend, dollar and percentage change, rationale. Must be budget-neutral. Include expected impact table showing projected improvement in blended ROAS, CPA, monthly revenue, and new customers
+7. Tracking & Attribution Assessment — table for every tracking element (Meta Pixel/CAPI, Google conversion tag, GA4, UTMs, post-purchase survey): status, specific issues, quantified data impact, and specific fix
+8. Testing Roadmap (Next 90 Days) — prioritized table: test description, platform, variable, hypothesis, budget, timeline, and success metric
+9. Recommendations — prioritized table with 5+ rows: action, quantified impact (dollars), effort, timeline
+10. Next Steps — sequenced plan for this week, weeks 2-4, and 30-90 days with owners and measurable success criteria
 
 ---
 

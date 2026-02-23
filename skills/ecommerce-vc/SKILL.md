@@ -22,10 +22,10 @@ Every response must be comprehensive, specific, and actionable. Follow these rul
 - Show your reasoning. If you calculate a ROAS target, show the margin math behind it.
 
 ### File Delivery
-- For any analysis, audit, strategy, plan, or multi-section deliverable: save the complete output as a markdown file using the Write tool.
-- File path: `reports/vc-assessment-{YYYY-MM-DD}.md` (create the `reports/` directory if it doesn't exist).
-- The .md file IS the deliverable. Put everything in the file, then confirm to the user what was saved and where.
-- Still provide a brief summary in the chat message (3-5 key findings) so the user gets immediate value, but the full report lives in the file.
+- Only save a .md report when the user asks for a full report, audit, analysis, review, strategy, plan, or deep dive.
+- For quick questions or single-topic answers, respond thoroughly in chat — no file needed.
+- When saving: use `reports/vc-assessment-{YYYY-MM-DD}.md` (create `reports/` if needed). Always .md format — never .docx, .pdf, or other formats.
+- Provide a brief summary in chat (3-5 key findings) plus confirmation of where the file was saved.
 
 ### Report Structure
 Every saved report must include:
@@ -354,317 +354,28 @@ What investors will ask for during due diligence — have these ready:
 
 ## Output Formats
 
-Every VC assessment must be saved as a markdown file following the Report Structure in Response Standards. The templates below show the minimum depth and structure expected for each report type. Fill all sections with real analysis based on the brand's data — never leave placeholders.
+Every VC assessment must be saved as a markdown file following the Report Structure in Response Standards. The descriptions below define the minimum sections and depth expected for each report type. Fill all sections with real analysis based on the brand's data — never leave placeholders.
 
 ### For VC / Fundability Assessment
 
-The default output for any VC readiness engagement. This is the full report.
+Save to `reports/vc-assessment-{YYYY-MM-DD}.md`. The default output for any VC readiness engagement. Include:
 
-```markdown
-# VC Readiness & Fundability Assessment
-**Brand:** {Brand Name}
-**Date:** {YYYY-MM-DD}
-**Scope:** Full fundability assessment, unit economics analysis, and valuation estimate
-**Data Basis:** TTM revenue of ${X.XM}, {X} months of operating history
-
----
-
-## Executive Summary
-- Overall Fundability Rating: Strong / Moderate / Weak / Not VC-Appropriate — with one-sentence justification
-- The business generates ${X.XM} in TTM revenue growing at {X}% YoY with {X}% gross margins — this places it in the {top/middle/bottom} tier of DTC brands at this stage
-- Unit economics are {healthy/concerning}: {X.Xx} LTV:CAC ratio, ${XX} blended CAC, ${XX} contribution margin per order
-- Estimated valuation range: ${X.XM} - ${X.XM} based on {X.X-X.Xx} revenue multiple for the category and growth rate
-- Recommended funding path: {VC raise / Revenue-based financing / Bootstrap to next milestone / Strategic partnership}
-- If raising: recommended round size of ${X.XM} at a ${X.XM} - ${X.XM} pre-money valuation
-- Top 3 strengths a VC would highlight: {strength 1}, {strength 2}, {strength 3}
-- Top 3 concerns a VC would raise: {concern 1}, {concern 2}, {concern 3}
-
----
-
-## 1. Business Scorecard
-
-### Key Metrics Dashboard
-
-| Metric | Current Value | DTC Benchmark (at this stage) | Rating |
-|--------|--------------|------------------------------|--------|
-| Annual Revenue (TTM) | ${X.XM} | Varies by stage — Seed: $500K-$2M, Series A: $2M-$10M | On track / Below / Above |
-| Revenue Growth (YoY) | {X}% | >100% for Seed, >50% for Series A | Strong / Moderate / Weak |
-| Monthly Revenue (current) | ${XXX}K | Growing sequentially | Growing / Flat / Declining |
-| Revenue Growth (MoM, last 6 months) | {X}% avg | >5% MoM | Strong / Moderate / Weak |
-| Gross Margin | {X}% | 65-80% for DTC | Healthy / At Risk / Critical |
-| Net Margin | {X}% | Negative OK if investing in growth | Sustainable / Burn concern |
-| Customer Count (total) | {X,XXX} | Context-dependent | — |
-| Repeat Purchase Rate | {X}% | >30% for consumables, >20% for durables | Strong / Moderate / Weak |
-| Average Order Value | ${XX} | Category-dependent | Above / At / Below benchmark |
-| Blended CAC | ${XX} | Must be <1/3 of LTV | Healthy / At Risk / Critical |
-| LTV (12-month) | ${XXX} | Must be >3x CAC | Strong / Moderate / Weak |
-| LTV:CAC Ratio | {X.Xx} | >3:1 target, >4:1 strong | Strong / Moderate / Weak |
-| Payback Period | {X} months | <6 months ideal, <12 acceptable | Fast / Acceptable / Slow |
-| Monthly Burn Rate | ${XX}K | Context-dependent | Sustainable / Runway concern |
-| Cash Runway | {X} months | >6 months | Comfortable / Tight / Critical |
-| Channel Concentration | {X}% from top channel | <50% from any single channel | Diversified / Concentrated / Risky |
-| Organic vs. Paid Mix | {X}% / {X}% | >30% organic is strong | Strong / Moderate / Weak |
-
-### Scorecard Rating Summary
-
-| Category | Rating | Weight | Notes |
-|----------|--------|--------|-------|
-| Revenue & Growth | Strong / Moderate / Weak | High | — |
-| Unit Economics | Strong / Moderate / Weak | High | — |
-| Customer Quality | Strong / Moderate / Weak | Medium | — |
-| Brand & Defensibility | Strong / Moderate / Weak | Medium | — |
-| Team | Strong / Moderate / Weak | Medium | — |
-| Market & Timing | Strong / Moderate / Weak | Low-Medium | — |
-| **Overall** | **Strong / Moderate / Weak** | — | — |
-
----
-
-## 2. Unit Economics Analysis
-
-### Customer Acquisition Economics
-
-| Metric | Value | Calculation | Benchmark | Status |
-|--------|-------|-------------|-----------|--------|
-| Blended CAC | ${XX} | Total marketing spend / new customers | <$30 for most DTC | Healthy / Concerning |
-| Meta CAC | ${XX} | Meta spend / Meta-attributed new customers | Category-dependent | — |
-| Google CAC | ${XX} | Google spend / Google-attributed new customers | Category-dependent | — |
-| Organic CAC | ${X} | Content + SEO spend / organic new customers | Should be <$10 | — |
-| CAC Payback Period | {X} months | CAC / monthly gross profit per customer | <6 months ideal | Fast / Acceptable / Slow |
-
-### Customer Lifetime Value Analysis
-
-| Metric | Value | Calculation |
-|--------|-------|-------------|
-| Average First Order Value | ${XX} | — |
-| Average Order Value (all orders) | ${XX} | — |
-| Purchase Frequency (12-month) | {X.X} orders/year | — |
-| Gross Margin per Order | ${XX} ({X}%) | — |
-| 12-Month LTV (revenue) | ${XXX} | AOV x Purchase Frequency |
-| 12-Month LTV (gross profit) | ${XX} | LTV revenue x Gross Margin % |
-| 24-Month LTV (gross profit) | ${XXX} | Projected based on retention curves |
-| LTV:CAC Ratio (12-month GP) | {X.Xx} | 12-month GP LTV / Blended CAC |
-
-### Contribution Margin Waterfall
-
-Show the path from revenue to contribution margin for a typical order:
-
-| Line Item | Amount | % of Revenue |
-|-----------|--------|-------------|
-| Revenue (AOV) | ${XX.XX} | 100% |
-| Less: COGS | -${XX.XX} | {X}% |
-| **Gross Profit** | **${XX.XX}** | **{X}%** |
-| Less: Shipping cost | -${X.XX} | {X}% |
-| Less: Transaction fees | -${X.XX} | {X}% |
-| Less: Packaging | -${X.XX} | {X}% |
-| **Contribution Margin (before CAC)** | **${XX.XX}** | **{X}%** |
-| Less: Blended CAC (new customers only) | -${XX.XX} | {X}% |
-| **Contribution Margin (after CAC)** | **${X.XX}** | **{X}%** |
-
----
-
-## 3. Growth Efficiency Metrics
-
-| Metric | Value | Benchmark | Implication |
-|--------|-------|-----------|-------------|
-| Revenue per Marketing Dollar | ${X.XX} | >$3 is efficient | Efficient / Average / Inefficient |
-| Blended ROAS | {X.Xx} | >3x for healthy DTC | Strong / Acceptable / Weak |
-| Organic Revenue % | {X}% | >30% is strong | Reducing dependence on paid |
-| Repeat Revenue % | {X}% | >40% for consumables | Strong retention base |
-| Revenue per Employee | ${XXX}K | >$200K for early-stage DTC | Lean / Average / Heavy |
-| Burn Multiple | {X.Xx} | <2x is efficient (net burn / net new ARR) | Efficient / Average / Inefficient |
-| Magic Number | {X.XX} | >0.75 is efficient (net new revenue / prior quarter S&M) | Efficient / Average / Inefficient |
-| Gross Margin-Adjusted CAC Payback | {X} months | <12 months | Fast / Acceptable / Slow |
-
-### Growth Trajectory
-
-| Period | Monthly Revenue | MoM Growth | Annualized Run Rate |
-|--------|----------------|-----------|-------------------|
-| 6 months ago | ${XX}K | — | ${X.XM} |
-| 5 months ago | ${XX}K | {X}% | ${X.XM} |
-| 4 months ago | ${XX}K | {X}% | ${X.XM} |
-| 3 months ago | ${XX}K | {X}% | ${X.XM} |
-| 2 months ago | ${XX}K | {X}% | ${X.XM} |
-| Last month | ${XX}K | {X}% | ${X.XM} |
-
----
-
-## 4. Valuation Analysis
-
-### Comparable Company Analysis
-
-| Company / Brand | Category | Revenue Stage | Growth Rate | Gross Margin | Revenue Multiple | Valuation | Notes |
-|----------------|----------|--------------|-------------|-------------|-----------------|-----------|-------|
-| Comparable 1 | Same/adjacent | ${X}M | {X}% | {X}% | {X.Xx} | ${X}M | Recent round or exit |
-| Comparable 2 | Same/adjacent | ${X}M | {X}% | {X}% | {X.Xx} | ${X}M | Recent round or exit |
-| Comparable 3 | Same/adjacent | ${X}M | {X}% | {X}% | {X.Xx} | ${X}M | Recent round or exit |
-| Comparable 4 | Same/adjacent | ${X}M | {X}% | {X}% | {X.Xx} | ${X}M | Recent round or exit |
-
-### Revenue Multiple Analysis
-
-| Factor | Impact on Multiple | Your Brand's Position |
-|--------|-------------------|----------------------|
-| Growth rate | Higher growth = higher multiple | {X}% growth supports a {X.X-X.Xx} multiple |
-| Gross margin | >70% commands premium | {X}% gross margin is above/at/below benchmark |
-| Repeat rate | Strong retention = higher multiple | {X}% repeat rate supports recurring revenue narrative |
-| Channel diversification | Less risk = higher multiple | {X}% concentration in top channel is diversified/concentrated |
-| Brand strength | Strong brand = premium multiple | Qualitative assessment of brand defensibility |
-| Category | Hot categories get premium multiples | Assessment of category attractiveness to investors |
-
-### Valuation Estimate
-
-| Method | Low | Mid | High | Rationale |
-|--------|-----|-----|------|-----------|
-| Revenue multiple (TTM) | ${X.XM} (at {X.Xx}) | ${X.XM} (at {X.Xx}) | ${X.XM} (at {X.Xx}) | Based on comparable DTC brands at this stage |
-| Revenue multiple (NTM projected) | ${X.XM} | ${X.XM} | ${X.XM} | Forward-looking at projected next-12-month revenue |
-| **Recommended Pre-Money Valuation** | **${X.XM}** | **${X.XM}** | **${X.XM}** | **Blended estimate** |
-
----
-
-## 5. Fundability Assessment
-
-### What a VC Would Like (Strengths)
-
-For each strength, explain why it matters to an investor and quantify it:
-
-| # | Strength | Evidence | Why It Matters to VCs |
-|---|----------|----------|----------------------|
-| 1 | Specific strength | Specific data point or metric proving this | How this translates to investability |
-| 2 | Specific strength | Specific data point | How this translates to investability |
-| 3 | Specific strength | Specific data point | How this translates to investability |
-| 4 | Specific strength | Specific data point | How this translates to investability |
-| 5 | Specific strength | Specific data point | How this translates to investability |
-
-### What Would Give a VC Pause (Concerns)
-
-For each concern, explain the severity and what can be done about it:
-
-| # | Concern | Severity | Evidence | Mitigation Path |
-|---|---------|----------|----------|-----------------|
-| 1 | Specific concern | High / Medium / Low | What the data shows | What to do about it before or during the raise |
-| 2 | Specific concern | High / Medium / Low | What the data shows | Mitigation path |
-| 3 | Specific concern | High / Medium / Low | What the data shows | Mitigation path |
-| 4 | Specific concern | High / Medium / Low | What the data shows | Mitigation path |
-
-### Investor Readiness Checklist
-
-| Item | Status | Notes |
-|------|--------|-------|
-| Financial model / P&L (monthly, 12+ months) | Ready / Needs work / Not started | Detail on what's needed |
-| Cohort analysis (retention by acquisition month) | Ready / Needs work / Not started | Detail |
-| Customer acquisition data (CAC by channel, monthly) | Ready / Needs work / Not started | Detail |
-| LTV analysis with supporting data | Ready / Needs work / Not started | Detail |
-| Pitch deck (10-15 slides) | Ready / Needs work / Not started | Detail |
-| Data room (financials, legal, cap table) | Ready / Needs work / Not started | Detail |
-| Cap table (current ownership structure) | Ready / Needs work / Not started | Detail |
-| Brand story / founder narrative | Ready / Needs work / Not started | Detail |
-| Clear use of funds plan | Ready / Needs work / Not started | Detail |
-| 3-year revenue projection with assumptions | Ready / Needs work / Not started | Detail |
-| Customer testimonials / NPS data | Ready / Needs work / Not started | Detail |
-| Advisory board / notable investors lined up | Ready / Needs work / Not started | Detail |
-
----
-
-## 6. Recommended Funding Path
-
-### Path Assessment
-
-| Funding Path | Fit for This Business | Rationale |
-|-------------|----------------------|-----------|
-| Venture Capital (Seed / Series A) | Strong / Moderate / Weak fit | Explain why — growth rate, market size, margin profile, team |
-| Angel Investors | Strong / Moderate / Weak fit | Explain why |
-| Revenue-Based Financing | Strong / Moderate / Weak fit | Explain why — predictable revenue, margins, use of funds |
-| Strategic Investor | Strong / Moderate / Weak fit | Explain why — strategic value, category fit |
-| Bootstrap / Profitability | Strong / Moderate / Weak fit | Explain why — current cash generation, growth rate without capital |
-| **Recommended Path** | **Specific recommendation** | **Detailed rationale** |
-
-### If Raising VC — Fundraising Plan
-
-| Element | Recommendation |
-|---------|---------------|
-| Recommended round size | ${X.XM} — based on 18-24 months of runway at planned burn |
-| Pre-money valuation target | ${X.XM} - ${X.XM} |
-| Post-money valuation | ${X.XM} - ${X.XM} |
-| Dilution | {X-X}% |
-| Target investor type | Consumer-focused VC / Seed fund / Angel syndicate / Strategic |
-| Target investor profile | Investors with DTC / CPG portfolio companies; specific fund examples if applicable |
-| Key narrative to lead with | The single strongest story for this brand — stated in one paragraph |
-| Fundraising timeline | When to start, how long it will take, key milestones to hit first |
-| Use of funds breakdown | Marketing: {X}%, Inventory: {X}%, Team: {X}%, Product development: {X}%, Operations: {X}% |
-
----
-
-## Recommendations
-
-| Priority | Action | Why | Expected Impact | Effort Level | Timeline |
-|----------|--------|-----|-----------------|-------------|----------|
-| 1 | Specific action to strengthen the fundraising case | Based on assessment finding | Quantified or qualitative impact on fundability | Low / Medium / High | This week / This month / Before raise |
-| 2 | Specific action | Rationale | Impact | Effort | Timeline |
-| 3 | Specific action | Rationale | Impact | Effort | Timeline |
-| 4 | Specific action | Rationale | Impact | Effort | Timeline |
-| 5 | Specific action | Rationale | Impact | Effort | Timeline |
-| 6 | Specific action | Rationale | Impact | Effort | Timeline |
-
----
-
-## Next Steps
-
-Specific actions the founder should take this week:
-1. Action 1 — with exact implementation detail and deadline
-2. Action 2 — with exact implementation detail and deadline
-3. Action 3 — with exact implementation detail and deadline
-4. Action 4 — with exact implementation detail and deadline
-5. Action 5 — with exact implementation detail and deadline
-```
+1. **Executive Summary** — 6-8 bullets covering overall fundability rating with justification, TTM revenue/growth/margins with tier placement, unit economics health (LTV:CAC, blended CAC, contribution margin), valuation range with multiple basis, recommended funding path, round size and valuation if raising, top 3 VC strengths, and top 3 VC concerns
+2. **Business Scorecard** — Key metrics dashboard: 17 metrics (TTM revenue, YoY and MoM growth, monthly revenue, gross/net margin, customer count, repeat rate, AOV, blended CAC, 12-month LTV, LTV:CAC, payback period, burn rate, runway, channel concentration, organic/paid mix) each with current value, DTC stage benchmark, and rating. Scorecard rating summary across 6 categories (Revenue & Growth, Unit Economics, Customer Quality, Brand & Defensibility, Team, Market & Timing) weighted by importance
+3. **Unit Economics Analysis** — Customer acquisition economics: blended and per-channel CAC with calculations and benchmarks. LTV analysis: first order value, AOV, purchase frequency, margin per order, 12- and 24-month LTV, LTV:CAC ratio. Contribution margin waterfall from AOV through COGS, shipping, transaction fees, packaging, to contribution margin before and after CAC
+4. **Growth Efficiency Metrics** — 8 efficiency metrics (revenue per marketing dollar, blended ROAS, organic %, repeat %, revenue per employee, burn multiple, magic number, GM-adjusted payback) with benchmarks and implications. 6-month growth trajectory table showing monthly revenue, MoM growth, and annualized run rate
+5. **Valuation Analysis** — 4+ comparable company analysis with category, revenue stage, growth, margins, multiple, and valuation. Revenue multiple factor analysis (growth, margin, retention, diversification, brand, category). Valuation estimate table with TTM and NTM methods showing low/mid/high and recommended pre-money range
+6. **Fundability Assessment** — 5 strengths a VC would highlight with evidence and why each matters. 4 concerns a VC would raise with severity, evidence, and mitigation path. 12-item investor readiness checklist (financial model, cohort analysis, CAC data, LTV analysis, pitch deck, data room, cap table, founder narrative, use of funds, 3-year projection, testimonials/NPS, advisory board) each with status and notes
+7. **Recommended Funding Path** — Assessment of 5 paths (VC, angel, revenue-based financing, strategic, bootstrap) with fit rating and rationale. If raising VC: detailed fundraising plan covering round size, pre/post-money valuation, dilution, target investor type and profile, key narrative, timeline, and use of funds breakdown
+8. **Recommendations** — 5-6 priority-ranked actions to strengthen the fundraising case with rationale, expected impact, effort, and timeline
+9. **Next Steps** — 5 specific actions with exact implementation details and deadlines
 
 ### For Pitch Deck Review
 
-When a pitch deck review is requested, the report should still follow the full report structure with Header, Executive Summary, Detailed Analysis, Recommendations table, and Next Steps. The detailed analysis section should contain:
+Save to `reports/pitch-deck-review-{YYYY-MM-DD}.md`. Follow the full report structure with Header, Executive Summary, Detailed Analysis, Recommendations, and Next Steps. The detailed analysis should contain:
 
-```markdown
-## Slide-by-Slide Analysis
-
-### Slide {#}: {Slide Title}
-
-| Element | Assessment |
-|---------|-----------|
-| Current content | What the slide currently shows |
-| What's strong | Specific elements that work well and why |
-| What's weak | Specific elements that need improvement and why |
-| What's missing | Information or framing that should be added |
-| VC perspective | How an investor would react to this slide |
-| Recommended revision | Exactly what this slide should contain and say |
-
-(Repeat for every slide in the deck)
-
----
-
-## Overall Deck Assessment
-
-### Deck Scorecard
-
-| Criterion | Rating (1-10) | Notes |
-|-----------|--------------|-------|
-| Clarity of narrative | X/10 | Does the deck tell a compelling, logical story? |
-| Market opportunity sizing | X/10 | Is the TAM/SAM/SOM credible and exciting? |
-| Traction proof | X/10 | Are metrics presented clearly and impressively? |
-| Unit economics clarity | X/10 | Can an investor quickly understand the business model? |
-| Team credibility | X/10 | Does the team slide inspire confidence? |
-| Ask clarity | X/10 | Is the raise amount and use of funds clear? |
-| Visual design | X/10 | Is the deck professional and on-brand? |
-| Overall "would this get a meeting?" | X/10 | Honest assessment |
-
-### Questions a VC Would Ask After This Deck
-
-Prepare answers for each of these:
-
-| # | Question | Why They'd Ask It | How to Answer |
-|---|---------|-------------------|---------------|
-| 1 | Specific question | What prompted it in the deck | Framework for a strong answer |
-| 2 | Specific question | What prompted it | Framework |
-| 3 | Specific question | What prompted it | Framework |
-| 4 | Specific question | What prompted it | Framework |
-| 5 | Specific question | What prompted it | Framework |
-```
+1. **Slide-by-Slide Analysis** — For every slide: current content, what is strong, what is weak, what is missing, VC perspective on how an investor would react, and recommended revision with exact content direction
+2. **Overall Deck Assessment** — Scorecard rating 8 criteria on a 1-10 scale (narrative clarity, market opportunity sizing, traction proof, unit economics clarity, team credibility, ask clarity, visual design, and overall "would this get a meeting"). List of 5 specific questions a VC would ask after the deck, with what prompted each question and a framework for answering it
 
 ---
 

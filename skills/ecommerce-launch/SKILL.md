@@ -24,10 +24,10 @@ Every response must be comprehensive, specific, and actionable. Follow these rul
 - Show your reasoning. If you calculate a ROAS target, show the margin math behind it.
 
 ### File Delivery
-- For any analysis, audit, strategy, plan, or multi-section deliverable: save the complete output as a markdown file using the Write tool.
-- File path: `reports/launch-plan-{YYYY-MM-DD}.md` (create the `reports/` directory if it doesn't exist).
-- The .md file IS the deliverable. Put everything in the file, then confirm to the user what was saved and where.
-- Still provide a brief summary in the chat message (3-5 key findings) so the user gets immediate value, but the full report lives in the file.
+- Only save a .md report when the user asks for a full report, audit, analysis, review, strategy, plan, or deep dive.
+- For quick questions or single-topic answers, respond thoroughly in chat — no file needed.
+- When saving: use `reports/launch-plan-{YYYY-MM-DD}.md` (create `reports/` if needed). Always .md format — never .docx, .pdf, or other formats.
+- Provide a brief summary in chat (3-5 key findings) plus confirmation of where the file was saved.
 
 ### Report Structure
 Every saved report must include:
@@ -553,305 +553,25 @@ Accept orders before the product ships. Use when manufacturing timelines are lon
 
 ## Output Formats
 
-Every launch plan must be saved as a markdown file following the Report Structure in Response Standards. The templates below show the minimum depth and structure expected for each report type. Fill all sections with real plans based on the brand's data — never leave placeholders.
+Every launch plan must be saved as a markdown file following the Report Structure in Response Standards. The descriptions below define the minimum sections and depth expected for each report type. Fill all sections with real plans based on the brand's data — never leave placeholders.
 
 ### For Complete Launch Plan
 
-The default output for any product launch engagement. This is the full report.
+Save to `reports/launch-plan-{YYYY-MM-DD}.md`. The default output for any product launch engagement. Include:
 
-```markdown
-# Product Launch Plan
-**Brand:** {Brand Name}
-**Product:** {Product Name}
-**Launch Date:** {YYYY-MM-DD}
-**Launch Type:** New product / New collection / New variant / Brand relaunch / Seasonal drop
-**Prepared:** {YYYY-MM-DD}
-
----
-
-## Executive Summary
-- Launch of {Product Name} targeting ${X,XXX} revenue in launch week with {X} new customers acquired
-- Pre-launch sequence begins {X} weeks out with a {waitlist / teaser / VIP access} strategy to build anticipation
-- Total launch marketing budget: ${X,XXX} allocated across paid ads (${X,XXX}), influencer ({X} partnerships), and email/SMS (owned channels)
-- Email list of {X,XXX} subscribers is the primary revenue driver — projected to generate {X}% of launch week revenue
-- Paid ads launch on Day 0 with {X} creative variants targeting {audience segments}, ramping spend from ${X}/day to ${X}/day by Day 3
-- Post-launch optimization plan runs Weeks 2-4 to sustain momentum and maximize the long tail
-- Revenue projection model: conservative ${X,XXX} / base ${X,XXX} / aggressive ${XX,XXX} for the first 30 days
-
----
-
-## 1. Launch Timeline
-
-### Master Timeline Overview
-
-| Date | Phase | Channel | Action | Owner | Status |
-|------|-------|---------|--------|-------|--------|
-| Week -4 | Pre-Launch | Internal | Finalize product photography, descriptions, and PDP | Product/Creative | Not started |
-| Week -4 | Pre-Launch | Email | Build and test pre-launch email sequence | Marketing | Not started |
-| Week -3 | Pre-Launch | Ads | Create ad creatives: X static, X video, X UGC | Creative | Not started |
-| Week -3 | Pre-Launch | Social | Begin teaser content series (X posts) | Social | Not started |
-| Week -3 | Pre-Launch | Influencer | Ship product to X influencers with launch-day posting brief | Marketing | Not started |
-| Week -2 | Pre-Launch | Email | Send teaser email #1: "Something new is coming" | Marketing | Not started |
-| Week -2 | Pre-Launch | Site | Create landing page / coming soon page with email capture | Web | Not started |
-| Week -1 | Pre-Launch | Email | Send teaser email #2: Product reveal (no purchase link) | Marketing | Not started |
-| Week -1 | Pre-Launch | SMS | SMS teaser to VIP segment | Marketing | Not started |
-| Day -1 | Launch | Email | VIP early access email to top customers / subscribers | Marketing | Not started |
-| Day 0 | Launch | All | LAUNCH DAY — see hour-by-hour plan below | All | Not started |
-| Day 1 | Launch | Email | Launch follow-up email: social proof + urgency | Marketing | Not started |
-| Day 1 | Launch | Ads | Review Day 0 ad performance; pause underperformers | Ads | Not started |
-| Day 2-3 | Launch | Email/SMS | Cart abandonment sequence live for launch product | Marketing | Not started |
-| Day 3-5 | Launch | Ads | Scale winning ad creatives; introduce new audiences | Ads | Not started |
-| Day 5-7 | Launch | Email | Final push email: "Last chance at launch price" (if using launch offer) | Marketing | Not started |
-| Week 2 | Post-Launch | Ads | Optimization pass: consolidate budgets into top performers | Ads | Not started |
-| Week 2 | Post-Launch | Email | Post-purchase review request sequence begins | Marketing | Not started |
-| Week 3 | Post-Launch | Content | Publish customer UGC and reviews as social proof content | Social | Not started |
-| Week 4 | Post-Launch | All | Launch retrospective: compile results vs. targets | Leadership | Not started |
-
----
-
-## 2. Pre-Launch Sequence
-
-### Pre-Launch Email Sequence
-
-#### Email 1: Teaser (Week -2)
-- **Audience:** Full email list
-- **Subject line options:**
-  1. Subject line option A
-  2. Subject line option B
-  3. Subject line option C
-- **Preview text:** Preview text that builds curiosity
-- **Body structure:**
-  - Opening hook: 1-2 sentences that create intrigue without revealing the product
-  - Middle: Hint at what the product solves or why it exists
-  - CTA: "Get on the waitlist" or "Be the first to know" — link to landing page
-- **Full copy:** Write the complete email copy here, ready to paste into the ESP
-- **Design notes:** Minimal design, text-focused, one CTA button
-
-#### Email 2: Product Reveal (Week -1)
-- **Audience:** Full email list + waitlist signups
-- **Subject line options:**
-  1. Subject line option A
-  2. Subject line option B
-  3. Subject line option C
-- **Preview text:** Preview text that builds excitement
-- **Body structure:**
-  - Opening: Reveal the product — what it is
-  - Product hero image placement
-  - Key benefits: 3-4 bullet points
-  - The "why" story: Why this product was created, what makes it different
-  - Launch date + any launch incentive
-  - CTA: "Save my spot" or "Set a reminder"
-- **Full copy:** Write the complete email copy here
-- **Design notes:** Product imagery featured prominently, benefit-focused layout
-
-#### Email 3: VIP Early Access (Day -1)
-- **Audience:** VIP segment (top X% by LTV or engagement), waitlist signups
-- **Subject line options:**
-  1. Subject line option A
-  2. Subject line option B
-  3. Subject line option C
-- **Preview text:** Preview text emphasizing exclusivity
-- **Body structure:**
-  - Opening: "You're getting access before anyone else"
-  - Product details: full benefits, ingredients/materials, pricing
-  - Launch incentive (if applicable): exclusive VIP pricing or gift
-  - CTA: "Shop now — before everyone else" — direct link to PDP
-- **Full copy:** Write the complete email copy here
-- **Design notes:** Premium feel, clear CTA, urgency elements
-
-### Pre-Launch SMS Sequence
-
-| SMS # | Timing | Audience | Message | CTA |
-|-------|--------|----------|---------|-----|
-| 1 | Week -1 | SMS subscribers | Teaser message: "Something big dropping next {day}. VIP access starts tomorrow. Watch your inbox." | No link — builds anticipation |
-| 2 | Day -1 | VIP SMS list | Early access message with direct PDP link | Shop now link |
-| 3 | Day 0 | Full SMS list | Launch announcement with link | Shop now link |
-
-### Pre-Launch Ad Creative Briefs
-
-| Creative # | Format | Hook / Concept | Visual Direction | Target Audience | Platform |
-|------------|--------|---------------|-----------------|-----------------|----------|
-| 1 | UGC-style video (30s) | Problem/solution: "I used to struggle with X, then I found..." | Creator on camera, product reveal at :10 | Prospecting — interest-based | Meta |
-| 2 | Static image | Product hero with bold claim | Clean product photography, benefit-focused text overlay | Prospecting — lookalike | Meta |
-| 3 | Carousel | "X reasons this is different" | Each card = one benefit with product imagery | Retargeting — site visitors | Meta |
-| 4 | Video (15s) | Product demo / unboxing | Close-up shots, satisfying visuals, quick-cut edit | Prospecting — broad | Meta / TikTok |
-| 5 | UGC video (45s) | Founder story: "Why I created this" | Founder on camera, authentic/raw, product shots interspersed | Prospecting — interest-based | Meta |
-
-### Pre-Launch Social Content Plan
-
-| Date | Platform | Content Type | Content Concept | Goal |
-|------|----------|-------------|-----------------|------|
-| Week -3, Day 1 | Instagram | Story | Behind-the-scenes: product in development | Curiosity building |
-| Week -3, Day 3 | Instagram | Feed post | Cryptic teaser image + "Coming soon" | Anticipation |
-| Week -2, Day 1 | Instagram/TikTok | Reel/TikTok | Founder talking about a problem the product solves (without showing product) | Problem awareness |
-| Week -2, Day 4 | Instagram | Story poll | "What if we made a {category hint}? Yes/No" | Engagement + anticipation |
-| Week -1, Day 1 | Instagram | Feed post | Product reveal: first look photo + launch date | Reveal moment |
-| Week -1, Day 3 | Instagram/TikTok | Reel/TikTok | Product demo video — full reveal | Education + desire |
-| Week -1, Day 5 | Instagram | Story countdown | Launch countdown sticker + "Set a reminder" | Drive reminder sign-ups |
-
----
-
-## 3. Launch Day Orchestration Plan
-
-### Hour-by-Hour Schedule
-
-| Time | Channel | Action | Detail |
-|------|---------|--------|--------|
-| 6:00 AM | Site | Product page goes live | Confirm PDP is live, pricing correct, inventory loaded, all links working |
-| 6:15 AM | Email | Launch email #1 sends to full list | Main launch announcement — full product reveal + CTA to shop |
-| 6:30 AM | SMS | Launch SMS sends to full list | Short message with direct PDP link |
-| 7:00 AM | Social | Instagram feed post + story series | Launch announcement post + 5-frame story with product details + swipe-up |
-| 7:00 AM | Social | TikTok launch video | "It's here" product reveal video |
-| 8:00 AM | Ads | Activate all launch ad campaigns | Turn on all pre-built campaigns; start at planned daily budget |
-| 9:00 AM | Monitor | First performance check | Email open rates, site traffic, first orders, any technical issues |
-| 12:00 PM | Social | Instagram story update | "Already selling fast" + order count or social proof |
-| 12:00 PM | Monitor | Mid-day performance review | Ad spend, ROAS, conversion rate, inventory levels |
-| 2:00 PM | Email | Launch email #2 to non-openers | Resend with new subject line to anyone who didn't open email #1 |
-| 4:00 PM | Monitor | Afternoon ad check | Pause any creative with CTR <X% or CPA >$XX; shift budget to winners |
-| 6:00 PM | Social | Story/TikTok | Customer reactions, first review, or real-time order update |
-| 8:00 PM | Monitor | End-of-day review | Compile Day 0 results: revenue, orders, new customers, ad performance |
-
----
-
-## 4. Channel-Specific Budgets and Targets
-
-### Budget Allocation
-
-| Channel | Pre-Launch Budget | Launch Week Budget | Post-Launch (Weeks 2-4) Budget | Total 30-Day Budget |
-|---------|------------------|-------------------|-------------------------------|-------------------|
-| Meta Ads | $X,XXX | $X,XXX | $X,XXX | $X,XXX |
-| TikTok Ads | $XXX | $X,XXX | $XXX | $X,XXX |
-| Influencer | $X,XXX (product seeding) | — | — | $X,XXX |
-| Email/SMS | $0 (owned channel) | $0 | $0 | $0 |
-| PR | $XXX | — | — | $XXX |
-| **Total** | **$X,XXX** | **$X,XXX** | **$X,XXX** | **$X,XXX** |
-
-### Performance Targets by Channel
-
-| Channel | Metric | Launch Week Target | 30-Day Target |
-|---------|--------|-------------------|---------------|
-| Meta Ads | ROAS | X.Xx | X.Xx |
-| Meta Ads | CPA | $XX | $XX |
-| Meta Ads | CTR | >X.X% | >X.X% |
-| TikTok Ads | ROAS | X.Xx | X.Xx |
-| Email | Revenue attributed | $X,XXX | $X,XXX |
-| Email | Open rate (launch emails) | >XX% | — |
-| Email | Click rate (launch emails) | >X.X% | — |
-| SMS | Revenue attributed | $X,XXX | $X,XXX |
-| Influencer | Posts live | X posts | X posts |
-| Organic Social | Engagement rate | >X.X% | >X.X% |
-
----
-
-## 5. Post-Launch Optimization Plan
-
-### Week-by-Week Post-Launch Plan
-
-| Week | Focus Area | Specific Actions | Success Criteria |
-|------|-----------|-----------------|------------------|
-| Week 2 | Ad optimization | Review all creative performance; kill anything with CPA >$XX; scale winners by XX% daily; introduce 2 new creatives based on launch learnings | ROAS improves to X.Xx from launch week baseline |
-| Week 2 | Email flows | Ensure new product is in welcome flow, browse abandonment, and post-purchase cross-sell | New product appears in all relevant automated flows |
-| Week 2 | Review generation | Trigger post-purchase review request emails (7 days after delivery) | Collect XX+ reviews in first 2 weeks |
-| Week 3 | Content refresh | Create new ad creatives using real customer UGC and reviews from launch | X new UGC creatives in rotation |
-| Week 3 | Audience expansion | Test broader audiences on Meta; test new interest-based audiences on TikTok | Identify X new profitable audience segments |
-| Week 3 | Cross-sell | Launch bundle offers pairing new product with existing top sellers | Bundle AOV >$XX |
-| Week 4 | Retrospective | Full launch retrospective: revenue vs. target, CAC vs. target, channel performance, lessons learned | Document completed and shared |
-| Week 4 | Evergreen transition | Transition launch campaigns into evergreen structure; set steady-state daily budgets | Sustainable daily spend at target ROAS |
-
----
-
-## 6. Revenue Projection Model
-
-### 30-Day Revenue Forecast
-
-| Revenue Source | Conservative | Base Case | Aggressive | Assumptions |
-|---------------|-------------|-----------|-----------|-------------|
-| Email/SMS (launch sequence) | $X,XXX | $X,XXX | $X,XXX | X,XXX list size, XX% open rate, X.X% click rate, X.X% conversion rate |
-| VIP Early Access (Day -1) | $X,XXX | $X,XXX | $X,XXX | XXX VIPs, XX% open rate, XX% conversion rate |
-| Meta Ads (Launch Week) | $X,XXX | $X,XXX | $X,XXX | $X,XXX spend, X.Xx / X.Xx / X.Xx ROAS |
-| Meta Ads (Weeks 2-4) | $X,XXX | $X,XXX | $XX,XXX | $X,XXX spend, scaling as ROAS allows |
-| Organic Social | $XXX | $X,XXX | $X,XXX | Based on current engagement rates and follower count |
-| Influencer | $XXX | $X,XXX | $X,XXX | X influencers, estimated reach XXK, X.X% conversion |
-| PR / Earned Media | $0 | $XXX | $X,XXX | Unpredictable — base case assumes 1 feature |
-| Direct / Returning | $X,XXX | $X,XXX | $X,XXX | Based on current repeat purchase rate and customer base |
-| **Total 30-Day Revenue** | **$X,XXX** | **$XX,XXX** | **$XX,XXX** | — |
-
-### Unit Economics for Launch
-
-| Metric | Value |
-|--------|-------|
-| Product Price | $XX.XX |
-| Landed COGS | $XX.XX |
-| Gross Profit per Unit | $XX.XX |
-| Gross Margin | XX% |
-| Target Blended CPA (new customers) | $XX.XX |
-| Contribution Margin after CPA | $XX.XX |
-| Break-even units (to cover launch marketing spend) | XXX units |
-| Break-even timeline | Day X of launch |
-
----
-
-## Recommendations
-
-| Priority | Action | Why | Expected Impact | Effort Level | Timeline |
-|----------|--------|-----|-----------------|-------------|----------|
-| 1 | Specific tactical recommendation | Rationale from launch analysis | Quantified impact | Low / Medium / High | Pre-launch / Launch day / Post-launch |
-| 2 | Specific tactical recommendation | Rationale | Quantified impact | Low / Medium / High | Timeline |
-| 3 | Specific tactical recommendation | Rationale | Quantified impact | Low / Medium / High | Timeline |
-| 4 | Specific tactical recommendation | Rationale | Quantified impact | Low / Medium / High | Timeline |
-| 5 | Specific tactical recommendation | Rationale | Quantified impact | Low / Medium / High | Timeline |
-
----
-
-## Next Steps
-
-Specific actions the founder should take this week:
-1. Action 1 — with exact implementation detail and deadline
-2. Action 2 — with exact implementation detail and deadline
-3. Action 3 — with exact implementation detail and deadline
-4. Action 4 — with exact implementation detail and deadline
-5. Action 5 — with exact implementation detail and deadline
-```
+1. **Executive Summary** — 5-7 bullets covering launch revenue target, pre-launch strategy and timeline, total budget allocation by channel, email list as primary revenue driver with projected share, paid ads launch plan with creative count and spend ramp, post-launch optimization window, and 3-scenario revenue projection (conservative/base/aggressive)
+2. **Launch Timeline** — Master timeline table from Week -4 through Week 4 covering every action across all channels (internal, email, ads, social, influencer, site). Each row: date, phase, channel, action, owner, status. Must span pre-launch prep, pre-launch marketing, launch day, launch week, and post-launch
+3. **Pre-Launch Sequence** — (a) Full email sequence: 3+ emails (teaser, product reveal, VIP early access) each with audience, 3 subject line options, preview text, body structure, complete ready-to-paste copy, and design notes; (b) SMS sequence: 3 messages with timing, audience, message, and CTA; (c) Ad creative briefs: 5 creatives with format, hook/concept, visual direction, target audience, and platform; (d) Social content plan: daily content calendar from Week -3 through launch with platform, content type, concept, and goal
+4. **Launch Day Orchestration** — Hour-by-hour schedule from 6 AM through 8 PM covering site go-live, email sends, SMS blast, social posts, ad activation, and 4+ performance monitoring checkpoints with specific metrics to review at each
+5. **Channel-Specific Budgets and Targets** — Budget allocation table by channel across pre-launch, launch week, and post-launch periods with totals. Performance targets by channel with launch week and 30-day targets for ROAS, CPA, CTR, email revenue, open/click rates, SMS revenue, influencer posts, and social engagement
+6. **Post-Launch Optimization** — Week-by-week plan for Weeks 2-4 covering ad optimization, email flow integration, review generation, UGC content refresh, audience expansion, cross-sell bundles, launch retrospective, and evergreen transition — each with specific actions and success criteria
+7. **Revenue Projection Model** — 30-day forecast table with conservative/base/aggressive scenarios broken out by channel (email/SMS, VIP access, Meta ads launch week, Meta ads weeks 2-4, organic social, influencer, PR, direct/returning) with assumptions for each. Unit economics table: product price, COGS, gross profit, margin, target CPA, contribution margin, break-even units, and break-even timeline
+8. **Recommendations** — 5 priority-ranked recommendations with rationale, quantified impact, effort level, and timeline
+9. **Next Steps** — 5 specific actions with exact implementation details and deadlines
 
 ### For Launch Email Sequence
 
-When a standalone launch email sequence is requested, the report should still include the full Header, Executive Summary, and Next Steps. The detailed analysis section should contain every email in the sequence with this level of depth per email:
-
-```markdown
-### Email {#}: {Name} — {Timing}
-
-**Audience:** Specific segment description
-**Subject line options:**
-1. Option A
-2. Option B
-3. Option C
-
-**Preview text:** The preview text for this email
-
-**Body — Full Copy:**
-
-Write the complete, ready-to-paste email copy here. Include:
-- Opening hook (first 1-2 lines — what makes them keep reading)
-- Body content (product details, benefits, story, social proof as appropriate)
-- CTA placement and button text
-- Post-CTA reinforcement (guarantee, shipping info, or secondary link)
-
-**Design Notes:**
-- Layout direction (single column, hero image, text-focused, etc.)
-- Image placement recommendations
-- Mobile optimization notes
-
-**Send Specifications:**
-
-| Spec | Value |
-|------|-------|
-| Send time | Specific time and timezone |
-| Segment | Segment definition |
-| Exclude | Who to exclude from this send |
-| Goal | Primary conversion goal |
-| Expected open rate | XX% based on segment and send time |
-| Expected click rate | X.X% |
-```
+Save to `reports/launch-emails-{YYYY-MM-DD}.md`. Include Header, Executive Summary, and Next Steps. The detailed analysis section should contain every email in the sequence, each with: audience, 3 subject line options, preview text, complete ready-to-paste body copy (opening hook, body content, CTA placement, post-CTA reinforcement), design notes (layout, image placement, mobile optimization), and send specifications (send time, segment, exclusions, goal, expected open rate, expected click rate)
 
 ---
 

@@ -22,10 +22,10 @@ Every response must be comprehensive, specific, and actionable. Follow these rul
 - Show your reasoning. Show the math behind every margin calculation and financial projection.
 
 ### File Delivery
-- For any analysis, audit, strategy, plan, or multi-section deliverable: save the complete output as a markdown file using the Write tool.
-- File path: `reports/cfo-review-{YYYY-MM-DD}.md` (create the `reports/` directory if it doesn't exist).
-- The .md file IS the deliverable. Put everything in the file, then confirm to the user what was saved and where.
-- Still provide a brief summary in the chat message (3-5 key findings) so the user gets immediate value, but the full report lives in the file.
+- Only save a .md report when the user asks for a full report, audit, analysis, review, strategy, plan, or deep dive.
+- For quick questions or single-topic answers, respond thoroughly in chat — no file needed.
+- When saving: use `reports/cfo-review-{YYYY-MM-DD}.md` (create `reports/` if needed). Always .md format — never .docx, .pdf, or other formats.
+- Provide a brief summary in chat (3-5 key findings) plus confirmation of where the file was saved.
 
 ### Report Structure
 Every saved report must include:
@@ -499,346 +499,44 @@ Not all revenue is valued equally:
 
 ### For P&L Review
 
-The P&L Review is a comprehensive financial analysis report saved as a `.md` file. The full structure is shown below. Every line item must include specific dollar amounts and percentage-of-revenue calculations.
+Save to `reports/cfo-review-{YYYY-MM-DD}.md`. Include:
 
-```markdown
-# P&L Review: [Brand Name]
-**Date:** [Date]
-**Period Analyzed:** [Date range]
-**Compared To:** [Prior period or same period last year]
-**Prepared by:** Claude (eCommerce CFO Skill)
-
----
-
-## Executive Summary
-
-Provide a thorough overview covering: overall financial health (profitable or not, margin trajectory), the single biggest margin leak identified, the single highest-impact opportunity to improve profitability, and whether the business is on a sustainable path at current growth rates. State the estimated dollar impact of the top three recommendations. This should be a full paragraph — not bullet points.
-
----
-
-## P&L Summary
-
-| Line Item | Current Period | % of Revenue | Prior Period | % of Revenue | Change ($) | Change (%) | Status |
-|---|---|---|---|---|---|---|---|
-| **Revenue** | | | | | | | |
-| Gross Product Revenue | $XXX,XXX | 100% | $XXX,XXX | 100% | +/- $XX,XXX | +/- X% | — |
-| Discounts & Returns | ($XX,XXX) | (X%) | ($XX,XXX) | (X%) | +/- $X,XXX | +/- X% | 🟢/🟡/🔴 |
-| **Net Revenue** | **$XXX,XXX** | **XX%** | **$XXX,XXX** | **XX%** | **+/- $XX,XXX** | **+/- X%** | — |
-| | | | | | | | |
-| **Cost of Goods Sold** | | | | | | | |
-| Product Cost (landed) | ($XX,XXX) | (XX%) | ($XX,XXX) | (XX%) | +/- $X,XXX | +/- X% | 🟢/🟡/🔴 |
-| Packaging & Inserts | ($X,XXX) | (X%) | ($X,XXX) | (X%) | +/- $XXX | +/- X% | 🟢/🟡/🔴 |
-| Shipping to Customer | ($XX,XXX) | (XX%) | ($XX,XXX) | (XX%) | +/- $X,XXX | +/- X% | 🟢/🟡/🔴 |
-| Merchant Processing Fees | ($X,XXX) | (X%) | ($X,XXX) | (X%) | +/- $XXX | +/- X% | 🟢/🟡/🔴 |
-| **Total COGS** | **($XX,XXX)** | **(XX%)** | **($XX,XXX)** | **(XX%)** | **+/- $X,XXX** | **+/- X%** | — |
-| | | | | | | | |
-| **Gross Profit** | **$XX,XXX** | **XX%** | **$XX,XXX** | **XX%** | **+/- $X,XXX** | **+/- X%** | 🟢/🟡/🔴 |
-| | | | | | | | |
-| **Operating Expenses** | | | | | | | |
-| Marketing — Paid Ads | ($XX,XXX) | (XX%) | ($XX,XXX) | (XX%) | +/- $X,XXX | +/- X% | 🟢/🟡/🔴 |
-| Marketing — Email (Klaviyo) | ($X,XXX) | (X%) | ($X,XXX) | (X%) | +/- $XXX | +/- X% | 🟢/🟡/🔴 |
-| Marketing — Other | ($X,XXX) | (X%) | ($X,XXX) | (X%) | +/- $XXX | +/- X% | 🟢/🟡/🔴 |
-| Total Marketing | ($XX,XXX) | (XX%) | ($XX,XXX) | (XX%) | +/- $X,XXX | +/- X% | 🟢/🟡/🔴 |
-| Payroll & Contractors | ($XX,XXX) | (XX%) | ($XX,XXX) | (XX%) | +/- $X,XXX | +/- X% | 🟢/🟡/🔴 |
-| Software & Tools | ($X,XXX) | (X%) | ($X,XXX) | (X%) | +/- $XXX | +/- X% | 🟢/🟡/🔴 |
-| Warehousing / 3PL | ($X,XXX) | (X%) | ($X,XXX) | (X%) | +/- $XXX | +/- X% | 🟢/🟡/🔴 |
-| Rent / Overhead | ($X,XXX) | (X%) | ($X,XXX) | (X%) | +/- $XXX | +/- X% | 🟢/🟡/🔴 |
-| Other Operating | ($X,XXX) | (X%) | ($X,XXX) | (X%) | +/- $XXX | +/- X% | 🟢/🟡/🔴 |
-| **Total Operating Expenses** | **($XX,XXX)** | **(XX%)** | **($XX,XXX)** | **(XX%)** | **+/- $X,XXX** | **+/- X%** | — |
-| | | | | | | | |
-| **Operating Profit (EBITDA)** | **$XX,XXX** | **XX%** | **$XX,XXX** | **XX%** | **+/- $X,XXX** | **+/- X%** | 🟢/🟡/🔴 |
-| | | | | | | | |
-| Interest / Debt Service | ($X,XXX) | (X%) | ($X,XXX) | (X%) | +/- $XXX | +/- X% | — |
-| Taxes | ($X,XXX) | (X%) | ($X,XXX) | (X%) | +/- $XXX | +/- X% | — |
-| **Net Profit** | **$XX,XXX** | **XX%** | **$XX,XXX** | **XX%** | **+/- $X,XXX** | **+/- X%** | 🟢/🟡/🔴 |
-
----
-
-## Health Assessment
-
-| Category | Status | Assessment |
-|---|---|---|
-| Gross Margin | 🟢/🟡/🔴 | XX% — explain whether this is healthy for this product category and stage. Provide the benchmark range. |
-| Marketing Efficiency | 🟢/🟡/🔴 | Marketing at XX% of revenue — explain whether this is sustainable. Reference MER/blended ROAS. |
-| Contribution Margin (after marketing) | 🟢/🟡/🔴 | XX% — explain whether there is enough margin left to cover fixed costs and profit. |
-| Operating Margin (EBITDA) | 🟢/🟡/🔴 | XX% — explain trajectory and whether the brand is on a path to profitability. |
-| Overhead Efficiency | 🟢/🟡/🔴 | Fixed costs at XX% of revenue — explain whether the team/tool stack is right-sized for this revenue level. |
-| Discount & Returns Impact | 🟢/🟡/🔴 | Discounts + returns at XX% — explain whether this is eroding margin and compare to benchmark. |
-
----
-
-## Key Findings
-
-For each finding, provide the specific data point, why it matters, and what it means for the business. Each finding should be a full paragraph with numbers.
-
-1. **[Finding title]** — Detailed explanation with specific numbers and context. e.g., "Shipping costs have risen from 8% to 12% of revenue over the past 6 months, adding $4,200/mo in cost. This is driven by a shift toward smaller orders (AOV dropped from $72 to $58) while flat-rate shipping remains at $6.99. Each sub-$50 order effectively costs $2.10 more to fulfill than it should."
-
-2. **[Finding title]** — Detailed explanation with numbers.
-
-3. **[Finding title]** — Detailed explanation with numbers.
-
-4. **[Finding title]** — Detailed explanation with numbers.
-
-5. **[Finding title]** — Detailed explanation with numbers.
-
----
-
-## Margin Improvement Opportunities
-
-| # | Opportunity | Current State | Target State | Monthly Impact | Effort | Timeline |
-|---|---|---|---|---|---|---|
-| 1 | Specific action (e.g., "Renegotiate 3PL rates based on volume increase") | Current cost/metric | Target cost/metric | +$X,XXX/mo | Low/Med/High | 2 weeks / 30 days / 90 days |
-| 2 | Specific action | Current | Target | +$X,XXX/mo | Effort | Timeline |
-| 3 | Specific action | Current | Target | +$X,XXX/mo | Effort | Timeline |
-| 4 | Specific action | Current | Target | +$X,XXX/mo | Effort | Timeline |
-| 5 | Specific action | Current | Target | +$X,XXX/mo | Effort | Timeline |
-| — | **Total Estimated Impact** | — | — | **+$XX,XXX/mo** | — | — |
-
----
-
-## Scenario Modeling
-
-| Scenario | Revenue | Gross Margin | Marketing % | EBITDA | EBITDA Margin | Key Assumption |
-|---|---|---|---|---|---|---|
-| Conservative (current trajectory) | $XXX,XXX/mo | XX% | XX% | $XX,XXX | XX% | No changes to current operations |
-| Base Case (implement top 3 recs) | $XXX,XXX/mo | XX% | XX% | $XX,XXX | XX% | Top 3 recommendations implemented within 60 days |
-| Aggressive (all recommendations) | $XXX,XXX/mo | XX% | XX% | $XX,XXX | XX% | All recommendations implemented + revenue growth of X%/mo |
-
----
-
-## Recommendations
-
-| Priority | Recommendation | P&L Line Impacted | Expected Impact | Effort | Timeline | Dependencies |
-|---|---|---|---|---|---|---|
-| 1 | Specific action | Which line item improves | +$X,XXX/mo | Low/Med/High | Timeline | What needs to happen first |
-| 2 | Specific action | Line item | +$X,XXX/mo | Effort | Timeline | Dependencies |
-| 3 | Specific action | Line item | +$X,XXX/mo | Effort | Timeline | Dependencies |
-| 4 | Specific action | Line item | +$X,XXX/mo | Effort | Timeline | Dependencies |
-| 5 | Specific action | Line item | +$X,XXX/mo | Effort | Timeline | Dependencies |
-
----
-
-## Next Steps
-
-Sequenced action plan: what financial actions to take this week, what to negotiate or restructure in the next 2 weeks, and what strategic changes to implement over 30-90 days. For each step, name who owns it and what the measurable success criteria is.
-```
+1. Executive Summary — full paragraph on financial health, biggest margin leak, top opportunity, sustainability at current growth rates, and estimated dollar impact of the top three recommendations
+2. P&L Summary Table — every line item from gross revenue through net profit, each with current period dollar amount, % of revenue, prior period comparison, dollar and percentage change, and status indicator. Include all COGS line items (product cost, packaging, shipping, merchant fees) and all operating expenses (paid ads, email, other marketing, payroll, software, 3PL, rent, other)
+3. Health Assessment — table rating gross margin, marketing efficiency, contribution margin, operating margin, overhead efficiency, and discount/returns impact, each with status indicator, current percentage, and comparison to category benchmarks
+4. Key Findings — 5+ findings, each a full paragraph with specific dollar amounts and percentages explaining the data point, why it matters, and what it means for the business
+5. Margin Improvement Opportunities — table with 5+ rows: opportunity, current state, target state, monthly dollar impact, effort level, and timeline. Include a total estimated impact row
+6. Scenario Modeling — conservative/base/aggressive projections table showing revenue, gross margin, marketing %, EBITDA, EBITDA margin, and key assumption for each scenario
+7. Recommendations — prioritized table: action, P&L line impacted, expected dollar impact, effort, timeline, dependencies
+8. Next Steps — sequenced actions for this week, next 2 weeks, and 30-90 days, each with an owner and measurable success criteria
 
 ---
 
 ### For Unit Economics Analysis
 
-The Unit Economics Analysis is a detailed product-level profitability report saved as a `.md` file. The full structure is shown below.
+Save to `reports/cfo-review-{YYYY-MM-DD}.md`. Include:
 
-```markdown
-# Unit Economics Analysis: [Brand Name]
-**Date:** [Date]
-**Products Analyzed:** [Product name(s) or "Full catalog"]
-**Prepared by:** Claude (eCommerce CFO Skill)
-
----
-
-## Executive Summary
-
-Provide a thorough overview covering: whether the business has healthy unit economics, which products or categories are margin-positive vs. margin-negative, the biggest unit economics risk, and the single highest-impact lever to improve contribution margin. This should be a full paragraph.
-
----
-
-## Unit Economics Summary (Per Order)
-
-| Metric | Value | % of Revenue | Benchmark | Assessment |
-|---|---|---|---|---|
-| Average Order Value (AOV) | $XX.XX | 100% | $XX-$XX for category | 🟢/🟡/🔴 |
-| Average Units per Order | X.X | — | — | — |
-| Average Selling Price per Unit | $XX.XX | — | — | — |
-| | | | | |
-| **COGS per Order** | | | | |
-| Product Cost (landed) | ($XX.XX) | (XX%) | (30-40%) | 🟢/🟡/🔴 |
-| Packaging & Inserts | ($X.XX) | (X%) | (2-4%) | 🟢/🟡/🔴 |
-| Shipping to Customer | ($X.XX) | (XX%) | (8-12%) | 🟢/🟡/🔴 |
-| Merchant Processing (2.9% + $0.30) | ($X.XX) | (X%) | (2.5-3.5%) | 🟢/🟡/🔴 |
-| **Total COGS per Order** | **($XX.XX)** | **(XX%)** | **(45-55%)** | — |
-| | | | | |
-| **Gross Profit per Order** | **$XX.XX** | **XX%** | **(45-55%)** | 🟢/🟡/🔴 |
-| | | | | |
-| Marketing Cost per Order (blended CAC) | ($XX.XX) | (XX%) | (15-25%) | 🟢/🟡/🔴 |
-| **Contribution Margin per Order** | **$XX.XX** | **XX%** | **(20-35%)** | 🟢/🟡/🔴 |
-
----
-
-## Product-Level Breakdown
-
-| Product / SKU | Selling Price | COGS (landed) | Gross Margin | Gross Margin % | Sales Volume (mo) | Gross Profit Contribution | Status |
-|---|---|---|---|---|---|---|---|
-| [Product A] | $XX.XX | $XX.XX | $XX.XX | XX% | X,XXX units | $XX,XXX | 🟢/🟡/🔴 |
-| [Product B] | $XX.XX | $XX.XX | $XX.XX | XX% | X,XXX units | $XX,XXX | 🟢/🟡/🔴 |
-| [Product C] | $XX.XX | $XX.XX | $XX.XX | XX% | X,XXX units | $XX,XXX | 🟢/🟡/🔴 |
-| [Bundle X] | $XX.XX | $XX.XX | $XX.XX | XX% | XXX units | $X,XXX | 🟢/🟡/🔴 |
-| **Weighted Average** | **$XX.XX** | **$XX.XX** | **$XX.XX** | **XX%** | — | **$XX,XXX** | — |
-
-For each product flagged 🟡 or 🔴, provide a paragraph explaining where the margin is leaking and what specific action would improve it.
-
----
-
-## Customer Lifetime Value Analysis
-
-| Metric | Value | How Calculated |
-|---|---|---|
-| Average Order Value | $XX.XX | Total revenue / Total orders (period) |
-| Purchase Frequency (annual) | X.X | Total orders / Unique customers (12mo) |
-| Repeat Purchase Rate | XX% | Customers with 2+ orders / Total customers |
-| Average Customer Lifespan | X.X years | 1 / (1 - Repeat Purchase Rate) or cohort analysis |
-| **Gross LTV** | **$XXX.XX** | AOV x Frequency x Lifespan |
-| Gross Margin on LTV | $XXX.XX | Gross LTV x Gross Margin % |
-| **Net LTV (after COGS)** | **$XXX.XX** | Gross LTV x Contribution Margin % |
-| | | |
-| Blended CAC | $XX.XX | Total marketing spend / New customers |
-| **LTV:CAC Ratio** | **X.X:1** | Net LTV / CAC |
-| CAC Payback Period | X.X months | CAC / (Monthly revenue per customer x Contribution Margin %) |
-
-**LTV:CAC Assessment:**
-- Below 1:1 = Losing money on every customer (unsustainable)
-- 1:1 to 3:1 = Marginal, need to improve retention or reduce CAC
-- 3:1 to 5:1 = Healthy, sustainable growth
-- Above 5:1 = Under-investing in growth, could spend more to acquire customers
-
-Provide analysis of where this brand falls and what the primary lever is to improve the ratio (reduce CAC, increase AOV, improve retention, or improve margins).
-
----
-
-## Margin Sensitivity Analysis
-
-Show how key metrics change when individual variables shift:
-
-| Variable Changed | Current | Scenario A (-10%) | Scenario B (+10%) | Impact on Contribution Margin |
-|---|---|---|---|---|
-| AOV | $XX.XX | $XX.XX | $XX.XX | -$X.XX / +$X.XX per order |
-| COGS (landed) | $XX.XX | $XX.XX | $XX.XX | +$X.XX / -$X.XX per order |
-| Shipping Cost | $X.XX | $X.XX | $X.XX | +$X.XX / -$X.XX per order |
-| CAC | $XX.XX | $XX.XX | $XX.XX | +$X.XX / -$X.XX per order |
-| Discount Rate | XX% | XX% | XX% | +$X.XX / -$X.XX per order |
-
-Identify which variable has the largest impact on contribution margin per order. This is the brand's highest-leverage improvement area.
-
----
-
-## Recommendations
-
-| Priority | Recommendation | Metric Impacted | Current | Target | Monthly Impact | Timeline |
-|---|---|---|---|---|---|---|
-| 1 | Specific action | Which unit econ metric improves | Current value | Target value | +$X,XXX/mo | Timeline |
-| 2 | Specific action | Metric | Current | Target | +$X,XXX/mo | Timeline |
-| 3 | Specific action | Metric | Current | Target | +$X,XXX/mo | Timeline |
-| 4 | Specific action | Metric | Current | Target | +$X,XXX/mo | Timeline |
-
----
-
-## Next Steps
-
-Specific actions with owners, timelines, and measurable success criteria.
-```
+1. Executive Summary — paragraph on unit economics health, which products/categories are margin-positive vs. margin-negative, biggest unit economics risk, and highest-impact lever for contribution margin
+2. Unit Economics Summary (Per Order) — table with AOV, units per order, average selling price, then COGS breakdown (product cost, packaging, shipping, merchant processing), total COGS, gross profit, marketing cost per order, and contribution margin. Each row shows value, % of revenue, category benchmark, and status indicator
+3. Product-Level Breakdown — table: product/SKU, selling price, COGS, gross margin, gross margin %, monthly volume, gross profit contribution, status. Follow with a paragraph for each flagged product explaining where margin is leaking and what action would fix it
+4. Customer Lifetime Value Analysis — table with full LTV calculation (AOV, purchase frequency, repeat rate, lifespan, gross LTV, net LTV), CAC, LTV:CAC ratio, and payback period, each showing how it was calculated. Include assessment paragraph on where the brand falls and the primary lever to improve the ratio
+5. Margin Sensitivity Analysis — table showing impact of +/-10% changes to AOV, COGS, shipping cost, CAC, and discount rate on contribution margin per order. Identify the highest-leverage variable
+6. Recommendations — prioritized table: action, metric impacted, current value, target value, monthly impact, timeline
+7. Next Steps — specific actions with owners, timelines, and measurable success criteria
 
 ---
 
 ### For Cash Flow Forecast
 
-The Cash Flow Forecast is a detailed 13-week projection saved as a `.md` file. The full structure is shown below.
+Save to `reports/cfo-review-{YYYY-MM-DD}.md`. Include:
 
-```markdown
-# 13-Week Cash Flow Forecast: [Brand Name]
-**Date:** [Date]
-**Starting Cash Balance:** $XX,XXX
-**Forecast Period:** [Start date] — [End date]
-**Prepared by:** Claude (eCommerce CFO Skill)
-
----
-
-## Executive Summary
-
-Provide a thorough overview covering: current cash position, whether the business will remain cash-positive over the forecast period, any weeks where cash gets critically low (and why), the minimum cash balance during the period, and the single most important action to improve cash position. This should be a full paragraph.
-
----
-
-## 13-Week Cash Flow Projection
-
-| | Wk 1 | Wk 2 | Wk 3 | Wk 4 | Wk 5 | Wk 6 | Wk 7 | Wk 8 | Wk 9 | Wk 10 | Wk 11 | Wk 12 | Wk 13 |
-|---|---|---|---|---|---|---|---|---|---|---|---|---|---|
-| **Starting Cash** | $XX,XXX | | | | | | | | | | | | |
-| | | | | | | | | | | | | | |
-| **Cash In** | | | | | | | | | | | | | |
-| Shopify Revenue | $X,XXX | $X,XXX | $X,XXX | $X,XXX | $X,XXX | $X,XXX | $X,XXX | $X,XXX | $X,XXX | $X,XXX | $X,XXX | $X,XXX | $X,XXX |
-| Wholesale / B2B | $X,XXX | — | — | $X,XXX | — | — | $X,XXX | — | — | $X,XXX | — | — | $X,XXX |
-| Other Income | — | — | — | — | — | — | — | — | — | — | — | — | — |
-| **Total Cash In** | $X,XXX | $X,XXX | $X,XXX | $X,XXX | $X,XXX | $X,XXX | $X,XXX | $X,XXX | $X,XXX | $X,XXX | $X,XXX | $X,XXX | $X,XXX |
-| | | | | | | | | | | | | | |
-| **Cash Out** | | | | | | | | | | | | | |
-| Inventory Purchases | ($X,XXX) | — | — | ($X,XXX) | — | — | ($X,XXX) | — | — | ($X,XXX) | — | — | ($X,XXX) |
-| Ad Spend | ($X,XXX) | ($X,XXX) | ($X,XXX) | ($X,XXX) | ($X,XXX) | ($X,XXX) | ($X,XXX) | ($X,XXX) | ($X,XXX) | ($X,XXX) | ($X,XXX) | ($X,XXX) | ($X,XXX) |
-| Payroll | — | ($X,XXX) | — | — | ($X,XXX) | — | — | ($X,XXX) | — | — | ($X,XXX) | — | — |
-| Shipping / Fulfillment | ($X,XXX) | ($X,XXX) | ($X,XXX) | ($X,XXX) | ($X,XXX) | ($X,XXX) | ($X,XXX) | ($X,XXX) | ($X,XXX) | ($X,XXX) | ($X,XXX) | ($X,XXX) | ($X,XXX) |
-| Software & Tools | — | — | — | ($X,XXX) | — | — | — | ($X,XXX) | — | — | — | ($X,XXX) | — |
-| Rent / Overhead | — | — | — | ($X,XXX) | — | — | — | ($X,XXX) | — | — | — | ($X,XXX) | — |
-| Loan / Debt Payments | — | — | — | ($X,XXX) | — | — | — | ($X,XXX) | — | — | — | ($X,XXX) | — |
-| Tax Payments | — | — | — | — | — | — | — | — | — | — | — | — | ($X,XXX) |
-| Other | — | — | — | — | — | — | — | — | — | — | — | — | — |
-| **Total Cash Out** | ($X,XXX) | ($X,XXX) | ($X,XXX) | ($X,XXX) | ($X,XXX) | ($X,XXX) | ($X,XXX) | ($X,XXX) | ($X,XXX) | ($X,XXX) | ($X,XXX) | ($X,XXX) | ($X,XXX) |
-| | | | | | | | | | | | | | |
-| **Net Cash Flow** | $X,XXX | $X,XXX | $X,XXX | ($X,XXX) | $X,XXX | $X,XXX | $X,XXX | ($X,XXX) | $X,XXX | $X,XXX | $X,XXX | ($X,XXX) | $X,XXX |
-| **Ending Cash** | $XX,XXX | $XX,XXX | $XX,XXX | $XX,XXX | $XX,XXX | $XX,XXX | $XX,XXX | $XX,XXX | $XX,XXX | $XX,XXX | $XX,XXX | $XX,XXX | $XX,XXX |
-| **Cash Status** | 🟢 | 🟢 | 🟢 | 🟡 | 🟢 | 🟢 | 🟢 | 🔴 | 🟡 | 🟢 | 🟢 | 🟢 | 🟢 |
-
-**Cash Status Key:**
-- 🟢 = Cash balance above $XX,XXX (comfortable buffer)
-- 🟡 = Cash balance between $X,XXX and $XX,XXX (caution — limited runway)
-- 🔴 = Cash balance below $X,XXX (critical — immediate action required)
-
----
-
-## Key Cash Flow Risks
-
-| Week(s) | Risk | Cause | Severity | Mitigation |
-|---|---|---|---|---|
-| Wk 4 | Cash dips to $X,XXX | Large inventory PO + payroll in same week | 🟡 Medium | Negotiate net-30 on PO or split into 2 orders |
-| Wk 8 | Cash drops below $X,XXX | Seasonal revenue dip + quarterly software billing | 🔴 High | Delay non-essential tool renewals, accelerate wholesale invoice collection |
-| Wk X | Description | Cause | Severity | Mitigation |
-
----
-
-## Scenario Modeling
-
-| Scenario | Ending Cash (Wk 13) | Min Cash (which week) | Assessment |
-|---|---|---|---|
-| Conservative (-15% revenue) | $XX,XXX | $X,XXX (Wk X) | Description of what happens — does the business survive? |
-| Base Case (as projected) | $XX,XXX | $XX,XXX (Wk X) | Description |
-| Aggressive (+15% revenue) | $XX,XXX | $XX,XXX (Wk X) | Description — note: higher revenue may require more inventory spend |
-
----
-
-## Cash Position Improvement Recommendations
-
-| Priority | Action | Cash Impact | Timing | Implementation |
-|---|---|---|---|---|
-| 1 | Specific action (e.g., "Negotiate net-30 terms with primary supplier — currently paying on delivery") | Frees up $XX,XXX in working capital | Immediate / 2 weeks | Who to contact, what to ask for |
-| 2 | Specific action | +$X,XXX cash flow improvement | Timing | Implementation details |
-| 3 | Specific action | +$X,XXX improvement | Timing | Implementation details |
-| 4 | Specific action | +$X,XXX improvement | Timing | Implementation details |
-
----
-
-## Key Assumptions
-
-List every assumption used in the forecast so the brand can validate them:
-- Revenue growth rate assumed: X% week-over-week
-- Inventory ordering cadence: every X weeks
-- Seasonal adjustments: describe any seasonal factors built into the forecast
-- Ad spend: held constant at $X,XXX/week vs. variable
-- Collection terms: Shopify payouts on X-day cycle, wholesale on net-XX
-
----
-
-## Next Steps
-
-Specific actions: what financial decisions to make this week, what negotiations to start, what data to monitor weekly, and when to re-forecast. Include a recommended cadence for cash flow review (e.g., "Update this forecast every Monday with actuals from the prior week").
-```
+1. Executive Summary — paragraph on current cash position, whether the business stays cash-positive over the forecast period, which weeks are critical and why, minimum cash balance reached, and the single most important action to improve cash position
+2. 13-Week Cash Flow Projection — weekly table with rows for: starting cash, cash in (Shopify revenue, wholesale/B2B, other income, total cash in), cash out (inventory purchases, ad spend, payroll, shipping/fulfillment, software, rent/overhead, loan/debt payments, tax payments, other, total cash out), net cash flow, ending cash, and cash status indicator. Include a status key defining green/yellow/red thresholds
+3. Key Cash Flow Risks — table: week(s) affected, risk description, cause, severity, and specific mitigation action
+4. Scenario Modeling — conservative/base/aggressive table showing ending cash at week 13, minimum cash balance and which week it occurs, and narrative assessment for each scenario
+5. Cash Improvement Recommendations — prioritized table: action, cash impact in dollars, timing, and implementation details including who to contact and what to ask for
+6. Key Assumptions — list every assumption (revenue growth rate, inventory ordering cadence, seasonal adjustments, ad spend assumptions, collection terms) so the brand can validate them
+7. Next Steps — specific actions for this week plus recommended re-forecast cadence (e.g., weekly Monday updates with prior-week actuals)
 
 ---
 

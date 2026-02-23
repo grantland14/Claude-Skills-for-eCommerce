@@ -20,10 +20,10 @@ Every response must be comprehensive, specific, and actionable. Follow these rul
 - Show your reasoning. When recommending flow timing or discount strategy, explain the data behind it.
 
 ### File Delivery
-- For any analysis, audit, strategy, plan, or multi-section deliverable: save the complete output as a markdown file using the Write tool.
-- File path: `reports/email-{YYYY-MM-DD}.md` (create the `reports/` directory if it doesn't exist).
-- The .md file IS the deliverable. Put everything in the file, then confirm to the user what was saved and where.
-- Still provide a brief summary in the chat message (3-5 key findings) so the user gets immediate value, but the full report lives in the file.
+- Only save a .md report when the user asks for a full report, audit, analysis, review, strategy, plan, or deep dive.
+- For quick questions or single-topic answers, respond thoroughly in chat — no file needed.
+- When saving: use `reports/email-{YYYY-MM-DD}.md` (create `reports/` if needed). Always .md format — never .docx, .pdf, or other formats.
+- Provide a brief summary in chat (3-5 key findings) plus confirmation of where the file was saved.
 
 ### Report Structure
 Every saved report must include:
@@ -1089,412 +1089,53 @@ For brands selling consumable or repeat-purchase products:
 
 ### For Flow Creation
 
-Flow Creation deliverables are comprehensive build documents saved as `.md` files. The full structure is shown below. Every email in the flow must be fully specified — not summarized.
+Save to `reports/flow-build-{flow-name}-{YYYY-MM-DD}.md`. Include:
 
-```markdown
-# Flow Build: [Flow Name]
-**Brand:** [Brand Name]
-**Date:** [Date]
-**Platform:** Klaviyo
-**Prepared by:** Claude (eCommerce Email Skill)
-
----
-
-## Executive Summary
-
-Provide a thorough overview of the flow's purpose, how it fits into the broader email program, the revenue opportunity it addresses, and what makes this flow design different from a generic template. Reference the brand's specific AOV, purchase cycle, and customer behavior where relevant. This should be a full paragraph.
-
----
-
-## Flow Architecture
-
-| Parameter | Detail |
-|---|---|
-| Flow Name | Exact name to use in Klaviyo |
-| Trigger | Specific trigger event (e.g., "Placed Order" where order contains product from Collection X) |
-| Primary Goal | Revenue recovery / Nurture / Retention / Win-back / Cross-sell |
-| Secondary Goal | Brand education / Review collection / Referral |
-| Total Emails | X emails over X days |
-| Entry Condition | Who enters (include Klaviyo filter logic) |
-| Exit Condition | What removes someone (e.g., "Places an order" or "Enters VIP flow") |
-| Exclusions | Who should NOT receive this flow (e.g., "Suppress if received campaign in last 24 hours") |
-| Conditional Splits | Describe any branching logic (e.g., "Split on AOV > $100 vs. AOV ≤ $100") |
-
----
-
-## Flow Timeline & Email Sequence
-
-| # | Email Name | Send Timing | Purpose | Subject Line (Primary) | CTA |
-|---|---|---|---|---|---|
-| 1 | e.g., Cart Reminder | 1 hour after trigger | Remind, show cart contents | "You left something behind" | Return to Cart |
-| 2 | e.g., Social Proof Nudge | 24 hours after Email 1 | Build urgency with proof | "X people are eyeing this too" | Complete Purchase |
-| 3 | e.g., Incentive Offer | 48 hours after Email 2 | Overcome price objection | "Still thinking it over?" | Claim Your Offer |
-| (continue for all emails) | | | | | |
-
----
-
-## Individual Email Specifications
-
-### Email 1: [Email Name]
-
-**Timing:** [Exact delay from trigger or previous email]
-**Segment Condition:** [Any conditional split this email belongs to]
-
-**Subject Line Options (A/B test):**
-| Option | Subject Line | Rationale |
-|---|---|---|
-| A | Exact subject line text | Why this approach works (e.g., "Curiosity gap — drives opens without discount framing") |
-| B | Exact subject line text | Why this approach works |
-| C | Exact subject line text | Why this approach works |
-
-**Preview Text:** Exact preview text (ensure it complements subject line, not repeats it)
-
-**Email Copy:**
-
-> **Headline:** Exact headline text
->
-> **Opening Hook:** The first 1-2 sentences that appear above the fold. Explain the strategic approach in [brackets] after the copy — e.g., [Opens with empathy, not salesiness. Acknowledges the browse/cart action without being creepy.]
->
-> **Body Copy:** Full body copy for the email. Every paragraph written out. Include [bracketed annotations] explaining the persuasion principle or strategic choice behind each section — e.g., [Social proof block — references number of reviews or customers. Reduces perceived risk.]
->
-> **CTA Button:** Exact button text
-> **CTA Destination:** Exact URL path or dynamic link (e.g., {{ event.extra.checkout_url }})
->
-> **Post-CTA Copy:** Any copy below the CTA (e.g., guarantee reminder, support contact)
-
-**Design Notes:** Layout direction — single column vs. multi-column, hero image placement, product image block specifications, mobile considerations.
-
-**Klaviyo Setup Notes:** Any platform-specific configuration — dynamic blocks, conditional content, profile property references, event variable syntax.
-
----
-
-(Repeat the full "Email X" specification above for EVERY email in the flow. Do not abbreviate or use "repeat for each email" — each email must be fully written out.)
-
----
-
-## Performance Benchmarks
-
-| Metric | Target (This Flow) | Industry Benchmark | Notes |
-|---|---|---|---|
-| Flow Revenue / Recipient | $X.XX | $X.XX | Based on [flow type] benchmarks |
-| Open Rate (avg across flow) | XX% | XX% | Benchmark source |
-| Click Rate (avg across flow) | X.X% | X.X% | Benchmark source |
-| Conversion Rate | X.X% | X.X% | Benchmark source |
-| Unsubscribe Rate | <X.X% | <X.X% | Alert threshold |
-| Revenue per Email | $X.XX per email | — | Internal target |
-
----
-
-## Next Steps
-
-Specific implementation steps: what to build first in Klaviyo, what assets are needed (images, product feeds), when to activate, and when to conduct the first performance review.
-```
+1. Executive Summary — full paragraph on the flow's purpose, how it fits into the broader email program, the revenue opportunity it addresses, and what makes this design brand-specific (reference AOV, purchase cycle, customer behavior)
+2. Flow Architecture — table with: exact Klaviyo flow name, trigger event, primary and secondary goals, total emails and timespan, entry condition (with Klaviyo filter logic), exit condition, exclusions, and any conditional splits
+3. Flow Timeline & Email Sequence — summary table for all emails: email number, name, send timing, purpose, primary subject line, and CTA
+4. Individual Email Specifications — for EVERY email in the flow (do not abbreviate), include: timing, segment condition, 3 A/B subject line options with rationale, preview text, full email copy (headline, opening hook, body copy, CTA button and destination, post-CTA copy) with [bracketed strategic annotations] explaining the persuasion principle behind each section, design notes (layout, hero image, mobile), and Klaviyo setup notes (dynamic blocks, profile properties, event variable syntax)
+5. Performance Benchmarks — table with targets and industry benchmarks for: flow revenue/recipient, open rate, click rate, conversion rate, unsubscribe rate, revenue per email
+6. Next Steps — what to build first in Klaviyo, what assets are needed, when to activate, when to conduct first performance review
 
 ---
 
 ### For Email Program Audit
 
-The Email Program Audit is a comprehensive diagnostic report saved as a `.md` file. The full structure is shown below. Every flow and campaign type must be individually assessed — not summarized in aggregate.
+Save to `reports/email-audit-{YYYY-MM-DD}.md`. Include:
 
-```markdown
-# Email Program Audit: [Brand Name]
-**Date:** [Date]
-**Period Analyzed:** [Date range]
-**Platform:** Klaviyo
-**Prepared by:** Claude (eCommerce Email Skill)
-
----
-
-## Executive Summary
-
-Provide a thorough overview covering: overall email program health as a revenue channel, email revenue as a percentage of total (and whether that is healthy for this brand's stage), the single biggest revenue leak in the program, the single highest-impact opportunity, and estimated total revenue impact of implementing all recommendations. This should be a full paragraph — not bullets.
-
----
-
-## Program Overview
-
-| Metric | Current Value | Benchmark | Assessment |
-|---|---|---|---|
-| Email Revenue (% of total) | XX% | 25-35% | On target / Below / Above |
-| Flow Revenue (% of email revenue) | XX% | 50-70% | Assessment |
-| Campaign Revenue (% of email revenue) | XX% | 30-50% | Assessment |
-| Active List Size | XX,XXX | — | — |
-| 30-Day Engaged Segment | XX,XXX (XX% of list) | >25% | Assessment |
-| List Growth Rate (monthly) | +X,XXX (X%) | 3-5% | Assessment |
-| Average Open Rate (flows) | XX% | 40-60% | Assessment |
-| Average Click Rate (flows) | X.X% | 3-8% | Assessment |
-| Average Open Rate (campaigns) | XX% | 25-40% | Assessment |
-| Average Click Rate (campaigns) | X.X% | 1.5-4% | Assessment |
-| Unsubscribe Rate (campaigns) | X.X% | <0.3% | Assessment |
-| Spam Complaint Rate | X.XX% | <0.08% | Assessment |
-| Revenue per Recipient (flows avg) | $X.XX | $X.XX | Assessment |
-| Revenue per Recipient (campaigns avg) | $X.XX | $X.XX | Assessment |
-
----
-
-## Flow Performance Dashboard
-
-| Flow | Status | # Emails | Open Rate | Click Rate | Revenue (period) | Rev/Recipient | Benchmark Rev/Recip | Assessment |
-|---|---|---|---|---|---|---|---|---|
-| Welcome Series | ✅ Live / ⚠️ Needs Work / ❌ Missing | X | XX% | X.X% | $X,XXX | $X.XX | $X.XX | 🟢/🟡/🔴 |
-| Abandoned Cart | ✅ / ⚠️ / ❌ | X | XX% | X.X% | $X,XXX | $X.XX | $X.XX | 🟢/🟡/🔴 |
-| Browse Abandonment | ✅ / ⚠️ / ❌ | X | XX% | X.X% | $X,XXX | $X.XX | $X.XX | 🟢/🟡/🔴 |
-| Post-Purchase | ✅ / ⚠️ / ❌ | X | XX% | X.X% | $X,XXX | $X.XX | $X.XX | 🟢/🟡/🔴 |
-| Win-Back | ✅ / ⚠️ / ❌ | X | XX% | X.X% | $X,XXX | $X.XX | $X.XX | 🟢/🟡/🔴 |
-| Sunset / Re-Engagement | ✅ / ⚠️ / ❌ | X | XX% | X.X% | — | — | — | 🟢/🟡/🔴 |
-| VIP / Loyalty | ✅ / ⚠️ / ❌ | X | XX% | X.X% | $X,XXX | $X.XX | $X.XX | 🟢/🟡/🔴 |
-| Cross-Sell / Replenishment | ✅ / ⚠️ / ❌ | X | XX% | X.X% | $X,XXX | $X.XX | $X.XX | 🟢/🟡/🔴 |
-| **TOTAL FLOW REVENUE** | — | — | — | — | **$XX,XXX** | — | — | — |
-
----
-
-## Individual Flow Deep-Dives
-
-### [Flow Name] Flow
-
-**Status:** Live since [date] / Missing
-**Architecture:** X emails over X days
-
-**Per-Email Performance:**
-
-| Email # | Email Name | Send Timing | Open Rate | Click Rate | Conv. Rate | Revenue | Unsub Rate |
-|---|---|---|---|---|---|---|---|
-| 1 | [Name] | [Timing] | XX% | X.X% | X.X% | $X,XXX | X.X% |
-| 2 | [Name] | [Timing] | XX% | X.X% | X.X% | $X,XXX | X.X% |
-| 3 | [Name] | [Timing] | XX% | X.X% | X.X% | $X,XXX | X.X% |
-
-**Analysis:** Provide specific observations — which emails are underperforming, where the drop-off happens, whether timing gaps are too long or too short, whether subject lines are stale, whether the copy matches the brand voice.
-
-**Copy Recommendations:** For each underperforming email, provide specific subject line alternatives and copy direction changes. Explain why the current approach is falling short and what the new approach should accomplish.
-
-**Structural Recommendations:** Changes to flow architecture — add/remove emails, change timing, add conditional splits, update exit conditions.
-
-(Repeat this full deep-dive for EVERY flow — both live flows and missing flows. For missing flows, explain the revenue leak, provide an estimated revenue impact based on benchmark data, and prioritize setup urgency.)
-
----
-
-## Campaign Performance Analysis
-
-### Campaign Metrics (Last 90 Days)
-
-| Campaign Type | # Sent | Avg Open Rate | Avg Click Rate | Avg Revenue/Campaign | Avg Unsub Rate | Assessment |
-|---|---|---|---|---|---|---|
-| Promotional / Sale | X | XX% | X.X% | $X,XXX | X.X% | 🟢/🟡/🔴 |
-| New Product Launch | X | XX% | X.X% | $X,XXX | X.X% | 🟢/🟡/🔴 |
-| Content / Educational | X | XX% | X.X% | $X,XXX | X.X% | 🟢/🟡/🔴 |
-| Re-stock / Back in Stock | X | XX% | X.X% | $X,XXX | X.X% | 🟢/🟡/🔴 |
-
-**A/B Test Results (if available):**
-
-| Test | Variable | Variant A | Variant B | Winner | Lift | Significance |
-|---|---|---|---|---|---|---|
-| [Campaign name] | Subject line / Send time / Content | XX% open / $X rev | XX% open / $X rev | A or B | +X% | Yes / No |
-
-**Campaign Cadence Assessment:** Evaluate whether sending frequency is optimal — too frequent (list fatigue signals), too infrequent (leaving revenue on the table), or well-balanced. Reference unsubscribe trends and engagement trends over time.
-
----
-
-## List Health Assessment
-
-| Metric | Value | Benchmark | Status |
-|---|---|---|---|
-| Total List Size | XX,XXX | — | — |
-| 30-Day Active (opened or clicked) | XX,XXX (XX%) | >25% | 🟢/🟡/🔴 |
-| 90-Day Active | XX,XXX (XX%) | >50% | 🟢/🟡/🔴 |
-| Never Engaged | X,XXX (X%) | <10% | 🟢/🟡/🔴 |
-| Monthly Growth Rate | +X,XXX | 3-5%/mo | 🟢/🟡/🔴 |
-| Monthly Churn Rate | -X,XXX | <2%/mo | 🟢/🟡/🔴 |
-| Spam Complaint Rate | X.XX% | <0.08% | 🟢/🟡/🔴 |
-| Bounce Rate | X.X% | <2% | 🟢/🟡/🔴 |
-| Deliverability Score | XX% | >95% | 🟢/🟡/🔴 |
-
-**List Hygiene Recommendations:** Specific actions — sunset policy, re-engagement campaign specifications, segment cleanup, suppression list management.
-
----
-
-## Revenue Attribution Breakdown
-
-| Revenue Source | Monthly Revenue | % of Email Revenue | % of Total Revenue | Trend |
-|---|---|---|---|---|
-| Welcome Flow | $X,XXX | XX% | X% | ↑/↓/→ |
-| Abandoned Cart Flow | $X,XXX | XX% | X% | ↑/↓/→ |
-| Browse Abandonment Flow | $X,XXX | XX% | X% | ↑/↓/→ |
-| Post-Purchase Flow | $X,XXX | XX% | X% | ↑/↓/→ |
-| Other Flows | $X,XXX | XX% | X% | ↑/↓/→ |
-| Campaigns | $X,XXX | XX% | X% | ↑/↓/→ |
-| **Total Email Revenue** | **$XX,XXX** | **100%** | **XX%** | — |
-
----
-
-## Recommendations
-
-| Priority | Recommendation | Type | Expected Revenue Impact | Effort | Timeline |
-|---|---|---|---|---|---|
-| 1 | Specific action | Quick Win / Build / Optimization | +$X,XXX/mo | Low/Med/High | This week / 2 wks / 30 days |
-| 2 | Specific action | Type | +$X,XXX/mo | Effort | Timeline |
-| 3 | Specific action | Type | +$X,XXX/mo | Effort | Timeline |
-| 4 | Specific action | Type | +$X,XXX/mo | Effort | Timeline |
-| 5 | Specific action | Type | +$X,XXX/mo | Effort | Timeline |
-| — | **Total Estimated Impact** | — | **+$XX,XXX/mo** | — | — |
-
-Each recommendation must have a specific, quantified revenue impact estimate — not vague language like "improve engagement."
-
----
-
-## Next Steps
-
-Sequenced action plan: what to do this week, next 2 weeks, and next 30 days. For each step, name who owns it, what assets are needed, and what the measurable success criteria is.
-```
+1. Executive Summary — full paragraph on email program health as a revenue channel, email revenue % of total, the single biggest revenue leak, the single highest-impact opportunity, and estimated total revenue impact of all recommendations
+2. Program Overview — table of core metrics (email revenue % of total, flow vs. campaign revenue split, list size, 30-day engaged %, list growth rate, open/click rates for flows and campaigns, unsubscribe rate, spam complaint rate, revenue per recipient) each with benchmark and assessment
+3. Flow Performance Dashboard — table for every core flow (welcome, abandoned cart, browse abandonment, post-purchase, win-back, sunset, VIP, cross-sell/replenishment) showing status, email count, open/click rates, revenue, rev/recipient vs. benchmark, and assessment
+4. Individual Flow Deep-Dives — for EVERY flow (live and missing): per-email performance table (open rate, click rate, conversion rate, revenue, unsub rate), analysis paragraph, specific copy recommendations for underperforming emails, and structural recommendations (add/remove emails, timing changes, conditional splits). For missing flows, explain the revenue leak and estimated impact
+5. Campaign Performance Analysis — table by campaign type (promotional, product launch, content, restock) with volume, avg metrics, and assessment. Include A/B test results if available. Campaign cadence assessment paragraph
+6. List Health Assessment — table: total list size, 30/90-day active %, never engaged %, growth rate, churn rate, spam complaint rate, bounce rate, deliverability score, each with benchmark and status. List hygiene recommendations
+7. Revenue Attribution Breakdown — table by revenue source (each flow + campaigns) showing monthly revenue, % of email revenue, % of total revenue, and trend
+8. Recommendations — prioritized table with 5+ rows: action, type (quick win/build/optimization), quantified revenue impact, effort, timeline. Include total estimated impact row
+9. Next Steps — sequenced actions for this week, next 2 weeks, and 30 days with owners, assets needed, and success criteria
 
 ---
 
 ### For Campaign Planning
 
-Campaign Planning deliverables are detailed campaign briefs saved as `.md` files. The full structure is shown below.
+Save to `reports/campaign-brief-{campaign-name}-{YYYY-MM-DD}.md`. Include:
 
-```markdown
-# Campaign Brief: [Campaign Name]
-**Brand:** [Brand Name]
-**Date Range:** [Start] — [End]
-**Prepared by:** Claude (eCommerce Email Skill)
-
----
-
-## Campaign Overview
-
-| Parameter | Detail |
-|---|---|
-| Campaign Name | Exact name |
-| Campaign Type | Product Launch / Seasonal Sale / Flash Sale / Content / Re-engagement |
-| Audience Segment | Exact Klaviyo segment definition (e.g., "Engaged Last 90 Days AND Has Purchased > 0 times") |
-| List Size (estimated) | XX,XXX recipients |
-| Goal | Primary objective + measurable target (e.g., "$15K revenue from 3-email sequence") |
-| Offer | Exact discount/promotion details, code, expiry |
-| Exclusions | Who should NOT receive (e.g., "Exclude anyone who purchased in last 7 days") |
-
----
-
-## Email Sequence
-
-| # | Email Type | Send Date & Time | Audience | Subject Line (Primary) | CTA |
-|---|---|---|---|---|---|
-| 1 | Teaser / Announcement | [Date, Time, Timezone] | Full segment | Exact subject line | Shop Now / Learn More |
-| 2 | Launch / Main Push | [Date, Time, Timezone] | Full segment minus openers of E1 who converted | Exact subject line | Shop the Sale |
-| 3 | Reminder / Social Proof | [Date, Time, Timezone] | Openers of E1 or E2 who did not purchase | Exact subject line | Don't Miss Out |
-| 4 | Last Chance / Urgency | [Date, Time, Timezone] | Engaged non-purchasers | Exact subject line | Final Hours |
-
----
-
-## Individual Email Specifications
-
-### Email 1: [Type]
-
-**Send:** [Exact date, time, timezone]
-**Audience:** [Segment details]
-
-**Subject Line Options (A/B test):**
-| Option | Subject Line | Preview Text |
-|---|---|---|
-| A | Exact subject line | Exact preview text |
-| B | Exact subject line | Exact preview text |
-
-**Full Email Copy:**
-
-> Complete email copy, including headline, body paragraphs, CTA text, and any post-CTA copy. Written in the brand's voice with [bracketed strategic annotations] explaining the purpose of each section.
-
-**CTA:** [Button text] to [destination URL]
-**Design Notes:** Layout, imagery, product blocks, mobile considerations.
-
-(Repeat for every email in the campaign sequence.)
-
----
-
-## Success Metrics
-
-| Metric | Target | How to Measure |
-|---|---|---|
-| Total Campaign Revenue | $XX,XXX | Klaviyo campaign analytics |
-| Revenue per Recipient | $X.XX | Total revenue / recipients |
-| Average Open Rate | XX% | Across all emails |
-| Average Click Rate | X.X% | Across all emails |
-| Conversion Rate | X.X% | Unique purchasers / unique recipients |
-| Unsubscribe Rate | <X.X% | Monitor per email |
-
----
-
-## Next Steps
-
-What to prepare before send, design assets needed, Klaviyo setup steps, and post-campaign review schedule.
-```
+1. Campaign Overview — table: campaign name, type, exact Klaviyo audience segment definition, estimated list size, goal with measurable target, offer details (discount, code, expiry), and exclusions
+2. Email Sequence — summary table: email number, type, send date/time/timezone, audience, primary subject line, CTA
+3. Individual Email Specifications — for every email: send timing, audience, A/B subject line options with preview text, full email copy written in brand voice with [bracketed strategic annotations], CTA with destination URL, and design notes
+4. Success Metrics — table: total campaign revenue, revenue per recipient, open rate, click rate, conversion rate, unsubscribe rate, each with target and measurement method
+5. Next Steps — preparation checklist, design assets needed, Klaviyo setup steps, post-campaign review schedule
 
 ---
 
 ### For Email Copy
 
-Email Copy deliverables provide production-ready copy with strategic annotations. The full structure is shown below.
+Save to `reports/email-copy-{email-name}-{YYYY-MM-DD}.md`. Include:
 
-```markdown
-# Email Copy: [Email Name / Campaign Name]
-**Brand:** [Brand Name]
-**Flow/Campaign:** [Which flow or campaign this belongs to]
-**Email Position:** [e.g., "Email 2 of 4 in Abandoned Cart Flow"]
-**Prepared by:** Claude (eCommerce Email Skill)
-
----
-
-## Subject Line Options (A/B Test)
-
-| Option | Subject Line | Preview Text | Strategy |
-|---|---|---|---|
-| A | Exact subject line | Exact preview text that complements (not repeats) the subject | e.g., "Curiosity-driven — no discount framing, optimized for open rate" |
-| B | Exact subject line | Exact preview text | e.g., "Urgency-driven — time-sensitive framing for action bias" |
-| C | Exact subject line | Exact preview text | e.g., "Social proof — leverages review count for credibility" |
-
-**Recommended Winner:** Option [X] — explain why this is the primary recommendation for this audience.
-
----
-
-## Full Email Copy
-
-> **Headline:** Exact headline text
-> [Strategic note: Purpose of headline — e.g., "Reinforces the value proposition without leading with discount"]
->
-> **Opening Paragraph:**
-> Full opening copy here — 2-3 sentences that hook the reader.
-> [Strategic note: Explains the hook approach — e.g., "Empathy-first opening acknowledges the browse behavior without being surveillance-like"]
->
-> **Body Section 1 — [Purpose, e.g., Product Highlight]:**
-> Full copy for this section.
-> [Strategic note: Why this section exists here in the email structure]
->
-> **Body Section 2 — [Purpose, e.g., Social Proof]:**
-> Full copy for this section, including specific review quotes or statistics to feature.
-> [Strategic note: Persuasion principle — e.g., "Specific review quote reduces perceived risk for first-time buyers"]
->
-> **Body Section 3 — [Purpose, e.g., Objection Handling]:**
-> Full copy addressing the primary objection for this audience.
-> [Strategic note: Which objection this targets and why it matters at this point in the flow/campaign]
->
-> **CTA Button:** Exact button text
-> **CTA Destination:** URL or dynamic link
-> [Strategic note: Why this CTA text was chosen over alternatives]
->
-> **Post-CTA Copy:**
-> Any supporting copy below the CTA — guarantee reminder, support contact, secondary link.
-> [Strategic note: Purpose of post-CTA content]
-
----
-
-## Design Direction
-
-Provide layout guidance: single vs. multi-column, hero image recommendation, product image block placement, visual hierarchy notes, mobile-first considerations, and any dynamic/personalized content blocks.
-
----
-
-## Klaviyo Implementation Notes
-
-Any platform-specific details: dynamic variables ({{ first_name }}, {{ event.extra.line_items }}), conditional content blocks, UTM parameters to append, send-time optimization settings.
-```
+1. Subject Line Options (A/B Test) — table with 3 options: subject line, preview text (complements not repeats), and strategy explanation. State the recommended winner with rationale
+2. Full Email Copy — complete production-ready copy with: headline, opening paragraph (2-3 hook sentences), 2-3 body sections each labeled by purpose (product highlight, social proof, objection handling, etc.), CTA button text and destination, and post-CTA copy. Every section includes [bracketed strategic annotations] explaining the persuasion principle or strategic choice
+3. Design Direction — layout guidance: single vs. multi-column, hero image, product block placement, visual hierarchy, mobile-first considerations, dynamic/personalized content blocks
+4. Klaviyo Implementation Notes — dynamic variables, conditional content blocks, UTM parameters, send-time optimization settings
 
 ---
 

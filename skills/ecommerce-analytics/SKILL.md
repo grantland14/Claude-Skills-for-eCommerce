@@ -24,10 +24,10 @@ Every response must be comprehensive, specific, and actionable. Follow these rul
 - Show your reasoning. If you calculate a ROAS target, show the margin math behind it.
 
 ### File Delivery
-- For any analysis, audit, strategy, plan, or multi-section deliverable: save the complete output as a markdown file using the Write tool.
-- File path: `reports/marketing-analytics-{YYYY-MM-DD}.md` (create the `reports/` directory if it doesn't exist).
-- The .md file IS the deliverable. Put everything in the file, then confirm to the user what was saved and where.
-- Still provide a brief summary in the chat message (3-5 key findings) so the user gets immediate value, but the full report lives in the file.
+- Only save a .md report when the user asks for a full report, audit, analysis, review, strategy, plan, or deep dive.
+- For quick questions or single-topic answers, respond thoroughly in chat — no file needed.
+- When saving: use `reports/marketing-analytics-{YYYY-MM-DD}.md` (create `reports/` if needed). Always .md format — never .docx, .pdf, or other formats.
+- Provide a brief summary in chat (3-5 key findings) plus confirmation of where the file was saved.
 
 ### Report Structure
 Every saved report must include:
@@ -516,202 +516,29 @@ Use this to audit any eCommerce marketing analytics setup:
 
 ### For Marketing Analytics Audit
 
-The Marketing Analytics Audit is a comprehensive report saved as a `.md` file. The full structure is shown below. Every section must contain specific data, analysis, and actionable detail — not summaries or placeholders.
+Save to `reports/analytics-audit-{YYYY-MM-DD}.md`. Include:
 
-```markdown
-# Marketing Analytics Audit: [Brand Name]
-**Date:** [Date]
-**Period Analyzed:** [Date range]
-**Prepared by:** Claude (eCommerce Analytics Skill)
-
----
-
-## Executive Summary
-
-Provide a thorough overview covering: overall marketing efficiency (MER/blended ROAS), the single biggest revenue leak identified, the single highest-impact opportunity, and whether the current trajectory supports the brand's growth targets. State the estimated dollar impact of acting on the top three recommendations. This should be a full paragraph — not bullet points.
-
----
-
-## Tracking & Data Quality Assessment
-
-| Tracking System | Status | Issues Found | Impact on Data | Fix Complexity |
-|---|---|---|---|---|
-| GA4 Configuration | ✅ Active / ⚠️ Partial / ❌ Missing | e.g., Enhanced ecommerce events not firing on checkout | Revenue underreported by ~12% | Medium — requires GTM update |
-| Meta Pixel | ✅ / ⚠️ / ❌ | e.g., Purchase event firing on thank-you page load, not on actual conversion | Inflated conversion count by ~8% | Low — event trigger fix |
-| Google Ads Conversion Tag | ✅ / ⚠️ / ❌ | Describe specific issues | Quantify data impact | Complexity rating |
-| TikTok Pixel | ✅ / ⚠️ / ❌ | Describe specific issues | Quantify data impact | Complexity rating |
-| UTM Parameter Discipline | ✅ / ⚠️ / ❌ | e.g., Inconsistent utm_medium values (cpc vs CPC vs paid) | Cannot accurately attribute 23% of paid traffic | Low — naming convention doc |
-| Email Attribution (Klaviyo) | ✅ / ⚠️ / ❌ | Describe specific issues | Quantify data impact | Complexity rating |
-| Server-Side Tracking | ✅ / ⚠️ / ❌ | Describe specific issues | Quantify data impact | Complexity rating |
-
-**Data Confidence Score:** [High / Medium / Low] — explain what this means for the analysis that follows (e.g., "Medium — Meta revenue figures are likely overstated by 10-15% due to pixel double-firing, so all Meta ROAS figures below should be discounted accordingly").
-
----
-
-## Key Performance Metrics (Current State)
-
-| Metric | Current Value | Prior Period | Change | Benchmark | Assessment |
-|---|---|---|---|---|---|
-| Monthly Revenue | $XX,XXX | $XX,XXX | +/- X% | — | On track / Behind / Ahead |
-| Marketing Efficiency Ratio (MER) | X.Xx | X.Xx | +/- X% | >3.0x | Healthy / At risk / Critical |
-| Blended CAC | $XX.XX | $XX.XX | +/- X% | <1/3 of first-order AOV | Assessment |
-| LTV:CAC Ratio | X.X:1 | X.X:1 | +/- X% | >3:1 | Assessment |
-| Email Revenue % | XX% | XX% | +/- Xpp | 25-35% | Assessment |
-| New vs. Returning Split | XX% / XX% | XX% / XX% | — | 40-60% / 60-40% | Assessment |
-| Blended ROAS (all channels) | X.Xx | X.Xx | +/- X% | Depends on margin | Assessment |
-| Repeat Purchase Rate | XX% | XX% | +/- X% | >25% | Assessment |
-
-**Formulas Used:**
-- MER = Total Revenue / Total Marketing Spend
-- Blended CAC = Total Marketing Spend / New Customers Acquired
-- LTV:CAC = (AOV × Purchase Frequency × Customer Lifespan) / CAC
-- Blended ROAS = Total Revenue / Total Ad Spend
-
----
-
-## Channel Performance Dashboard
-
-| Channel | Monthly Spend | Revenue Attributed | ROAS | CPA (New Cust.) | Conv. Rate | Trend (3mo) | Status |
-|---|---|---|---|---|---|---|---|
-| Meta Ads — Prospecting | $X,XXX | $X,XXX | X.Xx | $XX.XX | X.X% | ↑/↓/→ | 🟢/🟡/🔴 |
-| Meta Ads — Retargeting | $X,XXX | $X,XXX | X.Xx | $XX.XX | X.X% | ↑/↓/→ | 🟢/🟡/🔴 |
-| Google Ads — Search (Brand) | $X,XXX | $X,XXX | X.Xx | $XX.XX | X.X% | ↑/↓/→ | 🟢/🟡/🔴 |
-| Google Ads — Search (Non-Brand) | $X,XXX | $X,XXX | X.Xx | $XX.XX | X.X% | ↑/↓/→ | 🟢/🟡/🔴 |
-| Google Ads — Shopping | $X,XXX | $X,XXX | X.Xx | $XX.XX | X.X% | ↑/↓/→ | 🟢/🟡/🔴 |
-| Google Ads — Performance Max | $X,XXX | $X,XXX | X.Xx | $XX.XX | X.X% | ↑/↓/→ | 🟢/🟡/🔴 |
-| TikTok Ads | $X,XXX | $X,XXX | X.Xx | $XX.XX | X.X% | ↑/↓/→ | 🟢/🟡/🔴 |
-| Email (Klaviyo) | $XXX (platform cost) | $X,XXX | — | — | X.X% | ↑/↓/→ | 🟢/🟡/🔴 |
-| Organic Search | $0 (excl. SEO cost) | $X,XXX | — | — | X.X% | ↑/↓/→ | 🟢/🟡/🔴 |
-| Organic Social | $0 (excl. labor) | $X,XXX | — | — | X.X% | ↑/↓/→ | 🟢/🟡/🔴 |
-| **TOTAL** | **$XX,XXX** | **$XX,XXX** | **X.Xx** | **$XX.XX** | **X.X%** | — | — |
-
-For each channel row flagged 🟡 or 🔴, provide a paragraph of analysis below the table explaining: what is underperforming, the likely root cause, and the specific fix recommended.
-
----
-
-## Attribution Analysis
-
-### Multi-Touch vs. Last-Click Comparison
-
-| Channel | Last-Click Revenue | Multi-Touch Revenue (data-driven) | Difference | Likely Over/Under-Credited |
-|---|---|---|---|---|
-| Meta Ads | $X,XXX | $X,XXX | +/- $X,XXX | Over-credited / Under-credited |
-| Google Ads | $X,XXX | $X,XXX | +/- $X,XXX | Over-credited / Under-credited |
-| Email | $X,XXX | $X,XXX | +/- $X,XXX | Over-credited / Under-credited |
-| Direct | $X,XXX | $X,XXX | +/- $X,XXX | Over-credited / Under-credited |
-
-Provide a detailed paragraph explaining the attribution model used, its limitations, and how the brand should interpret discrepancies between platform-reported and analytics-reported revenue. Call out any channels where attribution is likely significantly distorted and recommend how to handle this in decision-making.
-
----
-
-## Customer Acquisition Cost Breakdown
-
-| Acquisition Channel | Spend | New Customers | CAC | First-Order AOV | First-Order Margin | Payback Period |
-|---|---|---|---|---|---|---|
-| Meta Prospecting | $X,XXX | XXX | $XX.XX | $XX.XX | $XX.XX | X.X months |
-| Google Non-Brand Search | $X,XXX | XXX | $XX.XX | $XX.XX | $XX.XX | X.X months |
-| Google Shopping | $X,XXX | XXX | $XX.XX | $XX.XX | $XX.XX | X.X months |
-| TikTok | $X,XXX | XXX | $XX.XX | $XX.XX | $XX.XX | X.X months |
-| Organic/Earned | $0 | XXX | $0 | $XX.XX | $XX.XX | Immediate |
-| **Blended** | **$XX,XXX** | **X,XXX** | **$XX.XX** | **$XX.XX** | **$XX.XX** | **X.X months** |
-
-Provide analysis: which channels acquire profitable customers fastest, which channels have unsustainable CAC relative to first-order contribution margin, and what the acceptable CAC ceiling is given the brand's LTV data.
-
----
-
-## Cohort Analysis
-
-### Revenue Retention by Monthly Acquisition Cohort
-
-| Cohort | Customers | Month 1 Rev | Month 2 Rev | Month 3 Rev | Month 6 Rev | Month 12 Rev | Cumulative LTV |
-|---|---|---|---|---|---|---|---|
-| Jan 2025 | X,XXX | $XX | $XX | $XX | $XX | $XX | $XXX |
-| Feb 2025 | X,XXX | $XX | $XX | $XX | $XX | $XX | $XXX |
-| Mar 2025 | X,XXX | $XX | $XX | $XX | $XX | $XX | $XXX |
-| (continue for available months) | | | | | | | |
-
-Provide analysis of cohort trends: Are newer cohorts retaining better or worse than older ones? What is the payback period trend? Which cohort stands out and why (e.g., was a specific campaign running that month that attracted higher-quality customers)?
-
----
-
-## Recommendations
-
-| Priority | Recommendation | Expected Impact | Effort | Timeline | Dependencies |
-|---|---|---|---|---|---|
-| 1 | Specific action to take | +$X,XXX/mo revenue or +X.Xx ROAS improvement | Low/Med/High | This week / 2 weeks / 30 days | What needs to happen first |
-| 2 | Specific action to take | Quantified impact | Effort level | Timeline | Dependencies |
-| 3 | Specific action to take | Quantified impact | Effort level | Timeline | Dependencies |
-| 4 | Specific action to take | Quantified impact | Effort level | Timeline | Dependencies |
-| 5 | Specific action to take | Quantified impact | Effort level | Timeline | Dependencies |
-
-Each recommendation must include a specific, quantified expected impact — not vague language like "improve performance."
-
----
-
-## Next Steps
-
-Provide a sequenced action plan: what to do this week, what to do in the next 2 weeks, and what to tackle in the next 30 days. For each step, name who should own it (brand team, agency, developer, etc.) and what the measurable success criteria is.
-```
+1. Executive Summary — full paragraph on overall marketing efficiency (MER/blended ROAS), the single biggest revenue leak, the single highest-impact opportunity, whether the current trajectory supports growth targets, and estimated dollar impact of acting on the top three recommendations
+2. Tracking & Data Quality Assessment — table covering every tracking system (GA4, Meta Pixel, Google Ads tag, TikTok Pixel, UTM discipline, Klaviyo attribution, server-side tracking) with status, specific issues found, quantified data impact, and fix complexity. Include a Data Confidence Score with explanation of how it affects subsequent analysis
+3. Key Performance Metrics — table of core metrics (monthly revenue, MER, blended CAC, LTV:CAC, email revenue %, new vs. returning split, blended ROAS, repeat purchase rate) each with current value, prior period, change, benchmark, and assessment. Include formulas used for MER, CAC, LTV:CAC, and blended ROAS
+4. Channel Performance Dashboard — table for every channel (Meta prospecting/retargeting, Google brand/non-brand/Shopping/PMax, TikTok, email, organic search, organic social) showing spend, revenue attributed, ROAS, CPA, conversion rate, 3-month trend, and status. Follow with a paragraph of analysis for each flagged channel
+5. Attribution Analysis — multi-touch vs. last-click comparison table by channel with revenue under each model, difference, and over/under-credited assessment. Detailed paragraph on the attribution model used, its limitations, and how to interpret discrepancies
+6. Customer Acquisition Cost Breakdown — table by acquisition channel: spend, new customers, CAC, first-order AOV, first-order margin, payback period. Analysis paragraph on which channels acquire profitable customers fastest and the acceptable CAC ceiling given LTV
+7. Cohort Analysis — revenue retention table by monthly acquisition cohort showing month 1 through month 12 revenue and cumulative LTV. Analysis of cohort trends, payback period trends, and standout cohorts
+8. Recommendations — prioritized table with 5+ rows: action, quantified expected impact, effort, timeline, dependencies
+9. Next Steps — sequenced action plan for this week, next 2 weeks, and next 30 days with owners and measurable success criteria
 
 ---
 
 ### For Budget Allocation Recommendation
 
-The Budget Allocation Recommendation is a comprehensive report saved as a `.md` file. The full structure is shown below.
+Save to `reports/budget-allocation-{YYYY-MM-DD}.md`. Include:
 
-```markdown
-# Budget Allocation Recommendation: [Brand Name]
-**Date:** [Date]
-**Monthly Ad Budget:** $XX,XXX
-**Prepared by:** Claude (eCommerce Analytics Skill)
-
----
-
-## Executive Summary
-
-Provide a thorough overview of the current budget allocation, the core inefficiency or opportunity identified, and the recommended reallocation. State the total expected revenue impact in dollars. This should be a full paragraph.
-
----
-
-## Current Allocation vs. Recommended Allocation
-
-| Channel | Current Spend | Current % | Current ROAS | Rec. Spend | Rec. % | Change | Rationale |
-|---|---|---|---|---|---|---|---|
-| Meta — Prospecting | $X,XXX | XX% | X.Xx | $X,XXX | XX% | +/- $X,XXX | Specific reason for increase/decrease |
-| Meta — Retargeting | $X,XXX | XX% | X.Xx | $X,XXX | XX% | +/- $X,XXX | Specific reason |
-| Google — Brand Search | $X,XXX | XX% | X.Xx | $X,XXX | XX% | +/- $X,XXX | Specific reason |
-| Google — Non-Brand Search | $X,XXX | XX% | X.Xx | $X,XXX | XX% | +/- $X,XXX | Specific reason |
-| Google — Shopping/PMax | $X,XXX | XX% | X.Xx | $X,XXX | XX% | +/- $X,XXX | Specific reason |
-| TikTok | $X,XXX | XX% | X.Xx | $X,XXX | XX% | +/- $X,XXX | Specific reason |
-| Email (Klaviyo) | $XXX | XX% | — | $XXX | XX% | +/- $XXX | Specific reason |
-| **TOTAL** | **$XX,XXX** | **100%** | **X.Xx (MER)** | **$XX,XXX** | **100%** | **$0** | — |
-
----
-
-## Expected Impact of Reallocation
-
-| Metric | Current | Projected | Change |
-|---|---|---|---|
-| Blended MER | X.Xx | X.Xx | +X.Xx |
-| Total Revenue | $XXX,XXX | $XXX,XXX | +$XX,XXX (+X%) |
-| New Customers / Month | X,XXX | X,XXX | +XXX (+X%) |
-| Blended CAC | $XX.XX | $XX.XX | -$X.XX (-X%) |
-| Blended ROAS | X.Xx | X.Xx | +X.Xx |
-
-Explain the assumptions behind each projection (e.g., "Assumes Meta prospecting ROAS holds at current levels up to $X,XXX/mo spend based on the diminishing returns curve observed over the past 90 days").
-
----
-
-## Implementation Plan
-
-Provide a week-by-week transition plan. Do not recommend shifting the entire budget at once. Include specific guardrails (e.g., "If Meta CPA rises above $XX after increasing spend by 20%, pause the increase and hold for 7 days before reassessing").
-
----
-
-## Next Steps
-
-Specific actions with owners and timelines.
-```
+1. Executive Summary — paragraph on current allocation, core inefficiency or opportunity identified, recommended reallocation, and total expected revenue impact in dollars
+2. Current vs. Recommended Allocation — table for every channel showing current spend, current %, current ROAS, recommended spend, recommended %, dollar change, and specific rationale for each increase or decrease. Must be budget-neutral (total stays the same)
+3. Expected Impact of Reallocation — table: blended MER, total revenue, new customers/month, blended CAC, blended ROAS, each with current and projected values and change. Include paragraph explaining assumptions behind each projection
+4. Implementation Plan — week-by-week transition plan with specific guardrails and pause thresholds (do not recommend shifting entire budget at once)
+5. Next Steps — specific actions with owners and timelines
 
 ---
 

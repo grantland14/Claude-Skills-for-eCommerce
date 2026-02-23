@@ -501,138 +501,36 @@ Don'ts:
 
 ## Output Formats
 
-All content is delivered inline — full production-ready copy, not just ideas or outlines. Every post includes complete caption text, hashtag sets, and visual direction.
+All content is delivered inline — full production-ready copy, not just ideas or outlines.
 
 ### For Content Ideas
 
-Deliver a full content brief for each idea, not just a title or concept.
-
-**Content Ideas for [Timeframe]**
-
-Organized by content pillar. For each idea, provide:
-
-**Pillar: Product Showcase**
-
-1. **[Idea Title]**
-   - Platform: Instagram / TikTok / both
-   - Format: Reel / Carousel / Static / Story
-   - Hook line (the opening text or first frame that stops the scroll): Write the actual hook
-   - Angle: What makes this post interesting beyond "here's our product" (e.g., behind-the-scenes, unexpected use case, before/after, myth-busting)
-   - Goal: Awareness / engagement / traffic / conversion
-   - Visual concept: 2-3 sentences describing what the viewer sees
-
-2. (Next idea — same structure)
-3. (Next idea — same structure)
-
-**Pillar: Social Proof**
-(Same detailed structure for each idea)
-
-**Pillar: Education / Value**
-(Same detailed structure for each idea)
-
-**Pillar: Brand Personality / Behind the Scenes**
-(Same detailed structure for each idea)
-
-**Pillar: Community / UGC**
-(Same detailed structure for each idea)
-
-Provide minimum 3 ideas per pillar, more for high-priority pillars.
+Include per idea (organized by content pillar, minimum 3 ideas per pillar):
+1. Idea title and platform (Instagram / TikTok / both)
+2. Format — Reel / Carousel / Static / Story
+3. Hook line — the actual opening text or first frame that stops the scroll
+4. Angle — what makes this post interesting beyond "here's our product"
+5. Goal — awareness / engagement / traffic / conversion
+6. Visual concept — 2-3 sentences describing what the viewer sees
 
 ### For Captions
 
-Deliver full, ready-to-copy-paste captions with all components.
-
-**Post: [Post Title/Concept]**
-
-**Platform:** Instagram (adapt for each platform if cross-posting)
-**Format:** Reel / Carousel / Single Image / Story / Video
-**Pillar:** Which content pillar this serves
-**Goal:** Awareness / Engagement / Traffic / Conversion
-
-**Caption — Version A (Primary):**
-
-[Write the full caption. Structure it as:]
-- Hook (first line — visible before "more"): Write a specific opening line that stops the scroll. This is the most important line.
-- Body (3-8 sentences): The core message, story, or value. Write it in the brand voice.
-- CTA: A specific call to action (comment prompt, link-in-bio direction, save/share prompt)
-
-[Blank line]
-
-[Hashtag set — see below]
-
-**Caption — Version B (Alternate angle):**
-[Full alternate caption with a different hook and angle. Not just a word swap — a genuinely different approach to the same post concept.]
-
-**Caption — Version C (Short-form option):**
-[A punchy 1-3 sentence version for platforms or contexts where brevity wins.]
-
-**Hashtag Strategy for This Post:**
-- Primary hashtags (5-7): High-volume, category-level tags relevant to the post topic
-- Secondary hashtags (5-7): Mid-volume, niche-specific tags that reach your target audience
-- Branded hashtags (1-3): Your brand hashtag, campaign hashtag, or community hashtag
-- Total: 15-20 hashtags max for Instagram, 3-5 for TikTok, none for Facebook
-
-**Visual Direction / Creative Brief:**
-- What the viewer sees: Describe the image, video, or carousel frames in enough detail that a photographer, designer, or content creator could execute it without follow-up questions
-- For carousels: Describe each slide (Slide 1: ..., Slide 2: ..., etc.)
-- For Reels/TikTok: Describe the scene structure (Opening frame → transition → key moment → closing frame + text overlay)
-- Text overlays: Exact text that appears on screen and when
-- Music/audio direction: Vibe or specific trending audio recommendation (if applicable)
-- Mood/aesthetic: Color palette, energy level, visual style
-
-**Posting Notes:**
-- Recommended posting time and day (based on platform best practices and audience behavior)
-- Cross-posting adaptations: What to change when posting this to a different platform
-- Story promotion: Whether to share this to Stories and what to add (poll, question sticker, countdown)
-- Engagement plan: First comment to post, accounts to tag, communities to share with
+Include:
+1. Post metadata — platform, format, content pillar, goal
+2. Caption Version A (primary) — full copy-paste-ready caption with hook (first line visible before "more"), body (3-8 sentences in brand voice), and specific CTA
+3. Caption Version B — alternate angle, genuinely different approach (not a word swap)
+4. Caption Version C — short-form option (1-3 sentences) for brevity contexts
+5. Hashtag strategy — primary (5-7 high-volume), secondary (5-7 niche), branded (1-3). Totals: 15-20 for Instagram, 3-5 for TikTok, none for Facebook
+6. Visual direction — describe image/video/carousel frames in enough detail for a creator to execute. Include text overlays, music/audio direction, and mood/aesthetic
+7. Posting notes — recommended time, cross-posting adaptations, Story promotion ideas, engagement plan (first comment, tags)
 
 ### For Content Calendar
 
-Deliver a structured calendar with full detail for each posting slot.
-
-**Content Calendar: [Week/Month of Date Range]**
-
-**Key Themes This Period:**
-- Theme 1: What's driving content this period (product launch, seasonal moment, campaign, etc.)
-- Theme 2: Secondary theme
-- How they connect: The narrative thread tying the week/month together
-
-**Calendar Table:**
-
-| Date | Day | Platform | Format | Content Pillar | Topic/Concept | Hook (First Line) | CTA | Goal | Visual Notes |
-|---|---|---|---|---|---|---|---|---|---|
-| MM/DD | Mon | Instagram | Carousel | Education | [Specific topic] | [Actual hook line] | [Specific CTA] | Engagement | [Brief visual note] |
-| MM/DD | Mon | TikTok | Reel | Product | [Specific topic] | [Actual hook line] | [Specific CTA] | Awareness | [Brief visual note] |
-| MM/DD | Tue | Instagram | Story | Social Proof | [Specific topic] | [Actual hook line] | [Specific CTA] | Trust | [Brief visual note] |
-| MM/DD | Wed | Instagram | Reel | Brand | [Specific topic] | [Actual hook line] | [Specific CTA] | Engagement | [Brief visual note] |
-| ... | ... | ... | ... | ... | ... | ... | ... | ... | ... |
-
-**Daily Breakdown (for each posting day):**
-
-**Monday [Date]**
-
-*Post 1 — Instagram Carousel*
-- Topic: [Specific topic]
-- Full caption: [Write the complete caption or reference "see Caption section above"]
-- Hashtags: [Full set or reference the post's hashtag strategy]
-- Visual: [Description of each carousel slide]
-- Posting time: [Specific time with timezone]
-
-*Post 2 — TikTok Reel*
-- Topic: [Specific topic]
-- Caption: [Full TikTok caption]
-- Audio: [Trending audio recommendation or original audio direction]
-- Script/storyboard: [Scene-by-scene description]
-- Posting time: [Specific time]
-
-(Continue for each day and each post)
-
-**Weekly Stats to Track:**
-- Posts published vs. planned
-- Top performer (by reach, engagement, or saves)
-- Engagement rate trend
-- Follower growth
-- Content pillar distribution (ensure balance across pillars)
+Include:
+1. Key themes for the period — what's driving content and the narrative thread connecting posts
+2. Calendar table — Date | Platform | Format | Pillar | Topic | Hook | CTA | Goal | Visual Notes
+3. Daily breakdown per posting day — topic, full caption (or reference), hashtags, visual description, posting time
+4. Weekly stats to track — posts published vs. planned, top performer, engagement rate trend, follower growth, pillar distribution
 
 ---
 
