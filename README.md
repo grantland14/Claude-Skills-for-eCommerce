@@ -1,6 +1,6 @@
 # eCommerce Skills for Claude Code
 
-A collection of 14 AI agent skills built for eCommerce founders and DTC operators. Give Claude deep expertise in email marketing, paid ads, pricing, product launches, buyer psychology, financial analysis, and more — so every conversation starts with expert-level context instead of a blank slate.
+A collection of 14 AI agent skills and 7 CLI tools built for eCommerce founders and DTC operators. Give Claude deep expertise in email marketing, paid ads, pricing, product launches, buyer psychology, financial analysis, and more — plus direct API access to your marketing stack (Shopify, Klaviyo, Meta Ads, Google Ads, GA4, Search Console, TikTok Ads).
 
 Contributions welcome! Found a way to improve a skill or have a new one to add? [Open a PR](https://github.com/grantland14/Claude-Skills-for-eCommerce/pulls).
 
@@ -91,6 +91,40 @@ Example workflow:
 
 Each skill is standalone, but they're designed to compound when used together.
 
+## CLI Tools — Live Data Access
+
+The `tools/clis/` directory contains 7 zero-dependency CLI tools that give Claude direct API access to your marketing stack. No `npm install` required — just Node 18+ and your API keys.
+
+| CLI | Platform | What Claude Can Access |
+|-----|----------|----------------------|
+| `shopify.js` | Shopify | Orders, products, customers, inventory, store analytics |
+| `klaviyo.js` | Klaviyo | Flows, campaigns, segments, profiles, metrics |
+| `meta-ads.js` | Meta Ads | Campaigns, ad sets, audiences, ROAS, performance data |
+| `google-ads.js` | Google Ads | Search, Shopping, PMax campaigns, keywords, search terms |
+| `ga4.js` | Google Analytics 4 | Traffic, pages, ecommerce, acquisition, realtime data |
+| `gsc.js` | Google Search Console | Search queries, page rankings, URL inspection |
+| `tiktok-ads.js` | TikTok Ads | Campaigns, ad groups, performance reports |
+
+### Quick setup
+
+```bash
+# 1. Set API keys in your shell profile (~/.zshrc or ~/.bashrc)
+export SHOPIFY_STORE="your-store-name"
+export SHOPIFY_ACCESS_TOKEN="shpat_xxxxx"
+export KLAVIYO_API_KEY="pk_xxxxx"
+# ... add keys for each platform you use
+
+# 2. Reload shell
+source ~/.zshrc
+
+# 3. Test
+node Claude-Skills-for-eCommerce/tools/clis/shopify.js shop
+```
+
+Skills give Claude the **expertise**. CLI tools give Claude the **data**. Together, you get an analyst who knows eCommerce strategy AND has access to your live numbers.
+
+See the full setup guide with step-by-step instructions for getting API keys: **[tools/clis/README.md](tools/clis/README.md)**
+
 ## Folder Structure
 
 ```
@@ -101,10 +135,17 @@ skills/
   ecommerce-brand-guide/
     SKILL.md
     README.md
-  ecommerce-buyer-psychology/
-    SKILL.md
-    README.md
   ...
+tools/
+  clis/
+    README.md         # Full setup guide with API key instructions
+    shopify.js        # Shopify Admin API
+    klaviyo.js        # Klaviyo API
+    meta-ads.js       # Meta (Facebook/Instagram) Ads API
+    google-ads.js     # Google Ads API
+    ga4.js            # Google Analytics 4 API
+    gsc.js            # Google Search Console API
+    tiktok-ads.js     # TikTok Ads API
 ```
 
 ## License
