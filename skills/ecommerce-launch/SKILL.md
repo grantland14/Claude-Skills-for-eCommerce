@@ -62,438 +62,128 @@ Gather this context (ask if not provided — but skip anything already covered i
 
 ### Type 1: New Product Launch
 A completely new product added to your lineup. The flagship launch type.
-- **Timeline**: 4-6 weeks of pre-launch
-- **Key challenge**: Building awareness and desire for something nobody has tried
-- **Strategy focus**: Anticipation building, social proof creation, influencer seeding
+- **Timeline:** 4-6 weeks. **Key challenge:** Building awareness and desire for something nobody has tried
+- **Focus:** Anticipation building, social proof creation, influencer seeding
 
 ### Type 2: Collection or Line Launch
 Multiple related products launching together (new season, new collection, new category).
-- **Timeline**: 4-8 weeks (collections need more setup)
-- **Key challenge**: Telling a cohesive story across multiple products
-- **Strategy focus**: Lifestyle narrative, bundle architecture, editorial content
+- **Timeline:** 4-8 weeks. **Key challenge:** Telling a cohesive story across multiple products
+- **Focus:** Lifestyle narrative, bundle architecture, editorial content
 
 ### Type 3: Variant or Flavor Extension
 New color, size, scent, or flavor of an existing product.
-- **Timeline**: 2-3 weeks of pre-launch
-- **Key challenge**: Making it feel exciting when it's an iteration, not an invention
-- **Strategy focus**: Community involvement (vote on the new variant), limited edition framing
+- **Timeline:** 2-3 weeks. **Key challenge:** Making it feel exciting when it's an iteration, not an invention
+- **Focus:** Community involvement (vote on the variant), limited edition framing
 
 ### Type 4: Limited Edition or Collaboration
-Time-limited products, artist collaborations, or seasonal specials.
-- **Timeline**: 3-4 weeks of pre-launch
-- **Key challenge**: Creating urgency without feeling gimmicky
-- **Strategy focus**: Scarcity, exclusivity, storytelling around the collaboration
+Time-limited products, artist collabs, or seasonal specials.
+- **Timeline:** 3-4 weeks. **Key challenge:** Creating urgency without feeling gimmicky
+- **Focus:** Scarcity, exclusivity, storytelling around the collaboration
 
 ### Type 5: Seasonal Drop
 Products tied to a specific season or holiday (summer collection, holiday gifting).
-- **Timeline**: 4-6 weeks (gift guides need lead time for PR)
-- **Key challenge**: Standing out during peak competition
-- **Strategy focus**: Gift guides, influencer placements, gift bundle architecture
+- **Timeline:** 4-6 weeks (gift guides need PR lead time). **Key challenge:** Standing out during peak competition
+- **Focus:** Gift guides, influencer placements, gift bundle architecture
 
 ### Type 6: Brand Relaunch
 Major rebrand, new positioning, new packaging, or new website.
-- **Timeline**: 8-12 weeks (the most complex launch type)
-- **Key challenge**: Bringing existing customers along while attracting new ones
-- **Strategy focus**: Storytelling the evolution, addressing change directly, maintaining trust
+- **Timeline:** 8-12 weeks. **Key challenge:** Bringing existing customers along while attracting new ones
+- **Focus:** Storytelling the evolution, addressing change directly, maintaining trust
 
 ---
 
 ## The 4-Phase Launch Framework
 
+**For detailed week-by-week timelines, deliverable checklists, and day-by-day launch schedules:** See [references/launch-playbooks.md](references/launch-playbooks.md)
+
 ### Phase 1: Seed (4-6 Weeks Before Launch)
 
-**Goal:** Plant the seeds of awareness and start building anticipation before anyone knows the full details.
+**Goal:** Plant the seeds of awareness and build anticipation before anyone knows the full details.
 
-**Week 6-5: Internal Preparation**
-
-Product readiness:
-- Final product photography and videography completed
-- Product page copy written and reviewed
-- Product page built in Shopify (hidden/password-protected)
-- Inventory confirmed and in warehouse
-- Fulfillment team briefed on new SKU
-
-Content creation:
-- Launch email sequence drafted (6-8 emails across all phases)
-- Social content calendar built (3-4 weeks of posts)
-- Ad creative produced (static + video)
-- Influencer/creator briefs written
-- PR materials prepared (if pursuing press)
-
-Pricing and offers:
-- Launch pricing finalized
-- Early access or launch discount determined (if using)
-- Bundle options configured
-- Subscription option set up (if applicable)
-
-**Week 4-3: Seed the Market**
-
-Influencer seeding:
-- Send product to 10-20 creators (micro-influencers, 5K-50K followers)
-- Include a handwritten note with launch details and embargo date
-- Provide a unique discount code for each creator
-- Don't require posts — seeding builds goodwill and organic content
-- Brief them: "We're launching [date]. Feel free to share after [date]."
-
-Community whispers:
-- Mention "something new is coming" in your next 2-3 emails (not the main topic — just a P.S. or subtle tease)
-- Post behind-the-scenes content on Instagram Stories (product development, packaging, testing)
-- If you have a community (Facebook group, Discord), drop a hint: "Working on something we think you're going to love"
-
-Internal team alignment:
-- Customer support team briefed on new product (FAQs, ingredients, usage)
-- Logistics team prepared for order volume increase
-- Social team has content scheduled
-
-**Deliverables by end of Phase 1:**
-- [ ] All product pages built (hidden)
-- [ ] All email copy drafted
-- [ ] All social content created and scheduled
-- [ ] 10-20 influencers seeded with product
-- [ ] PR outreach sent (if applicable)
-- [ ] Ad creative produced
-- [ ] Launch discount/offer finalized
-- [ ] Inventory in warehouse and ready to ship
-
----
+- **Weeks 6-5 — Internal Preparation:** Finalize product photography and videography, build hidden product pages, draft the full launch email sequence (6-8 emails), produce ad creative (static + video), write influencer/creator briefs, prepare PR materials, lock pricing and launch offers
+- **Weeks 4-3 — Seed the Market:** Send product to 10-20 micro-influencers (5K-50K followers) with handwritten notes and launch embargo dates. Tease "something new is coming" in emails and Stories without revealing details. Brief CS and logistics teams on new SKU and expected order volume
+- **Key deliverables:** Product pages built (hidden), all email copy drafted, social content created and scheduled, influencers seeded, ad creative produced, launch offer finalized, inventory in warehouse and ready to ship
 
 ### Phase 2: Build (2-3 Weeks Before Launch)
 
 **Goal:** Create visible anticipation. Move from whispers to announcements. Build a waitlist.
 
-**Waitlist/Early Access Setup:**
-
-Create a dedicated landing page or popup:
-- Headline: "Be the First to Try [Product Name]"
-- Short description: What it is, why it's special, when it launches
-- Email capture: "Join the waitlist for early access"
-- SMS capture (optional): "Get a text the moment it drops"
-- Social proof: "X people are already waiting" (update daily)
-
-Drive traffic to the waitlist:
-- Email your list: Dedicated announcement email + waitlist link
-- Social posts: 3-5 posts over 2 weeks driving to waitlist
-- Instagram Stories: Countdown sticker + swipe-up to waitlist
-- Paid ads: Low-budget awareness campaign driving to waitlist ($5-20/day)
-- Website banner: Announcement bar on homepage linking to waitlist
-
-**Content Calendar (Weeks 3-2 Before Launch):**
-
-Week 3:
-- Monday: Teaser post — product silhouette or close-up detail (Instagram/TikTok)
-- Wednesday: Behind-the-scenes — "Why we created this" (email or blog)
-- Friday: Customer problem post — "If you've ever struggled with [problem]..." (social)
-- Weekend: Story polls — "Guess what's coming" or "Which would you pick?" (Instagram Stories)
-
-Week 2:
-- Monday: Ingredient/material reveal or product feature spotlight
-- Wednesday: Founder video — "I've been working on this for X months" (Reels/TikTok)
-- Friday: Full product reveal — name, image, what it does (social + email)
-- Weekend: Countdown begins — "Launching in 7 days" (Stories, SMS)
-
-**PR Push (if pursuing press):**
-
-- Send press releases and product samples to 20-50 relevant editors
-- Pitch story angles: founder story, ingredient innovation, sustainability angle
-- Target: Long-lead (magazines) 8-12 weeks before, short-lead (online) 2-3 weeks before
-- Offer exclusive first looks to 1-2 key publications
-
-**Deliverables by end of Phase 2:**
-- [ ] Waitlist live and collecting signups
-- [ ] Product officially announced (name, images, positioning)
-- [ ] Email sequence triggered for waitlist subscribers
-- [ ] Content calendar executing on schedule
-- [ ] PR materials sent
-- [ ] Paid ad awareness campaign running
-- [ ] Website updated with launch teaser
-
----
+- **Waitlist setup:** Dedicated landing page or popup with email/SMS capture, social proof counter ("X people are waiting"), and early access incentive
+- **Drive traffic:** Dedicated announcement email, 3-5 social posts over 2 weeks, Instagram countdown sticker, low-budget awareness ads ($5-20/day), homepage announcement bar
+- **Content calendar:** Week 3 focuses on teaser posts, behind-the-scenes content, and problem awareness. Week 2 escalates to product reveals, founder video, full product announcement, and countdown to launch
+- **PR push:** Press releases and product samples to 20-50 relevant editors, pitch founder story and innovation angles, offer exclusive first looks to 1-2 key publications
+- **Key deliverables:** Waitlist live and collecting signups, product officially announced, content calendar executing, paid awareness campaign running, website updated with launch teaser
 
 ### Phase 3: Launch (Launch Week)
 
 **Goal:** Execute a coordinated, multi-channel launch that drives maximum revenue in the first 48 hours.
 
-**Launch Week Timeline:**
-
-**Day -1 (Day Before Launch): VIP Early Access**
-- Email VIP segment (top 10% by spend, loyalty members, waitlist subscribers) with early access link
-- SMS blast to SMS subscribers: "You're in first. Shop now before everyone else."
-- Make product live on a hidden URL (only accessible via early access link)
-- Goal: Generate first sales, first reviews, first social shares from your best customers
-- Track: Open rate, click rate, conversion rate, revenue
-
-**Day 0 (Launch Day): General Launch**
-- 6:00 AM: Product page goes live on main site
-- 7:00 AM: Launch email #1 — "It's here" (full list)
-- 8:00 AM: Instagram post + Stories with product link
-- 9:00 AM: TikTok launch video
-- 10:00 AM: Turn on paid ads (launch creative, lookalike audiences)
-- 12:00 PM: SMS blast (if you have an SMS list)
-- 3:00 PM: Email #2 — "Selling fast" or "What customers are saying" (if early sales are strong)
-- 6:00 PM: Instagram Stories update — real-time sales or customer reactions
-- Evening: Respond to all social comments and DMs personally
-
-**Day 1 (Day After Launch):**
-- Morning: Email #3 — "In case you missed it" or "Why [product] exists" (the story email)
-- Afternoon: Share UGC from early customers and influencers
-- Monitor: Stock levels, customer questions, ad performance
-- Adjust: Shift ad budget toward best-performing creative
-
-**Day 2-3:**
-- Email #4 — Social proof email (reviews, UGC, press mentions if available)
-- Continue paid ads optimization
-- Post customer photos and unboxing content
-- Respond to all reviews (especially first reviews)
-
-**Day 4-5:**
-- Email #5 — Offer-driven (launch discount reminder if using one, or "Last chance for free gift with purchase")
-- Evaluate: What's working? Shift budget and effort toward top performers
-
-**Day 6-7:**
-- Email #6 — "Last day of launch pricing" or "Final call" (urgency close)
-- Instagram countdown Stories to offer expiration
-- Wind down launch-specific ads, transition to evergreen campaigns
-- Begin post-launch analysis
-
-**Launch Day Checklist:**
-- [ ] Product page live and tested (all variants, images, pricing correct)
-- [ ] Launch emails scheduled and sending on time
-- [ ] Social posts published on all platforms
-- [ ] Paid ads live and spending
-- [ ] SMS sent (if applicable)
-- [ ] Customer support team monitoring for issues
-- [ ] Inventory levels being tracked
-- [ ] Website performance monitored (page speed, checkout working)
-- [ ] Influencers posting (check tagged content)
-- [ ] Announcement bar or homepage hero updated
-
----
+- **Day -1 (VIP Early Access):** Email VIP segment (top 10% by spend, loyalty members, waitlist subscribers) with a hidden product URL. SMS blast to subscribers. Goal: first sales, first reviews, first social shares from your best customers
+- **Day 0 (Launch Day):** Product page goes live on main site. Coordinated rollout: launch email to full list (7 AM), social posts across all platforms, paid ads turned on, SMS blast, afternoon follow-up email if early sales are strong, evening social engagement
+- **Days 1-3:** "In case you missed it" story email, share UGC from early customers and influencers, social proof email with reviews and sales velocity, optimize ad spend toward best-performing creative
+- **Days 4-7:** Offer-driven email (discount reminder or gift-with-purchase), final urgency close email ("Last day of launch pricing"), wind down launch-specific ads, transition to evergreen campaigns, begin post-launch analysis
 
 ### Phase 4: Sustain (Weeks 1-4 After Launch)
 
-**Goal:** Turn launch momentum into sustained sales. The launch isn't over on Day 7 — the best brands extend the moment.
+**Goal:** Turn launch momentum into sustained sales.
 
-**Week 1 Post-Launch: Capture and Amplify**
+- **Week 1 — Capture and Amplify:** Request reviews from early buyers (email 7-10 days after delivery), repost all UGC and tag creators, add "As Seen In" press logos to site, scale best-performing ad creative, update PDP FAQ based on customer questions
+- **Weeks 2-3 — Integrate:** Add product to automated email flows (welcome series, browse abandonment, post-purchase cross-sell), create "Complete the Routine" bundles with existing products, publish how-to content and tutorial reels, add to collection pages with "NEW" badge
+- **Week 4 — Evaluate:** Run a full launch retrospective covering revenue vs. goal, email performance, paid ads ROAS, social reach, waitlist conversion, and lessons learned for next launch. Use the retrospective template in the reference file to structure the review.
 
-Collect social proof:
-- Request reviews from early buyers (email, 7-10 days after delivery)
-- Repost all UGC and tag creators
-- Screenshot and save positive DMs and comments
-- If you received press coverage, add "As Seen In" logos to your site
-
-Optimize based on data:
-- Which ad creative performed best? Scale it.
-- What email had the highest conversion? Use that angle in ads.
-- What questions are customers asking? Update the PDP FAQ.
-- What variant sold most? Feature it in collections and ads.
-
-**Weeks 2-3 Post-Launch: Integrate**
-
-Integrate the new product into your ecosystem:
-- Add to relevant automated email flows (welcome series, browse abandonment, post-purchase cross-sell)
-- Create "Complete the Routine" bundles with existing products
-- Add to collection pages with "NEW" badge
-- Update homepage to feature the new product
-
-Content marketing:
-- Blog post: "How to Use [Product] — The Complete Guide"
-- Email: "3 Ways to Use [Product] You Haven't Tried"
-- Social: Customer transformation content or tutorial reels
-- Pinterest: Pin product images to relevant boards
-
-**Week 4 Post-Launch: Evaluate**
-
-Full launch retrospective:
-
-```
-Launch Retrospective: [Product Name]
-
-Revenue:
-- Launch week revenue: $____
-- Launch month revenue: $____
-- vs. Goal: ____%
-- New customers acquired: ____
-- Returning customers who purchased: ____
-
-Email Performance:
-- Total emails sent: ____
-- Average open rate: ____%
-- Average click rate: ____%
-- Email-attributed revenue: $____
-
-Paid Ads Performance:
-- Total spend: $____
-- ROAS: ____x
-- Best-performing creative: [Description]
-- Best-performing audience: [Description]
-
-Social Performance:
-- Total reach: ____
-- Total engagement: ____
-- UGC pieces collected: ____
-- Follower growth: ____
-
-Waitlist Performance:
-- Waitlist signups: ____
-- Waitlist conversion rate: ____%
-- Waitlist revenue: $____
-
-What Worked:
-1. ____
-2. ____
-3. ____
-
-What Didn't Work:
-1. ____
-2. ____
-
-What to Do Differently Next Time:
-1. ____
-2. ____
-```
+**For the full retrospective template and detailed post-launch activity lists:** See [references/launch-playbooks.md](references/launch-playbooks.md)
 
 ---
 
 ## Launch Email Sequence
 
-### The 8-Email Launch Sequence
+### The 8-Email Launch Sequence (Summary)
 
-**Email 1: The Teaser (2 weeks before)**
-- Subject: "Something's coming..."
-- Goal: Create curiosity
-- Content: Hint at what's coming without revealing the product. Use intrigue, not details.
-- CTA: "Join the waitlist to be first"
+| # | Timing | Subject | Goal |
+|---|--------|---------|------|
+| 1 | 2 weeks before | "Something's coming..." | Create curiosity, drive waitlist |
+| 2 | 1 week before | "Introducing [Product Name]" | Announce product, drive waitlist |
+| 3 | 3-4 days before | "Why I spent X months creating this" | Build emotional connection |
+| 4 | Day before | "You're in first — shop before everyone" | First sales from VIPs/waitlist |
+| 5 | Launch day | "It's here. [Product Name] is live." | Drive majority of launch revenue |
+| 6 | Day 1-2 | "What everyone's saying about [Product]" | Convert the undecided with social proof |
+| 7 | Day 3-4 | "Everything you need to know" | Educate and convert researchers |
+| 8 | Day 6-7 | "Last chance for [launch offer]" | Urgency-driven final push |
 
-**Email 2: The Reveal (1 week before)**
-- Subject: "Introducing [Product Name]"
-- Goal: Announce the product and drive waitlist signups
-- Content: What it is, why you made it, what makes it special. Hero image.
-- CTA: "Get early access" (waitlist)
-
-**Email 3: The Story (3-4 days before)**
-- Subject: "Why I spent [X months] creating this"
-- Goal: Build emotional connection
-- Content: Founder's perspective on why this product exists. The problem it solves. The journey.
-- CTA: "Join the waitlist"
-
-**Email 4: VIP Early Access (day before launch)**
-- Subject: "You're in first — shop before everyone else"
-- Goal: First sales from best customers
-- Content: Direct and exciting. "As a VIP, you get first access before we open to everyone."
-- CTA: "Shop now" (hidden link)
-- Audience: VIPs and waitlist only
-
-**Email 5: Launch Day (day 0)**
-- Subject: "It's here. [Product Name] is live."
-- Goal: Drive the majority of launch revenue
-- Content: Product front and center. Key benefits. Launch offer (if applicable).
-- CTA: "Shop now"
-- Audience: Full list
-
-**Email 6: Social Proof (day 1-2)**
-- Subject: "What everyone's saying about [Product]"
-- Goal: Convert the undecided
-- Content: Early reviews, UGC photos, sales velocity ("200 sold in 24 hours"). Address common objections.
-- CTA: "See what the hype is about"
-
-**Email 7: The Deep Dive (day 3-4)**
-- Subject: "Everything you need to know about [Product]"
-- Goal: Educate and convert the researchers
-- Content: Detailed product information — ingredients, how to use, who it's for. FAQ format works well.
-- CTA: "Try it yourself"
-
-**Email 8: Last Chance (day 6-7)**
-- Subject: "Last chance for [launch offer]"
-- Goal: Urgency-driven final push
-- Content: Short. "Launch pricing ends tonight." Or "Launch gift-with-purchase ends at midnight."
-- CTA: "Don't miss out"
+**For full email details including content descriptions, CTAs, and audience segments:** See [references/launch-playbooks.md](references/launch-playbooks.md)
 
 ---
 
-## Launch Paid Ads Strategy
+## Launch Paid Ads Strategy (Summary)
 
-### Budget Allocation for Launch
+**Budget allocation across phases:**
+- **Phase 2 (Awareness/Waitlist):** 15-20% of total launch ad budget — objective is reach, video views, landing page views targeting lookalike and interest-based audiences
+- **Phase 3 (Launch week):** 60-70% — objective is conversions and purchase optimization, retargeting waitlist visitors, engaged audiences, and lookalikes
+- **Phase 4 (Sustain):** 15-20% — scale best-performing audiences and creative from launch week
 
-Allocate launch ad budget across phases:
+**Produce 5-8 creative variations:** Product hero, founder story video, problem/solution, UGC reaction, ingredients/materials close-up, social proof overlays, unboxing, before/after.
 
-```
-Total launch ad budget: $____
-
-Phase 2 (Awareness/Waitlist): 15-20% of budget
-- Objective: Reach, video views, landing page views
-- Targeting: Lookalike audiences, interest-based, broad
-- Creative: Teaser videos, problem-focused content
-
-Phase 3 (Launch week): 60-70% of budget
-- Objective: Conversions, purchase optimization
-- Targeting: Retargeting (waitlist visitors, engaged audiences), lookalikes
-- Creative: Product reveal, review-based, UGC, offer-driven
-
-Phase 4 (Sustain): 15-20% of budget
-- Objective: Conversions, sustained momentum
-- Targeting: Best-performing audiences from launch week
-- Creative: Best-performing creative from launch, new UGC
-```
-
-### Launch Ad Creative Types
-
-Produce at least 5-8 creative variations:
-
-1. **Product hero** — Clean product shot with key benefit headline
-2. **Founder story** — Vertical video of founder explaining why they made it
-3. **Problem/solution** — "Tired of [problem]? Meet [product]"
-4. **UGC reaction** — Real customer trying the product for the first time
-5. **Ingredients/materials** — Close-up of what makes the product special
-6. **Social proof** — Review quotes overlaid on product images
-7. **Unboxing** — What arrives at your door
-8. **Before/after** — Transformation (where applicable to category)
+**For detailed budget templates and creative type breakdowns:** See [references/launch-playbooks.md](references/launch-playbooks.md)
 
 ---
 
 ## Launch-Specific Strategies
 
+Not every launch follows the same playbook. Choose the strategy that fits your product, inventory, and audience situation.
+
+**For detailed strategy breakdowns including waitlist tiers, drop timelines, and soft launch week-by-week plans:** See [references/launch-playbooks.md](references/launch-playbooks.md)
+
 ### Waitlist Launch (Best for Building Hype)
-
-Build a waitlist → reward early signups with exclusive access:
-
-```
-Waitlist tiers:
-First 100 signups: 20% off launch price + free shipping
-101-500 signups: 15% off launch price
-501+: Early access (no discount, but shop before general public)
-```
-
-Show the counter: "847 people are waiting" — social proof drives more signups.
+Build a waitlist and reward early signups with tiered exclusive access (first 100 get deepest discount, 101-500 get moderate discount, 501+ get early access only). Show a live counter for social proof — "847 people are waiting" drives more signups.
 
 ### Drop Model (Best for Limited Edition/Hype Products)
-
-Set a specific date and time. Build anticipation. Drop everything at once.
-
-- Countdown timer on homepage for 7 days before
-- Product details fully revealed 3 days before (no secrets — let desire build)
-- "Set a reminder" option on the product page
-- At drop time, email + SMS + social post simultaneously
-- If inventory is truly limited, show live inventory count on the product page
+Set a specific date and time. Fully reveal product details 3 days before to let desire build. At drop time, fire email + SMS + social post simultaneously. Use countdown timers on homepage and live inventory counts on the product page.
 
 ### Soft Launch (Best for Testing)
-
-Launch quietly to a small audience first. Gather data and feedback before full launch.
-
-- Week 1: Email to VIP segment only (100-500 customers)
-- Week 2: Open to full email list
-- Week 3: Turn on paid ads
-- Week 4: Full public launch with press and influencers
-
-Benefits: You have reviews, optimized pages, and proven messaging before investing in paid acquisition.
+Launch quietly to a small VIP segment first (100-500 customers), then expand to full email list in week 2, then paid ads in week 3, then full public launch with press and influencers in week 4. You get reviews, optimized pages, and proven messaging before investing in paid acquisition.
 
 ### Pre-Order Launch (Best When Inventory Isn't Ready)
-
-Accept orders before the product ships. Use when manufacturing timelines are long.
-
-- Clearly state: "Pre-order — ships by [date]"
-- Offer a pre-order incentive (10% off, free gift, exclusive variant)
-- Send regular updates: "Your [product] is in production," "Shipping this week!"
-- The waiting creates anticipation — use it. Behind-the-scenes content during the wait period builds excitement.
+Accept orders before the product ships with a clear "Pre-order — ships by [date]" label and a pre-order incentive (10% off, free gift, exclusive variant). Send regular production updates — the waiting itself builds anticipation when paired with behind-the-scenes content.
 
 ---
 
