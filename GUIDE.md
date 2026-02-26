@@ -24,7 +24,10 @@
 - [How the Skills Work Together](#how-the-skills-work-together)
 - [Workflows for Common Scenarios](#workflows-for-common-scenarios)
 - [Tips for Getting the Most Out of Your Skills](#tips-for-getting-the-most-out-of-your-skills)
+- [Connecting Your Data with CLI Tools](#connecting-your-data-with-cli-tools)
 - [FAQ](#faq)
+- [What We Learned Building These Skills](#what-we-learned-building-these-skills)
+- [Building Your Own Claude Code Skills](#building-your-own-claude-code-skills)
 
 ---
 
@@ -144,6 +147,33 @@ With the guide:
 > **Claude:** "Based on your brand guide, here's a 3-email cart abandonment sequence for your $65 AOV skincare brand, written in your conversational-but-expert tone, with a 10% discount in email 3 that aligns with your discount strategy..."
 
 That's the difference. Build the guide once, benefit from it in every future conversation.
+
+### How the auto-referencing works
+
+Every skill in this collection has an identical `## Brand Context` section near the top with these instructions:
+
+1. **Check** if `.claude/brand-guide.md` exists in the project
+2. **Read it first** if it does — pulling in your brand identity, personas, products, voice, competitors, key dates, and proof points
+3. **Skip questions** that the brand guide already answers — no re-asking what you sell or who your customer is
+4. **Only ask** for information specific to the current task that isn't in the guide
+
+This means updating your brand guide instantly updates the context for all 14 skills. Add a new product to the catalog section, and the next time you ask for a product page, email sequence, or ad campaign, Claude already knows about it.
+
+### Updating your Brand Guide
+
+You don't need to rebuild the guide from scratch. Ask Claude to update specific sections:
+
+- *"Update my brand guide — we just launched 3 new products: [details]"*
+- *"Add Competitor X to my brand guide's competitive landscape"*
+- *"Update my brand voice section — we've shifted to a more playful tone"*
+- *"Add our holiday sales calendar to the key dates section"*
+- *"Update the proof points — we just got featured in Vogue and hit 5,000 reviews"*
+
+**When to update:**
+- After launching new products or discontinuing old ones
+- When your positioning, pricing, or competitive landscape changes
+- Before a major campaign or launch (update key dates and proof points)
+- Quarterly — even if nothing major changed, a quick review keeps things current
 
 ---
 
@@ -776,6 +806,137 @@ If Claude gives a recommendation, ask "why?" and "what specifically should I cha
 
 ---
 
+## Connecting Your Data with CLI Tools
+
+Skills give Claude the expertise. CLI tools give Claude the data. Together, you get an analyst who knows eCommerce strategy AND has access to your live numbers.
+
+The `tools/clis/` directory contains 7 standalone Node.js scripts that give Claude direct API access to your marketing stack. No `npm install` required — just Node 18+ and your API keys.
+
+### How it works
+
+1. You set API keys as environment variables in your shell profile
+2. Claude runs the CLI tools during conversations to pull live data
+3. Claude combines the data with the relevant skill's frameworks to give you analysis rooted in your actual numbers
+
+Instead of pasting screenshots or exporting CSVs, you just ask: "How are my Meta ads performing this month?" and Claude pulls the data, analyzes it, and gives you recommendations.
+
+### Setup
+
+Add the environment variables for each platform you use to `~/.zshrc` (or `~/.bashrc`):
+
+```bash
+# Shopify
+export SHOPIFY_STORE="your-store-name"
+export SHOPIFY_ACCESS_TOKEN="shpat_xxxxx"
+
+# Klaviyo
+export KLAVIYO_API_KEY="pk_xxxxx"
+
+# Meta Ads
+export META_ACCESS_TOKEN="xxxxx"
+export META_AD_ACCOUNT_ID="123456789"
+
+# Google Ads
+export GOOGLE_ADS_TOKEN="ya29.xxxxx"
+export GOOGLE_ADS_DEVELOPER_TOKEN="xxxxx"
+export GOOGLE_ADS_CUSTOMER_ID="123-456-7890"
+
+# Google Analytics 4
+export GA4_ACCESS_TOKEN="ya29.xxxxx"
+export GA4_PROPERTY_ID="123456789"
+
+# Google Search Console
+export GSC_ACCESS_TOKEN="ya29.xxxxx"
+export GSC_SITE_URL="https://yourstore.com"
+
+# TikTok Ads
+export TIKTOK_ACCESS_TOKEN="xxxxx"
+export TIKTOK_ADVERTISER_ID="123456789"
+```
+
+Then reload your shell and test:
+
+```bash
+source ~/.zshrc
+node Claude-Skills-for-eCommerce/tools/clis/shopify.js shop
+```
+
+For step-by-step instructions on getting API keys for each platform, see **[tools/clis/README.md](tools/clis/README.md)**.
+
+### Platform-by-Platform Guide
+
+#### Shopify — Store data, orders, products, inventory
+
+**Test command:** `node tools/clis/shopify.js shop`
+
+**Example prompts with live data:**
+- *"Pull my order data from last month and break down revenue by product"*
+- *"What are my top 10 best-selling products this quarter?"*
+- *"Check my inventory levels — am I running low on anything?"*
+
+#### Klaviyo — Email flows, campaigns, segments, metrics
+
+**Test command:** `node tools/clis/klaviyo.js flows list`
+
+**Example prompts with live data:**
+- *"Pull my Klaviyo flow performance and audit my email program"*
+- *"What's my email revenue this month? Break it down by flow vs. campaign"*
+- *"Show me my segment sizes — which ones should I be targeting more?"*
+
+#### Meta Ads — Facebook and Instagram ad campaigns
+
+**Test command:** `node tools/clis/meta-ads.js accounts list`
+
+**Example prompts with live data:**
+- *"Analyze my Meta Ads performance for the last 30 days — what's working?"*
+- *"My ROAS dropped this week. Pull the campaign data and help me diagnose why"*
+- *"Compare my active campaigns — which ones should I scale and which should I pause?"*
+
+#### Google Ads — Search, Shopping, and Performance Max campaigns
+
+**Test command:** `node tools/clis/google-ads.js account info`
+
+**Example prompts with live data:**
+- *"Pull my Google Shopping performance — which products are profitable?"*
+- *"Show me my search terms report — am I wasting money on irrelevant queries?"*
+- *"How are my PMax campaigns performing vs. standard Shopping?"*
+
+#### GA4 — Website traffic, conversions, ecommerce analytics
+
+**Test command:** `node tools/clis/ga4.js traffic`
+
+**Example prompts with live data:**
+- *"Pull my GA4 data — which traffic sources have the best conversion rate?"*
+- *"Show me my top landing pages and their bounce rates"*
+- *"Break down my ecommerce data by source — where is revenue actually coming from?"*
+
+#### Google Search Console — SEO and search performance
+
+**Test command:** `node tools/clis/gsc.js queries`
+
+**Example prompts with live data:**
+- *"What search queries are driving the most traffic to my store?"*
+- *"Which of my product pages rank on page 1 vs. page 2?"*
+- *"Show me my search impressions trend over the last 90 days"*
+
+#### TikTok Ads — TikTok ad campaigns and performance
+
+**Test command:** `node tools/clis/tiktok-ads.js advertisers info`
+
+**Example prompts with live data:**
+- *"How are my TikTok campaigns performing compared to Meta?"*
+- *"Pull my TikTok ad performance for the last 30 days"*
+- *"Which TikTok ad groups have the best cost per purchase?"*
+
+### Security notes
+
+- All API keys live in environment variables — never hardcoded, never committed to repos
+- Use `--dry-run` on any CLI command to preview the API request without sending it
+- All CLIs are read-heavy by design — write operations require explicit flags
+- Keys in `~/.zshrc` stay local to your machine
+
+---
+
 ## FAQ
 
 ### Do I need all 14 skills?
@@ -798,5 +959,140 @@ These skills are optimized for DTC (direct-to-consumer) brands selling through t
 
 ### What if two skills give conflicting advice?
 The skills are designed to be complementary, but if you ever get conflicting recommendations, the financial skills (CFO, Pricing) should take precedence for financial decisions, and the customer-facing skills (PDP, Email, Copywriting) should take precedence for marketing decisions. When in doubt, the data wins — use the Analytics skill to test both approaches.
+
+---
+
+## What We Learned Building These Skills
+
+We built 14 skills and iterated on them extensively. Here's what we learned about making AI skills that actually produce expert-level output.
+
+### Lean skill files, reference files for depth
+
+The main SKILL.md should stay between 250-400 lines. It contains the role description, context-gathering questions, core frameworks, and output formats — the strategic skeleton. Detailed data — full email sequence specifications, platform-specific playbooks, financial templates, benchmark tables — goes into separate `references/*.md` files.
+
+The skill links to these with: `**For detailed X:** See [references/filename.md](references/filename.md)`. Claude reads the reference file when it needs the detail, not on every single conversation. This keeps Claude focused on the right framework for the situation instead of trying to reference everything at once.
+
+When skills are too long, Claude produces massive responses because it feels obligated to touch on everything it read. Splitting into a lean skill + reference files solved this.
+
+### Why markdown
+
+Skills are plain text markdown files. No code, no API, no build step, no special tooling. This means anyone can read, edit, and improve them with any text editor. The only structured requirement is YAML frontmatter at the top with `name` and `description` fields.
+
+Markdown was chosen because it's the simplest format that supports structure (headings, lists, tables, code blocks) while being both human-readable and machine-readable. Skills don't need to be complex — they need to be clear.
+
+### The brand guide as dependency injection
+
+Instead of every skill asking the same 20 foundational questions about your brand, one skill (the Brand Guide) creates a shared context file that all others read automatically. This was the single most impactful architectural decision in the entire collection.
+
+Without it, every conversation starts with 5 minutes of "What do you sell? Who's your customer?" With it, Claude already knows your brand and jumps straight to the strategic work. And when you update the brand guide, every future conversation across all 14 skills immediately has the new context — no manual updates to individual skills needed.
+
+### Behavioral instructions shape output quality
+
+Adding a sentence like "Respond in focused stages. Start by asking the context questions, then give targeted advice. Don't produce a full plan unless explicitly asked" to a skill's intro paragraph dramatically changes how Claude responds.
+
+Skills aren't just knowledge repositories — they're behavioral instructions. The opening paragraphs define not just what Claude knows, but how Claude should approach the conversation. A skill that says "you are direct with founders — if the numbers don't work, you say so clearly" produces fundamentally different output than one without that instruction.
+
+### Output format templates are blueprints
+
+If you include a detailed output template with 15 fields in a skill, Claude will try to fill every field every time — even when the user asked a simple question. The template becomes a blueprint for a massive response.
+
+The fix: keep output templates minimal in the main skill file, or move them behind reference files so they're only loaded when Claude needs to produce a complete deliverable. A skill should default to conversational, targeted responses — not form-filling.
+
+### Specificity beats comprehensiveness
+
+A skill with 10 deeply-applied principles beats one with 30 principles that get surface-level treatment. Our buyer psychology skill originally had 30 cognitive biases — trimming it to 10 core principles with deeper eCommerce applications produced better, more actionable responses.
+
+The same applies to frameworks, templates, and advice. Cut anything that doesn't directly improve the output. If you're not sure whether to include something, leave it out and see if anyone misses it.
+
+### Context-gathering questions are the highest-leverage content
+
+The numbered question lists at the start of each skill ("What do you sell? How big is your email list? What's your AOV?") are what make responses specific rather than generic. Without them, Claude gives advice that could apply to any eCommerce store. With them, Claude understands the founder's actual situation before advising.
+
+If you're building a skill and can only write one section well, write the context-gathering questions. Everything else follows from having the right context.
+
+---
+
+## Building Your Own Claude Code Skills
+
+Want to build skills for your own domain? Here's what works.
+
+### The anatomy of a skill
+
+Every skill follows the same structure:
+
+```
+---
+name: your-skill-name
+description: A clear description of what this skill does
+---
+
+# Skill Title
+
+[Role description — who Claude becomes when using this skill]
+
+## Context Section
+[Questions to gather before giving advice]
+
+## Core Frameworks
+[The mental models, frameworks, and structured knowledge]
+
+## Output Formats
+[Templates for deliverables — keep these minimal]
+
+## Questions to Ask
+[Fallback questions if context is missing]
+```
+
+The YAML frontmatter (`name` and `description`) is required — Claude Code uses it to detect and select skills. Everything else is markdown.
+
+### Start with the role description
+
+The opening paragraph is the most important part of any skill. It defines Claude's persona, expertise, and approach. Be specific:
+
+**Good:** "You are a fractional CFO who specializes in eCommerce and DTC businesses. You think in contribution margins, cash conversion cycles, and unit economics — not just top-line revenue."
+
+**Generic:** "You help with finances and business analysis."
+
+The role description should also include behavioral instructions — how Claude should approach conversations. "You are direct with founders. If the numbers don't work, you say so clearly" shapes every response Claude gives.
+
+### Write the questions first
+
+Before writing frameworks, write the context-gathering questions. These determine what information Claude collects before giving advice, and they're the difference between generic output and specific, actionable recommendations.
+
+Think about what a real expert would ask in their first meeting with a client. A pricing consultant doesn't start with pricing theory — they ask "What do you sell? What are your margins? Who are your competitors? What's your current price?" The answers to those questions determine which frameworks even apply.
+
+### When to use reference files
+
+If your skill is over 400 lines, split it. Move detailed data into `references/*.md` files:
+
+- **Keep in the main skill:** Role description, context questions, core frameworks (summarized), output formats, fallback questions
+- **Move to references:** Detailed playbooks, step-by-step procedures, benchmark tables, template libraries, platform-specific guides, full example sequences
+
+Create a `references/` directory alongside your SKILL.md. Link from the main skill:
+
+```markdown
+**For detailed email flow specifications:** See [references/flow-playbooks.md](references/flow-playbooks.md)
+```
+
+Claude reads the reference file when it needs the detail — not on every conversation. This keeps the main skill focused and prevents the "reference everything you read" problem.
+
+### Test and iterate
+
+The first version of a skill is never the final version. Use it 5-10 times with different prompts and watch for these signals:
+
+- **Generic responses** → Add more context-gathering questions. Claude doesn't have enough information about the specific situation.
+- **Overly long responses** → The skill file is too dense. Move detail to reference files, or trim frameworks that aren't pulling their weight.
+- **Missing advice** → Add the missing framework or principle. If Claude should know something for this domain, put it in the skill.
+- **Wrong tone or approach** → Adjust the role description and behavioral instructions in the opening paragraphs.
+
+### Keep behavioral instructions in the intro
+
+Any instruction about HOW Claude should respond belongs in the first 2-3 paragraphs of the skill, not buried in a separate section at the bottom. Claude weights the opening of a skill more heavily, and behavioral instructions need to shape every response — not just the ones where Claude happens to scroll to the right section.
+
+Examples of effective behavioral instructions:
+
+- "Respond in focused stages. Start by asking context questions, then give targeted advice."
+- "Don't produce a full plan unless explicitly asked. Give the founder what they need for their specific situation."
+- "Every recommendation must be specific to this brand — never give advice that could apply to any store."
 
 ---
